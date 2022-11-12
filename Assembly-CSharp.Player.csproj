@@ -662,7 +662,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CamerScripts\CameraMovementScript.cs" />
-    <Compile Include="Assets\Scripts\EnvScripts\PlatformManager.cs" />
+    <Compile Include="Assets\Scripts\Enums\Enums.cs" />
+    <Compile Include="Assets\Scripts\EnvScripts\MovingPlatform.cs" />
+    <Compile Include="Assets\Scripts\EnvScripts\PlatformHandler.cs" />
     <Compile Include="Assets\Scripts\InputDetection\InputDetection.cs" />
     <Compile Include="Assets\Scripts\InputDetection\InputMapper.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IHange.cs" />
@@ -672,7 +674,8 @@
     <Compile Include="Assets\Scripts\PlayerScripts\HorizontalMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\Jump.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\LedgeHang.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\PlayerScriptableObject.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\PlatformScriptableObject.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\PlayerScriptableObject.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

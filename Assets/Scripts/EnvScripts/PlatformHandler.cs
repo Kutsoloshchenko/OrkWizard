@@ -7,12 +7,22 @@ using System.Linq;
 namespace OrkWizard
 {
     [RequireComponent(typeof(BoxCollider2D))]
-    public class PlatformManager : MonoBehaviour, IHange
+    public class PlatformHandler : MonoBehaviour, IHange
     {
-        private BoxCollider2D boxCollider;
-        private float[] verticalAngles = new float[] { 0, 90, 180, 270, 360 };
+        protected BoxCollider2D boxCollider;
+        protected const string _playerTag = "Player";
+        protected float[] verticalAngles = new float[] { 0, 90, 180, 270, 360 };
+
+        [SerializeField]
+        protected PlatformScriptableObject platformScriptableObject;
+
 
         private void Start()
+        {
+            Initialize();
+        }
+
+        protected virtual void Initialize()
         {
             boxCollider = GetComponent<BoxCollider2D>();
         }
