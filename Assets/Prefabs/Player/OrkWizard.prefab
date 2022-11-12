@@ -166,12 +166,13 @@ MonoBehaviour:
   wallCollistionLayer:
     serializedVersion: 2
     m_Bits: 512
-  distanceToCollider: 0.2
+  distanceToCollider: 0.8
   isFacingLeft: 0
   isJumping: 0
   isGrounded: 0
   isPlatformHanging: 0
-  playerScriptableObject: {fileID: 0}
+  playerScriptableObject: {fileID: 11400000, guid: f79d89660dbee314ea84e501e74dd6be,
+    type: 2}
 --- !u!114 &8230919764732228922
 MonoBehaviour:
   m_ObjectHideFlags: 0
