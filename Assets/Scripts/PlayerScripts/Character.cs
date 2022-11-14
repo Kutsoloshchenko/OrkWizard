@@ -43,7 +43,7 @@ namespace OrkWizard
         public bool isPlatformHanging;
 
         [SerializeField]
-        public PlayerScriptableObject playerScriptableObject;
+        public PlayerSO playerScriptableObject;
 
         // Start is called before the first frame update
         void Start()
@@ -58,7 +58,7 @@ namespace OrkWizard
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
-
+            Debug.DrawRay(transform.position, Vector2.down *((playerCollider.size.y / 2) + distanceToCollider), Color.green );
         }
 
         protected virtual void Initialization()
@@ -84,6 +84,7 @@ namespace OrkWizard
             if (hit)
             {
                 currentPlatform = hit.collider.gameObject;
+                transform.SetParent(currentPlatform.transform);
                 return true;
             }
             currentPlatform = null;
@@ -127,11 +128,10 @@ namespace OrkWizard
         {
             if (currentPlatform != null)
             {
-                var angle = currentPlatform.GetComponentInParent<PlatformManager>().GetPlatformAngle();
+                var angle = currentPlatform.GetComponentInParent<PlatformHandler>().GetPlatformAngle();
                 // Currently we have all tillted platform to have 15 or -15 angle.
                 if (Mathf.Abs(angle) == 15)
                 {
-                    transform.parent = currentPlatform.transform;
                     if ((angle == 15 && !isFacingLeft) || (angle == -15 && isFacingLeft))
                     {
                         Flip();
@@ -143,7 +143,6 @@ namespace OrkWizard
             }
 
             transform.localEulerAngles = new Vector3(0, 0, 0);
-            transform.parent = null;
             return false;
         }
 

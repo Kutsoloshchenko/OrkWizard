@@ -20,19 +20,19 @@ namespace OrkWizard
             jumpCountDown = character.playerScriptableObject.buttonHoldTime;
         }
 
-        protected virtual void Update()
+        private void Update()
         {
             CheckForJump();
         }
 
-        protected virtual void FixedUpdate()
+        private void FixedUpdate()
         {
             ApplyJump();
-            GroundCheck();
             PerformWallKick();
+            GroundCheck();
         }
 
-        public virtual void CheckForJump()
+        private void CheckForJump()
         {
             if (input.JumpPressed())
             {
@@ -134,7 +134,6 @@ namespace OrkWizard
             }
             else
             {
-
                 if (character.Falling(0))
                 {
                     var newVelocity = rigidBody.velocity.y + Physics2D.gravity.y * 1.5f * Time.deltaTime;
