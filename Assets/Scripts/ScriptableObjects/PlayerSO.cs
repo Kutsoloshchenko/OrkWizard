@@ -3,7 +3,7 @@
 namespace OrkWizard
 {
     [CreateAssetMenu(fileName = "PlayerScriptableObject", menuName = "ScriptableObjects/PlayerScriptableObjects/Player")]
-    public class PlayerScriptableObject : ScriptableObject
+    public class PlayerSO : ScriptableObject
     {
 
         // How do i make it serializeble but still a private set?

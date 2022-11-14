@@ -9,6 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9c2d0a586d4c344c95aaaa69f6966b8, type: 3}
-  m_Name: PlayerScriptableObject
+  m_Script: {fileID: 11500000, guid: 8a4ef402001b0e249a114628e6605e8b, type: 3}
+  m_Name: MovingPlatform
   m_EditorClassIdentifier: 
+  platformType: 0
+  platformSpeed: 25
+  playerTriggerMovement: 1
+  stopTime: 2
+  finishOneTime: 0
+  platformResetTime: 2

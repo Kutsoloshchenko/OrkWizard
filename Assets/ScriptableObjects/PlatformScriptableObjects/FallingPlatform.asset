@@ -9,6 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9c2d0a586d4c344c95aaaa69f6966b8, type: 3}
-  m_Name: PlayerScriptableObject
+  m_Script: {fileID: 11500000, guid: c7a90fded0a11a64c9aa96cb3ced18ac, type: 3}
+  m_Name: FallingPlatform
   m_EditorClassIdentifier: 
+  fallDelay: 1.5
+  platformResetTime: 2
+  fallingSpeed: 60

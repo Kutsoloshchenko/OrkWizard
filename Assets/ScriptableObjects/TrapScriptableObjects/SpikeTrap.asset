@@ -9,6 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9c2d0a586d4c344c95aaaa69f6966b8, type: 3}
-  m_Name: PlayerScriptableObject
+  m_Script: {fileID: 11500000, guid: fde876d356633f84c93afb368d3e6a5f, type: 3}
+  m_Name: SpikeTrap
   m_EditorClassIdentifier: 
+  damage: 10
+  trigeredByPlayer: 1
+  dealDmgOnlyToPlayer: 1
+  dmgCooldown: 2
+  downTime: 0
+  activeTime: 2

@@ -19,7 +19,6 @@ namespace OrkWizard
             base.Initialization();
         }
 
-
         private void Update()
         {
             CheckInput();
@@ -103,8 +102,6 @@ namespace OrkWizard
                 Invoke("EnableHang", character.playerScriptableObject.platformHangTimeOut);
             }
         }
-
-
 
         private IEnumerator ClimbLedge(Vector2 destination)
         {
