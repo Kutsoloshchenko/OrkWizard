@@ -66,10 +66,14 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\CamerScripts\CameraMovementScript.cs" />
     <Compile Include="Assets\Scripts\Enums\Enums.cs" />
-    <Compile Include="Assets\Scripts\EnvScripts\MovingPlatform.cs" />
-    <Compile Include="Assets\Scripts\EnvScripts\PlatformHandler.cs" />
+    <Compile Include="Assets\Scripts\EnvScripts\PlatfromScripts\FallingPlatfrom.cs" />
+    <Compile Include="Assets\Scripts\EnvScripts\PlatfromScripts\MovingPlatform.cs" />
+    <Compile Include="Assets\Scripts\EnvScripts\PlatfromScripts\PlatformHandler.cs" />
+    <Compile Include="Assets\Scripts\EnvScripts\TrapScripts\TrapActivator.cs" />
+    <Compile Include="Assets\Scripts\EnvScripts\TrapScripts\TrapManager.cs" />
     <Compile Include="Assets\Scripts\InputDetection\InputDetection.cs" />
     <Compile Include="Assets\Scripts\InputDetection\InputMapper.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IDamagable.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IHange.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\Abilities.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\AnimatorController.cs" />
@@ -77,8 +81,10 @@
     <Compile Include="Assets\Scripts\PlayerScripts\HorizontalMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\Jump.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\LedgeHang.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\PlatformScriptableObject.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\PlayerScriptableObject.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\FallingPlatformSO.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\MovingPlatformSO.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\PlayerSO.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\TrapSO.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

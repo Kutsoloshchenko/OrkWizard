@@ -10,12 +10,9 @@ namespace OrkWizard
     public class PlatformHandler : MonoBehaviour, IHange
     {
         protected BoxCollider2D boxCollider;
+        protected Rigidbody2D rb;
         protected const string _playerTag = "Player";
         protected float[] verticalAngles = new float[] { 0, 90, 180, 270, 360 };
-
-        [SerializeField]
-        protected PlatformScriptableObject platformScriptableObject;
-
 
         private void Start()
         {
@@ -25,6 +22,7 @@ namespace OrkWizard
         protected virtual void Initialize()
         {
             boxCollider = GetComponent<BoxCollider2D>();
+            rb = GetComponent<Rigidbody2D>();
         }
 
         public float GetPlatformAngle()

@@ -16,13 +16,16 @@ namespace OrkWizard
         [SerializeField]
         private List<Vector2> possitionsToMove;
 
+        [SerializeField]
+        protected MovingPlatformSO movingPlatformSO;
+
         protected override void Initialize()
         {
             base.Initialize();
             originalPossition = transform.position;
             possitionsToMove.Add(originalPossition);
             possitionToMoveIndex = 0;
-            shouldMove = !platformScriptableObject.playerTriggerMovement;
+            shouldMove = !movingPlatformSO.playerTriggerMovement;
         }
 
         public void FixedUpdate()
@@ -40,57 +43,33 @@ namespace OrkWizard
 
             if (NeedsToMove())
             {
-                if (platformScriptableObject.platformType != PlatformType.Falling)
-                {
-                    Vector2 possition = FindPossitionToMove();
-                    MoveToPossition(possition);
-                }
+                Vector2 possition = FindPossitionToMove();
+                MoveToPossition(possition);
             }
         }
 
         private bool NeedsToMove()
         {
-            if (platformScriptableObject.finishOneTime && finishedOnce)
+            if (movingPlatformSO.finishOneTime && finishedOnce)
             {
                 return false;
             }
 
             // Contains any possitions to move, and not falling platform
-            if (possitionsToMove != null && possitionToMoveIndex < possitionsToMove.Count && platformScriptableObject.platformType != PlatformType.Falling)
+            if (possitionsToMove != null && possitionToMoveIndex < possitionsToMove.Count)
             {
                 // This gets set by player interaction if needed;
-                return shouldMove;
-            }
-            else if (platformScriptableObject.platformType == PlatformType.Falling) // just gets triggered by player
-            {
                 return shouldMove;
             }
 
             return false;
         }
 
-        private void OnCollisionEnter2D(Collision2D collision)
-        {
-            if (collision.gameObject.CompareTag(_playerTag) && platformScriptableObject.playerTriggerMovement)
-            {
-                shouldMove = true;
-                reset = false;
-            }
-        }
-
-        private void OnCollisionExit2D(Collision2D collision)
-        {
-            if (collision.gameObject.CompareTag(_playerTag) && platformScriptableObject.playerTriggerMovement)
-            {
-                reset = true;
-            }
-        }
-
         private void Reset()
         {
             if ((Vector2)transform.position != originalPossition)
             {
-                transform.position = Vector2.MoveTowards(transform.position, originalPossition, platformScriptableObject.platformSpeed * Time.deltaTime);
+                transform.position = Vector2.MoveTowards(transform.position, originalPossition, movingPlatformSO.platformSpeed * Time.deltaTime);
             }
             else
             {
@@ -99,6 +78,11 @@ namespace OrkWizard
                 finishedOnce = false;
                 reverseMode = false;
                 possitionToMoveIndex = 0;
+                rb.bodyType = RigidbodyType2D.Kinematic;
+                rb.gravityScale = 0;
+                rb.velocity = Vector2.zero;
+                boxCollider.enabled = true;
+                transform.position = originalPossition;
             }
         }
 
@@ -107,17 +91,17 @@ namespace OrkWizard
             if ((Vector2)transform.position == possitionsToMove[possitionToMoveIndex])
             {
 
-                if (platformScriptableObject.stopTime != 0)
+                if (movingPlatformSO.stopTime != 0)
                 {
                     shouldMove = false;
-                    Invoke("ShouldMoveAfterStop", platformScriptableObject.stopTime);
+                    Invoke("ShouldMoveAfterStop", movingPlatformSO.stopTime);
                 }
 
-                if (platformScriptableObject.platformType == PlatformType.Moving)
+                if (movingPlatformSO.platformType == PlatformMovementType.Moving)
                 {
                     possitionToMoveIndex = FindIndexForForwardMovement();
                 }
-                else if (platformScriptableObject.platformType == PlatformType.ReverseOrderOnFinish)
+                else if (movingPlatformSO.platformType == PlatformMovementType.ReverseOrderOnFinish)
                 {
                     possitionToMoveIndex = FindIndexForReverseMovement();
                 }
@@ -141,7 +125,6 @@ namespace OrkWizard
 
             return returnIndex;
         }
-
 
         private int FindIndexForReverseMovement()
         {
@@ -176,15 +159,34 @@ namespace OrkWizard
             return returnInt;
         }
 
-
         private void MoveToPossition(Vector2 possition)
         {
-            transform.position = Vector2.MoveTowards(transform.position, possition, platformScriptableObject.platformSpeed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, possition, movingPlatformSO.platformSpeed * Time.deltaTime);
         }
 
         private void ShouldMoveAfterStop()
         {
             shouldMove = true;
+        }
+
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (collision.gameObject.CompareTag(_playerTag) && movingPlatformSO.playerTriggerMovement)
+            {
+                if (collision.gameObject.CompareTag(_playerTag) && movingPlatformSO.playerTriggerMovement)
+                {
+                    shouldMove = true;
+                    reset = false;
+                }
+            }
+        }
+
+        private void OnCollisionExit2D(Collision2D collision)
+        {
+            if (collision.gameObject.CompareTag(_playerTag) && movingPlatformSO.playerTriggerMovement)
+            {
+                reset = true;
+            }
         }
 
         private void OnDrawGizmos()

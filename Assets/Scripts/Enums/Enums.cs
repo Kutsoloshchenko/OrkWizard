@@ -1,9 +1,8 @@
 ﻿namespace OrkWizard
 {
-    public enum PlatformType
+    public enum PlatformMovementType
     {
         Moving,
-        ReverseOrderOnFinish,
-        Falling
+        ReverseOrderOnFinish
     }
 }

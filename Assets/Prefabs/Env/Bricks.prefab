@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7363416839933459216}
   - component: {fileID: 7363416839933459217}
   - component: {fileID: 7363416839933459222}
-  - component: {fileID: 5237594174931959624}
+  - component: {fileID: 4080157420702886869}
   m_Layer: 8
   m_Name: Bricks
   m_TagString: Untagged
@@ -100,7 +100,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 123.05867, y: 6.064678}
+  m_Size: {x: 123, y: 6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -119,20 +119,20 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.065769196, y: -0.25181437}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 20.728996, y: 6.66}
-    newSize: {x: 123.05867, y: 6.064678}
+    newSize: {x: 123, y: 6}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 122.86881, y: 6.156371}
+  m_Size: {x: 123, y: 6}
   m_EdgeRadius: 0
---- !u!114 &5237594174931959624
+--- !u!114 &4080157420702886869
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,6 +141,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 7363416839933459219}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 068beccb5960f814a8630f43ec4768d2, type: 3}
+  m_Script: {fileID: 11500000, guid: 98cf51f04ce8b664b891167391d43ea2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

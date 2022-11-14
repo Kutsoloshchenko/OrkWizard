@@ -43,7 +43,7 @@ namespace OrkWizard
         public bool isPlatformHanging;
 
         [SerializeField]
-        public PlayerScriptableObject playerScriptableObject;
+        public PlayerSO playerScriptableObject;
 
         // Start is called before the first frame update
         void Start()

@@ -9,7 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4939578370672044781}
-  - component: {fileID: 1581167210060013376}
+  - component: {fileID: 5097346286640835367}
+  - component: {fileID: 5750432821877988753}
   m_Layer: 0
   m_Name: PipeOnBricks
   m_TagString: Untagged
@@ -33,7 +34,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1581167210060013376
+--- !u!61 &5097346286640835367
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5431327064061287488}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &5750432821877988753
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,7 +69,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5431327064061287488}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 068beccb5960f814a8630f43ec4768d2, type: 3}
+  m_Script: {fileID: 11500000, guid: 98cf51f04ce8b664b891167391d43ea2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &13860324748024155
@@ -122,7 +149,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5237594174931959624, guid: 1b8573114324225418b82b591dce2039, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1b8573114324225418b82b591dce2039, type: 3}
 --- !u!4 &7350192891900142156 stripped
 Transform:
