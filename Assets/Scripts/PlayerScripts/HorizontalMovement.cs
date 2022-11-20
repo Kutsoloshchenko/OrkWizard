@@ -45,7 +45,7 @@ namespace OrkWizard
 
         private void PowerSlide(int direction)
         {
-            currentSpeed = character.playerScriptableObject.maxSpeed * 1.5f * direction;
+            currentSpeed =  character.playerScriptableObject.maxSpeed * 1.5f * direction;
             animator.SetPowerSlide(true);
         }
 
@@ -57,7 +57,7 @@ namespace OrkWizard
             {
                 CalculateSpeed(horizontalMovement);
                 CheckDirection();
-                animator.SetHorizontalAnimation(true);
+                animator.SetMoving(true);
             }
             else
             {
@@ -90,7 +90,7 @@ namespace OrkWizard
                     if (currentSpeed < 0)
                     {
                         currentSpeed = 0;
-                        animator.SetHorizontalAnimation(false);
+                        animator.SetMoving(false);
                         runTime = 0;
                         return;
                     }

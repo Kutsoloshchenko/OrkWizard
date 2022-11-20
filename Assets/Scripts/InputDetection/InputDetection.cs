@@ -31,9 +31,19 @@ namespace OrkWizard
             return Input.GetKey(mapper.JumpKeyCode);
         }
 
+        internal bool AttackHeld()
+        {
+            return Input.GetKey(mapper.AttackKeyCode);
+        }
+
         public bool JumpPressed()
         {
             return Input.GetKeyDown(mapper.JumpKeyCode);
+        }
+
+        internal bool SwitchWeaponPressed()
+        {
+            return Input.GetKeyDown(mapper.SwitchWeaponKey);
         }
 
         public bool DownPressed()
