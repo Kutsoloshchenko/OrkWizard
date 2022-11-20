@@ -9,7 +9,8 @@ namespace OrkWizard
         // How do i make it serializeble but still a private set?
 
         // Horizontal movement variables
-        public float maxSpeed { get; private set; } = 50 ;
+        public float maxSpeed { get; set; } = 50 ;
+        public float originalMaxSpeed { get; private set; } = 50;
         public float timeTillMaxSpeed { get; private set; } = 3;
         public float walkSpeed { get; private set; } = 10;
         public float manualSpeedMultiplier { get; private set; } = 0.75f;
@@ -29,5 +30,7 @@ namespace OrkWizard
         // Platform hang variables
         public float platformHangTimeOut { get; private set; } = 0.3f;
         public float platformClimbTime { get; private set; } = 0.5f;
+
+        public float weaponOffset { get; private set; } = 2f;
     }
 }

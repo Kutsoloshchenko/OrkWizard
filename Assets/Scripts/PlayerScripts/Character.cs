@@ -16,11 +16,14 @@ namespace OrkWizard
         private HorizontalMovement horizontalMovement;
         private Jump jumpMovement;
         private GameObject currentPlatform;
+        private PlayerWeaponController weaponController;
         
         [SerializeField]
         private Text horizontalSpeed;
         [SerializeField]
         private Text verticalSpeed;
+        [SerializeField]
+        private Text weapon;
 
         [SerializeField]
         private LayerMask platformCollisionLayer;
@@ -69,6 +72,7 @@ namespace OrkWizard
             input = GetComponent<InputDetection>();
             horizontalMovement = GetComponent<HorizontalMovement>();
             jumpMovement = GetComponent<Jump>();
+            weaponController = GetComponent<PlayerWeaponController>();
         }
 
         public virtual void Flip()
@@ -112,6 +116,11 @@ namespace OrkWizard
             return hit;
         }
 
+        internal void UpdateDebugWeapon(string weaponName)
+        {
+            weapon.text = $"Weapon: {weaponName}";
+        }
+
         public bool Falling(float velocity)
         {
             if (!isPlatformHanging && (!isGrounded && rigidBody.velocity.y < velocity))
@@ -138,10 +147,15 @@ namespace OrkWizard
                     }
 
                     transform.localEulerAngles = new Vector3(0, 0, angle);
+                    weaponController.enabled = false;
                     return true;
                 }
             }
-
+            if (!weaponController.enabled)
+            {
+                weaponController.enabled = true;
+            }
+            
             transform.localEulerAngles = new Vector3(0, 0, 0);
             return false;
         }
@@ -156,6 +170,11 @@ namespace OrkWizard
             {
                 horizontalSpeed.text = $"Horizontal speed: {speed}";
             }
+        }
+
+        public void CapHorizontalSpeed(float number)
+        {
+            playerScriptableObject.maxSpeed = number;
         }
 
         public void SetHorizontalMovement(bool enabled)

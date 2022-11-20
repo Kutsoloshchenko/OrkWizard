@@ -5,32 +5,24 @@ using UnityEngine;
 
 namespace OrkWizard
 {
-    public class TrapManager : MonoBehaviour
+    public class TrapManager : AnimatorControllerBase
     {
         protected const string _playerTag = "Player";
-        private const string _activeAnimationBool = "Active";
+        private const string _activePostfix = "_active";
+        private const string _idlePostfix = "_idle";
         protected BoxCollider2D trapHitBox;
-        protected Animator animator;
 
         [SerializeField]
         protected TrapSO trapSO;
 
         private bool needsToActivate;
-        private bool needsToApplyDmg = true;
 
-        // Start is called before the first frame update
-        void Start()
+        protected override void Initialize()
         {
-            Initialize();
-        }
-
-        protected virtual void Initialize()
-        {
-
+            base.Initialize();
             trapHitBox = GetComponent<BoxCollider2D>();
             trapHitBox.enabled = false;
-            animator = GetComponent<Animator>();
-
+            ChangeState(trapSO.name + _idlePostfix);
             needsToActivate = !trapSO.trigeredByPlayer;
         }
 
@@ -46,14 +38,14 @@ namespace OrkWizard
         {
             trapHitBox.enabled = true;
             needsToActivate = false;
-            animator.SetBool(_activeAnimationBool, true);
+            ChangeState(trapSO.name + _activePostfix);
             Invoke("Deactivate", trapSO.activeTime);
         }
 
         private void Deactivate()
         {
             trapHitBox.enabled = false;
-            animator.SetBool(_activeAnimationBool, false);
+            ChangeState(trapSO.name + _idlePostfix);
             if (!trapSO.trigeredByPlayer)
             {
                 Invoke("Activate", trapSO.downTime);
@@ -66,19 +58,9 @@ namespace OrkWizard
             needsToActivate = true;
         }
 
-        private void ResetDmgTick()
-        {
-            needsToApplyDmg = true;
-        }
-
-        private void OnTriggerStay2D(Collider2D collision)
+        private void OnTriggerEnter2D(Collider2D collision)
         {
             if (trapSO.dealDmgOnlyToPlayer && !collision.CompareTag(_playerTag))
-            {
-                return;
-            }
-
-            if (!needsToApplyDmg)
             {
                 return;
             }
@@ -87,12 +69,24 @@ namespace OrkWizard
             var dmgApplyer = collision.gameObject.GetComponent<IDamagable>();
             if (dmgApplyer != null)
             {
-                dmgApplyer.ApplyDmg(trapSO.damage);
-                if (trapSO.dmgCooldown > 0)
+
+                if (trapSO.dmgOverTime)
                 {
-                    needsToApplyDmg = false;
-                    Invoke("ResetDmgTick", trapSO.dmgCooldown);
+                    dmgApplyer.ApplyDmg(trapSO.damage, trapSO.dmgType, trapSO.dmgCooldown);
                 }
+                else
+                {
+                    dmgApplyer.ApplyDmg(trapSO.damage, trapSO.dmgType);
+                }
+            }
+        }
+
+        private void OnTriggerExit2D(Collider2D collision)
+        {
+            var dmgApplyer = collision.gameObject.GetComponent<IDamagable>();
+            if (dmgApplyer != null && trapSO.dmgOverTime)
+            {
+                dmgApplyer.StopTickDmg();
             }
         }
     }
