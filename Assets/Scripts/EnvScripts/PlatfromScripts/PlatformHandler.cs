@@ -6,7 +6,6 @@ using System.Linq;
 
 namespace OrkWizard
 {
-    [RequireComponent(typeof(BoxCollider2D))]
     public class PlatformHandler : MonoBehaviour, IHange
     {
         protected BoxCollider2D boxCollider;

@@ -661,6 +661,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\BaseClasses\AnimatorControllerBase.cs" />
     <Compile Include="Assets\Scripts\CamerScripts\CameraMovementScript.cs" />
     <Compile Include="Assets\Scripts\Enums\Enums.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\PlatfromScripts\FallingPlatfrom.cs" />
@@ -672,16 +673,26 @@
     <Compile Include="Assets\Scripts\InputDetection\InputMapper.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IDamagable.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IHange.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IPlayerWeapon.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\Abilities.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\AnimatorController.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\Character.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\HorizontalMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\Jump.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\LedgeHang.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\WeaponScripts\PlayerWeaponController.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\FallingPlatformSO.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\MovingPlatformSO.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\PlayerSO.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\PlayerWeaponSO.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\ProjectileSO.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\TrapSO.cs" />
+    <Compile Include="Assets\Scripts\WeaponScripts\Projectiles\BaseProjectile.cs" />
+    <Compile Include="Assets\Scripts\WeaponScripts\Projectiles\ProjectileController.cs" />
+    <Compile Include="Assets\Scripts\WeaponScripts\Projectiles\SpreadController.cs" />
+    <Compile Include="Assets\Scripts\WeaponScripts\SpreadWeapon.cs" />
+    <Compile Include="Assets\Scripts\WeaponScripts\ThroableWeapon.cs" />
+    <Compile Include="Assets\Scripts\WeaponScripts\WeaponBase.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
