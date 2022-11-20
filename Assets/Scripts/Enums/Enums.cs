@@ -5,4 +5,12 @@
         Moving,
         ReverseOrderOnFinish
     }
+
+    public enum DamageType
+    {
+        Fire,
+        Ice,
+        Acid,
+        Physical
+    }
 }

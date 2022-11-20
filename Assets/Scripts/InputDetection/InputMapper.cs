@@ -12,6 +12,9 @@ namespace OrkWizard
 
         public KeyCode ManualKeyCode = KeyCode.S;
         public KeyCode Down = KeyCode.S;
-        public KeyCode Restart = KeyCode.R;
+        public KeyCode Restart = KeyCode.Escape;
+
+        public KeyCode AttackKeyCode = KeyCode.Return;
+        public KeyCode SwitchWeaponKey = KeyCode.R;
     }
 }
