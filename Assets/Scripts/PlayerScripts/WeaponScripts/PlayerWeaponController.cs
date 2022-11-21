@@ -45,7 +45,7 @@ namespace OrkWizard
 
         private void Update()
         {
-            attackHeld = input.AttackHeld();
+            attackHeld = input.AttackBeingPressed;
 
             if (input.SwitchWeaponPressed() && !isAttacking)
             {
