@@ -12,3 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9c2d0a586d4c344c95aaaa69f6966b8, type: 3}
   m_Name: PlayerScriptableObject
   m_EditorClassIdentifier: 
+  maxSpeed: 50
+  originalMaxSpeed: 50
+  timeTillMaxSpeed: 3
+  walkSpeed: 10
+  manualSpeedMultiplier: 0.75
+  dragMultiplier: 15
+  buttonHoldTime: 0.1
+  maxJumpSpeed: 40
+  initialJumpSpeed: 20
+  maxFallSpeed: -35
+  scatingSpeed: 10
+  timeTillJumpSpeed: 0.25
+  timeToJump: 0.2
+  wallJumpTime: 0.5
+  platformHangTimeOut: 0.3
+  platformClimbTime: 0.5
+  weaponOffset: 2

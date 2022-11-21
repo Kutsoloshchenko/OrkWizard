@@ -65,12 +65,13 @@ namespace OrkWizard
         {
             if (wallHang)
             {
-                if (input.JumpPressed())
+                // ???
+                if (input.JumpBeingPressed)
                 {
                     performPlatformClimb = true;
                     return;
                 }
-                else if (input.DownPressed())
+                else if (input.Manual)
                 {
                     performDisengage = true;
                 }
