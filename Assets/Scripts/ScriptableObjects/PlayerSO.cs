@@ -8,29 +8,28 @@ namespace OrkWizard
 
         // How do i make it serializeble but still a private set?
 
-        // Horizontal movement variables
-        public float maxSpeed { get; set; } = 50 ;
-        public float originalMaxSpeed { get; private set; } = 50;
-        public float timeTillMaxSpeed { get; private set; } = 3;
-        public float walkSpeed { get; private set; } = 10;
-        public float manualSpeedMultiplier { get; private set; } = 0.75f;
-        public float dragMultiplier { get; private set; } = 10;
+        [Header("Horizontal Movement")]
+        public float maxSpeed = 50;
+        public float originalMaxSpeed = 50;
+        public float timeTillMaxSpeed = 3;
+        public float walkSpeed = 10;
+        public float manualSpeedMultiplier = 0.75f;
+        public float dragMultiplier = 10;
 
+        [Header("Vertical Movement")]
+        public float buttonHoldTime = 0.5f;
+        public float maxJumpSpeed = 60;
+        public float initialJumpSpeed = 20;
+        public float maxFallSpeed = -35;
+        public float scatingSpeed = 10;
+        public float timeTillJumpSpeed = 0.5f;
+        public float timeToJump = 0.1f;
+        public float wallJumpTime = 0.5f;
 
-        // Vertical movement variables 
-        public float buttonHoldTime { get; private set; } = 0.5f;
-        public float maxJumpSpeed { get; private set; } = 60;
-        public float initialJumpSpeed { get; private set; } = 20;
-        public float maxFallSpeed { get; private set; } = -35;
-        public float scatingSpeed { get; private set; } = 10;
-        public float timeTillJumpSpeed { get; private set; } = 0.5f;
-        public float timeToJump { get; private set; } = 0.1f;
-        public float wallJumpTime { get; private set; } = 0.5f;
+        [Header("PlatformHang")]
+        public float platformHangTimeOut = 0.3f;
+        public float platformClimbTime = 0.5f;
 
-        // Platform hang variables
-        public float platformHangTimeOut { get; private set; } = 0.3f;
-        public float platformClimbTime { get; private set; } = 0.5f;
-
-        public float weaponOffset { get; private set; } = 2f;
+        public float weaponOffset = 2f;
     }
 }

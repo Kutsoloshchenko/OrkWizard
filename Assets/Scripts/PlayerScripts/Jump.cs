@@ -36,7 +36,6 @@ namespace OrkWizard
         {
             if (input.JumpPressed())
             {
-
                 if (!character.isGrounded && character.WallCheck())
                 {
                     // Performing Wall kick 
@@ -51,6 +50,7 @@ namespace OrkWizard
                     character.isJumping = false;
                     return;
                 }
+
                 rigidBody.velocity = new Vector2(rigidBody.velocity.x, 0);
                 jumpCountDown = character.playerScriptableObject.timeToJump;
                 jumpTime = 0;
@@ -62,32 +62,30 @@ namespace OrkWizard
         {
             if (character.isJumping)
             {
+                // Jump countdown 
+                jumpTime += Time.deltaTime;
                 var multiplier = Mathf.Abs(rigidBody.velocity.x) >= character.playerScriptableObject.scatingSpeed ? 1 : 0.3f;
-                rigidBody.velocity = new Vector2(rigidBody.velocity.x, character.playerScriptableObject.initialJumpSpeed * multiplier);
-            }
+                //Apply initial speed
+                if (rigidBody.velocity.y == 0)
+                {
+                    rigidBody.velocity = new Vector2(rigidBody.velocity.x, character.playerScriptableObject.initialJumpSpeed * multiplier);
+                }
 
-            if (input.JumpHeld() && character.isJumping)
-            {
-                if (jumpTime < jumpCountDown + character.playerScriptableObject.buttonHoldTime)
+                // Extend jumping time
+                if (input.JumpBeingPressed && (jumpTime < jumpCountDown + character.playerScriptableObject.buttonHoldTime))
                 {
                     jumpCountDown += Time.deltaTime;
-                    jumpTime += Time.deltaTime;
-                    var multiplier = Mathf.Abs(rigidBody.velocity.x) >= character.playerScriptableObject.scatingSpeed ? 1 : 0.3f;
-                    var currentSpeed = (character.playerScriptableObject.maxJumpSpeed / character.playerScriptableObject.timeTillJumpSpeed) * jumpTime;
 
-                    if (currentSpeed < character.playerScriptableObject.initialJumpSpeed)
-                    {
-                        currentSpeed = character.playerScriptableObject.initialJumpSpeed;
-                    }
-                    else if (currentSpeed > character.playerScriptableObject.maxJumpSpeed)
-                    {
-                        currentSpeed = character.playerScriptableObject.maxJumpSpeed;
-                    }
+                    // Add additionall speed to jump
 
-                    rigidBody.velocity = new Vector2(rigidBody.velocity.x, currentSpeed * multiplier);
+                    var currentSpeed = (character.playerScriptableObject.maxJumpSpeed / character.playerScriptableObject.buttonHoldTime) * jumpTime;
+                    currentSpeed = Mathf.Clamp(currentSpeed, character.playerScriptableObject.initialJumpSpeed, character.playerScriptableObject.maxJumpSpeed);
+
+                    rigidBody.velocity = new Vector2(rigidBody.velocity.x, currentSpeed);
                 }
             }
 
+            // Handle jump cancelation
             if (jumpTime > 0)
             {
                 jumpCountDown -= Time.deltaTime;
