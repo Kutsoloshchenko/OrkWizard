@@ -1888,7 +1888,7 @@ MonoBehaviour:
     m_ActionId: dd83c364-9930-492e-84f6-90325ba60e4e
     m_ActionName: Gameplay/Walk[/Keyboard/leftShift]
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
+  m_DefaultControlScheme: Keboard
   m_DefaultActionMap: Gameplay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
