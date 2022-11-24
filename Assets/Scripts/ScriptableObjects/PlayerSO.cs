@@ -14,6 +14,7 @@ namespace OrkWizard
         public float timeTillMaxSpeed = 3;
         public float walkSpeed = 10;
         public float manualSpeedMultiplier = 0.75f;
+        public float powerSlideSpeedMultiplier = 1.5f;
         public float dragMultiplier = 10;
 
         [Header("Vertical Movement")]
