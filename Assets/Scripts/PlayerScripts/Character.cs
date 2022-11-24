@@ -9,14 +9,18 @@ namespace OrkWizard
 {
     public class Character : MonoBehaviour
     {
+        public InputDetection Input { get; private set; }
+        public HorizontalMovement HorizontalMovement { get; private set; }
+        public Jump JumpMovement { get; private set; }
+        public PlayerWeaponController WeaponController { get; private set; }
+        public AnimatorController Animator { get; private set; }
+
+        public bool IsPowerSliding { get; private set; }
+
         private Rigidbody2D rigidBody;
         private CapsuleCollider2D playerCollider;
-        private AnimatorController animator;
-        private InputDetection input;
-        private HorizontalMovement horizontalMovement;
-        private Jump jumpMovement;
         private GameObject currentPlatform;
-        private PlayerWeaponController weaponController;
+        
         
         [SerializeField]
         private Text horizontalSpeed;
@@ -48,31 +52,40 @@ namespace OrkWizard
         [SerializeField]
         public PlayerSO playerScriptableObject;
 
-        // Start is called before the first frame update
-        void Start()
+        void Awake()
         {
             Initialization();
-        }
-
-        private void Update()
-        {
-            // obviously need to be in a class of its own, but its for debug 
-            if (input.RestartPressed())
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            }
-            Debug.DrawRay(transform.position, Vector2.down *((playerCollider.size.y / 2) + distanceToCollider), Color.green );
         }
 
         protected virtual void Initialization()
         {
             rigidBody = GetComponent<Rigidbody2D>();
             playerCollider = GetComponent<CapsuleCollider2D>();
-            animator = GetComponent<AnimatorController>();
-            input = GetComponent<InputDetection>();
-            horizontalMovement = GetComponent<HorizontalMovement>();
-            jumpMovement = GetComponent<Jump>();
-            weaponController = GetComponent<PlayerWeaponController>();
+            Animator = GetComponent<AnimatorController>();
+            Input = GetComponent<InputDetection>();
+            HorizontalMovement = GetComponent<HorizontalMovement>();
+            JumpMovement = GetComponent<Jump>();
+            WeaponController = GetComponent<PlayerWeaponController>();
+        }
+
+        private void Update()
+        {
+            // obviously need to be in a class of its own, but its for debug 
+            if (Input.RestartPressed())
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+            Debug.DrawRay(transform.position, Vector2.down *((playerCollider.size.y / 2) + distanceToCollider), Color.green );
+        }
+
+        internal void SetGravity(float v)
+        {
+            rigidBody.gravityScale = v;
+        }
+
+        internal Vector2 GetColliderSize()
+        {
+            return playerCollider.size;
         }
 
         public virtual void Flip()
@@ -101,11 +114,18 @@ namespace OrkWizard
             var hit = CollisionCheckRayCast(checkSide, transform.position, (playerCollider.size.x / 2) + distanceToCollider, wallCollistionLayer);
             if (hit)
             {
-                animator.SetWallTouch(true);
                 return true;
             }
-            animator.SetWallTouch(false);
             return false;
+        }
+
+        public Vector2 GetCurrentSpeed()
+        {
+            if (rigidBody != null)
+            {
+                return rigidBody.velocity;
+            }
+            return Vector2.zero;
         }
 
         public RaycastHit2D PlatformSideCheck()
@@ -147,29 +167,25 @@ namespace OrkWizard
                     }
 
                     transform.localEulerAngles = new Vector3(0, 0, angle);
-                    weaponController.enabled = false;
+                    IsPowerSliding = true;
                     return true;
                 }
             }
-            if (!weaponController.enabled)
-            {
-                weaponController.enabled = true;
-            }
-            
+            IsPowerSliding = false;
             transform.localEulerAngles = new Vector3(0, 0, 0);
             return false;
         }
 
-        public void UpdateDebugSpeed(float speed, bool isVertical)
+        public void UpdateXSpeed(float speed)
         {
-            if (isVertical)
-            {
-                verticalSpeed.text = $"Vertical speed: {speed}";
-            }
-            else
-            {
-                horizontalSpeed.text = $"Horizontal speed: {speed}";
-            }
+            rigidBody.velocity = new Vector2(speed, rigidBody.velocity.y);
+            horizontalSpeed.text = $"Horizontal speed: {speed}";
+        }
+
+        public void UpdateYSpeed(float speed)
+        {
+            rigidBody.velocity = new Vector2(rigidBody.velocity.x, speed);
+            verticalSpeed.text = $"Vertical speed: {speed}";
         }
 
         public void CapHorizontalSpeed(float number)
@@ -179,13 +195,19 @@ namespace OrkWizard
 
         public void SetHorizontalMovement(bool enabled)
         {
-            horizontalMovement.enabled = enabled;
+            HorizontalMovement.enabled = enabled;
         }
 
         public void SetVerticalMovement(bool enabled)
         {
-            jumpMovement.enabled = enabled;
+            JumpMovement.enabled = enabled;
         }
+
+        public void SetWeaponControls(bool enabled)
+        {
+            WeaponController.enabled = enabled;
+        }
+
 
         protected void FallSpeed(float speed)
         {

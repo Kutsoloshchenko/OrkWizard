@@ -20,7 +20,7 @@ namespace OrkWizard
         protected override void Initialize()
         {
             base.Initialize();
-            ChangeState(projectileSO.name + _idlePostfix);
+            ChangeAnimation(projectileSO.name + _idlePostfix);
         }
     }
 }

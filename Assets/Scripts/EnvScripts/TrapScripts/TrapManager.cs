@@ -22,7 +22,7 @@ namespace OrkWizard
             base.Initialize();
             trapHitBox = GetComponent<BoxCollider2D>();
             trapHitBox.enabled = false;
-            ChangeState(trapSO.name + _idlePostfix);
+            ChangeAnimation(trapSO.name + _idlePostfix);
             needsToActivate = !trapSO.trigeredByPlayer;
         }
 
@@ -38,14 +38,14 @@ namespace OrkWizard
         {
             trapHitBox.enabled = true;
             needsToActivate = false;
-            ChangeState(trapSO.name + _activePostfix);
+            ChangeAnimation(trapSO.name + _activePostfix);
             Invoke("Deactivate", trapSO.activeTime);
         }
 
         private void Deactivate()
         {
             trapHitBox.enabled = false;
-            ChangeState(trapSO.name + _idlePostfix);
+            ChangeAnimation(trapSO.name + _idlePostfix);
             if (!trapSO.trigeredByPlayer)
             {
                 Invoke("Activate", trapSO.downTime);
