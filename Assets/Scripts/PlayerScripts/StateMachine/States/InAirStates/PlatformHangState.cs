@@ -25,14 +25,14 @@ namespace OrkWizard
 
             if (currentHangTarget != null)
             {
-                var sign = stateManager.Character.isFacingLeft ? -1 : 1;
+                var sign = stateManager.Character.IsFacingLeft ? -1 : 1;
                 var colliderSize = stateManager.Character.GetColliderSize();
-                var platformHangPos = currentHangTarget.GetHangPossition(stateManager.Character.isFacingLeft);
+                var platformHangPos = currentHangTarget.GetHangPossition(stateManager.Character.IsFacingLeft);
                 stateManager.Character.transform.position = new Vector2(platformHangPos.x + ((colliderSize.x / 2) * sign), platformHangPos.y - (colliderSize.y / 4));
 
-                stateManager.Character.SetGravity(0f);
-                stateManager.Character.UpdateYSpeed(0);
-                stateManager.Character.UpdateXSpeed(0);
+                stateManager.Character.rbController.SetGravity(0f);
+                stateManager.Character.rbController.UpdateYSpeed(0);
+                stateManager.Character.rbController.UpdateXSpeed(0);
                 stateManager.Character.Animator.ChangeAnimation(_platfomrHang);
                 stateManager.Character.SetVerticalMovement(false);
                 stateManager.Character.SetHorizontalMovement(false);
@@ -42,7 +42,7 @@ namespace OrkWizard
 
         public override void OnExit(StateManager stateManager)
         {
-            stateManager.Character.SetGravity(1);
+            stateManager.Character.rbController.SetGravity(1);
             stateManager.Character.SetVerticalMovement(true);
             stateManager.Character.SetHorizontalMovement(true);
             stateManager.Character.SetWeaponControls(true);
@@ -73,8 +73,8 @@ namespace OrkWizard
             {
                 performPlatformClimb = false;
 
-                var sign = stateManager.Character.isFacingLeft ? -1 : 1;
-                var destination = currentHangTarget.GetHangPossition(stateManager.Character.isFacingLeft);
+                var sign = stateManager.Character.IsFacingLeft ? -1 : 1;
+                var destination = currentHangTarget.GetHangPossition(stateManager.Character.IsFacingLeft);
                 var colliderSize = stateManager.Character.GetColliderSize();
                 destination = new Vector2(destination.x + ((colliderSize.x / 2) * sign), destination.y + (colliderSize.y / 2));
                 stateManager.StartCoroutine(ClimbLedge(stateManager, destination));

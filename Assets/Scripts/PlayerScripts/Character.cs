@@ -10,18 +10,17 @@ namespace OrkWizard
     public class Character : MonoBehaviour
     {
         public InputDetection Input { get; private set; }
-        public HorizontalMovement HorizontalMovement { get; private set; }
-        public Jump JumpMovement { get; private set; }
         public PlayerWeaponController WeaponController { get; private set; }
         public AnimatorController Animator { get; private set; }
+        public RigidbodyController rbController { get; private set; }
 
         public bool IsPowerSliding { get; private set; }
 
-        private Rigidbody2D rigidBody;
         private CapsuleCollider2D playerCollider;
         private GameObject currentPlatform;
-        
-        
+        private Jump jumpMovement;
+        public HorizontalMovement horizontalMovement;
+
         [SerializeField]
         private Text horizontalSpeed;
         [SerializeField]
@@ -38,16 +37,10 @@ namespace OrkWizard
         private float distanceToCollider;
 
         [HideInInspector]
-        public bool isFacingLeft;
-
-        [HideInInspector]
-        public bool isJumping;
+        public bool IsFacingLeft { get; private set; }
 
         [HideInInspector]
         public bool isGrounded;
-
-        [HideInInspector]
-        public bool isPlatformHanging;
 
         [SerializeField]
         public PlayerSO playerScriptableObject;
@@ -59,13 +52,13 @@ namespace OrkWizard
 
         protected virtual void Initialization()
         {
-            rigidBody = GetComponent<Rigidbody2D>();
+            rbController = new RigidbodyController(GetComponent<Rigidbody2D>(), this);
             playerCollider = GetComponent<CapsuleCollider2D>();
             Animator = GetComponent<AnimatorController>();
             Input = GetComponent<InputDetection>();
-            HorizontalMovement = GetComponent<HorizontalMovement>();
-            JumpMovement = GetComponent<Jump>();
+            jumpMovement = GetComponent<Jump>();
             WeaponController = GetComponent<PlayerWeaponController>();
+            horizontalMovement = GetComponent<HorizontalMovement>();
         }
 
         private void Update()
@@ -78,11 +71,6 @@ namespace OrkWizard
             Debug.DrawRay(transform.position, Vector2.down *((playerCollider.size.y / 2) + distanceToCollider), Color.green );
         }
 
-        internal void SetGravity(float v)
-        {
-            rigidBody.gravityScale = v;
-        }
-
         internal Vector2 GetColliderSize()
         {
             return playerCollider.size;
@@ -90,8 +78,69 @@ namespace OrkWizard
 
         public virtual void Flip()
         {
-            isFacingLeft = !isFacingLeft;
+            IsFacingLeft = !IsFacingLeft;
             transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
+        }
+
+
+        #region Debug information update
+        internal void UpdateDebugWeapon(string weaponName)
+        {
+            weapon.text = $"Weapon: {weaponName}";
+        }
+
+        public void UpdateDebugSpeed(float x, float y)
+        {
+            horizontalSpeed.text = $"Horizontal speed: {x}";
+            verticalSpeed.text = $"Vertical speed: {y}";
+        }
+        #endregion
+
+        #region Scripts enables 
+        public void CapHorizontalSpeed(float number)
+        {
+            playerScriptableObject.maxSpeed = number;
+        }
+
+        public void SetHorizontalMovement(bool enabled)
+        {
+            horizontalMovement.enabled = enabled;
+        }
+
+        public void SetVerticalMovement(bool enabled)
+        {
+            jumpMovement.enabled = enabled;
+        }
+
+        public void SetWeaponControls(bool enabled)
+        {
+            WeaponController.enabled = enabled;
+        }
+        #endregion
+
+        #region Collider checks
+
+        public bool PowerSliding()
+        {
+            if (currentPlatform != null)
+            {
+                var angle = currentPlatform.GetComponentInParent<PlatformHandler>().GetPlatformAngle();
+                // Currently we have all tillted platform to have 15 or -15 angle.
+                if (Mathf.Abs(angle) == 15)
+                {
+                    if ((angle == 15 && !IsFacingLeft) || (angle == -15 && IsFacingLeft))
+                    {
+                        Flip();
+                    }
+
+                    transform.localEulerAngles = new Vector3(0, 0, angle);
+                    IsPowerSliding = true;
+                    return true;
+                }
+            }
+            IsPowerSliding = false;
+            transform.localEulerAngles = new Vector3(0, 0, 0);
+            return false;
         }
 
         public bool CheckGroundRayCast()
@@ -110,7 +159,7 @@ namespace OrkWizard
 
         public bool WallCheck()
         {
-            var checkSide = isFacingLeft ? Vector2.left : Vector2.right;
+            var checkSide = IsFacingLeft ? Vector2.left : Vector2.right;
             var hit = CollisionCheckRayCast(checkSide, transform.position, (playerCollider.size.x / 2) + distanceToCollider, wallCollistionLayer);
             if (hit)
             {
@@ -119,106 +168,12 @@ namespace OrkWizard
             return false;
         }
 
-        public Vector2 GetCurrentSpeed()
-        {
-            if (rigidBody != null)
-            {
-                return rigidBody.velocity;
-            }
-            return Vector2.zero;
-        }
-
         public RaycastHit2D PlatformSideCheck()
         {
-            var checkSide = isFacingLeft ? Vector2.left : Vector2.right;
+            var checkSide = IsFacingLeft ? Vector2.left : Vector2.right;
             var origin = new Vector2(transform.position.x, transform.position.y + (playerCollider.size.y / 4));
             var hit = CollisionCheckRayCast(checkSide, origin, (playerCollider.size.x / 2) + distanceToCollider, platformCollisionLayer);
             return hit;
-        }
-
-        internal void UpdateDebugWeapon(string weaponName)
-        {
-            weapon.text = $"Weapon: {weaponName}";
-        }
-
-        public bool Falling(float velocity)
-        {
-            if (!isPlatformHanging && (!isGrounded && rigidBody.velocity.y < velocity))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        public bool PowerSliding()
-        {
-            if (currentPlatform != null)
-            {
-                var angle = currentPlatform.GetComponentInParent<PlatformHandler>().GetPlatformAngle();
-                // Currently we have all tillted platform to have 15 or -15 angle.
-                if (Mathf.Abs(angle) == 15)
-                {
-                    if ((angle == 15 && !isFacingLeft) || (angle == -15 && isFacingLeft))
-                    {
-                        Flip();
-                    }
-
-                    transform.localEulerAngles = new Vector3(0, 0, angle);
-                    IsPowerSliding = true;
-                    return true;
-                }
-            }
-            IsPowerSliding = false;
-            transform.localEulerAngles = new Vector3(0, 0, 0);
-            return false;
-        }
-
-        public void UpdateSpeed(float xSpeed, float ySpeed)
-        {
-            rigidBody.velocity = new Vector2(xSpeed, ySpeed);
-            horizontalSpeed.text = $"Horizontal speed: {xSpeed}";
-            verticalSpeed.text = $"Vertical speed: {ySpeed}";
-        }
-
-        public void UpdateXSpeed(float speed)
-        {
-            rigidBody.velocity = new Vector2(speed, rigidBody.velocity.y);
-            horizontalSpeed.text = $"Horizontal speed: {speed}";
-        }
-
-        public void UpdateYSpeed(float speed)
-        {
-            rigidBody.velocity = new Vector2(rigidBody.velocity.x, speed);
-            verticalSpeed.text = $"Vertical speed: {speed}";
-        }
-
-        public void CapHorizontalSpeed(float number)
-        {
-            playerScriptableObject.maxSpeed = number;
-        }
-
-        public void SetHorizontalMovement(bool enabled)
-        {
-            HorizontalMovement.enabled = enabled;
-        }
-
-        public void SetVerticalMovement(bool enabled)
-        {
-            JumpMovement.enabled = enabled;
-        }
-
-        public void SetWeaponControls(bool enabled)
-        {
-            WeaponController.enabled = enabled;
-        }
-
-
-        protected void FallSpeed(float speed)
-        {
-            rigidBody.velocity = new Vector2(rigidBody.velocity.x, rigidBody.velocity.y * speed);
         }
 
         private RaycastHit2D CollisionCheckRayCast(Vector2 direction, Vector2 originPoint, float distance, LayerMask collision)
@@ -227,7 +182,7 @@ namespace OrkWizard
             return hit;
         }
 
-
+        #endregion
     }
 
 }

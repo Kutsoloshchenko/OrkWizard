@@ -63,8 +63,8 @@ namespace OrkWizard
                 stateManager.Character.Animator.ChangeAnimation(_ollie);
 
                 stateManager.Character.Flip();
-                var direction = stateManager.Character.isFacingLeft ? Vector2.left.x : Vector2.right.x;
-                stateManager.Character.UpdateSpeed(direction * stateManager.Character.playerScriptableObject.maxSpeed, stateManager.Character.playerScriptableObject.maxJumpSpeed);
+                var direction = stateManager.Character.IsFacingLeft ? Vector2.left.x : Vector2.right.x;
+                stateManager.Character.rbController.UpdateSpeed(direction * stateManager.Character.playerScriptableObject.maxSpeed, stateManager.Character.playerScriptableObject.maxJumpSpeed);
                 stateManager.Character.SetHorizontalMovement(false);
 
                 needsToWallJump = false;
@@ -76,7 +76,7 @@ namespace OrkWizard
 
                 if (wallJumpCountDown <= 0)
                 {
-                    stateManager.Character.UpdateYSpeed(0);
+                    stateManager.Character.rbController.UpdateYSpeed(0);
                     stateManager.Character.SetHorizontalMovement(true);
                     wallJumpCountDown = 0;
                 }

@@ -12,7 +12,7 @@ namespace OrkWizard
 
         public override void OnEnter(StateManager stateManager)
         {
-            stateManager.Character.Animator.ChangeAnimation(SetAppropriateAnimation(stateManager.Character.HorizontalMovement.CurrentSpeed, stateManager.Character.playerScriptableObject.walkSpeed));
+            stateManager.Character.Animator.ChangeAnimation(SetAppropriateAnimation(stateManager.Character.rbController.GetCurrentSpeed().x, stateManager.Character.playerScriptableObject.walkSpeed));
         }
 
         public override void OnExit(StateManager stateManager)
@@ -23,7 +23,7 @@ namespace OrkWizard
         public override void OnUpdate(StateManager stateManager)
         {
             base.OnUpdate(stateManager);
-            if (stateManager.Character.Input.HorizontalInput == Vector2.zero && stateManager.Character.GetCurrentSpeed().x == 0)
+            if (stateManager.Character.Input.HorizontalInput == Vector2.zero && stateManager.Character.rbController.GetCurrentSpeed().x == 0)
             {
                 stateManager.ChangeState(stateManager.IdleState);
                 return;
@@ -39,7 +39,7 @@ namespace OrkWizard
         public override void OnFixedUpdate(StateManager stateManager)
         {
             base.OnFixedUpdate(stateManager);
-            stateManager.Character.Animator.ChangeAnimation(SetAppropriateAnimation(stateManager.Character.HorizontalMovement.CurrentSpeed, stateManager.Character.playerScriptableObject.walkSpeed));
+            stateManager.Character.Animator.ChangeAnimation(SetAppropriateAnimation(stateManager.Character.rbController.GetCurrentSpeed().x, stateManager.Character.playerScriptableObject.walkSpeed));
         }
 
         private string SetAppropriateAnimation(float speed, float walkSpeed)
