@@ -80,6 +80,7 @@ namespace OrkWizard
         {
             if (CurrentSpeed != 0)
             {
+                var originalDirection = CurrentSpeed > 0 ? 1 : -1;
                 CurrentSpeed = Mathf.Abs(CurrentSpeed);
                 CurrentSpeed -= Time.deltaTime * character.playerScriptableObject.dragMultiplier;
                 if (CurrentSpeed < 0)
@@ -90,7 +91,7 @@ namespace OrkWizard
                     return;
                 }
 
-                CurrentSpeed *= direction;
+                CurrentSpeed *= originalDirection;
             }
         }
 

@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9c2d0a586d4c344c95aaaa69f6966b8, type: 3}
   m_Name: PlayerScriptableObject
   m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 10
   maxSpeed: 50
   originalMaxSpeed: 50
   timeTillMaxSpeed: 3
@@ -30,3 +32,6 @@ MonoBehaviour:
   platformHangTimeOut: 0.3
   platformClimbTime: 0.5
   weaponOffset: 2
+  dmgKnockbackDuration: 0.5
+  dmgKnockbackXForce: 50
+  dmgKnockbackYForce: 9
