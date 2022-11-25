@@ -21,7 +21,15 @@ namespace OrkWizard
             stateManager.Character.CapHorizontalSpeed(stateManager.Character.playerScriptableObject.originalMaxSpeed);
         }
 
+        public override void OnFixedUpdate(StateManager stateManager)
+        {
+            base.OnFixedUpdate(stateManager);
 
+            if (!stateManager.Character.Input.Manual)
+            {
+                stateManager.ChangeState(stateManager.IdleState);
+            }
+        }
 
     }
 }

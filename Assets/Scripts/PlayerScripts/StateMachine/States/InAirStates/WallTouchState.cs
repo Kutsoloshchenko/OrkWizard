@@ -21,6 +21,7 @@ namespace OrkWizard
 
         public override void OnExit(StateManager stateManager)
         {
+            stateManager.Character.SetHorizontalMovement(true);
             return;
         }
 
@@ -28,7 +29,7 @@ namespace OrkWizard
         {
             base.OnUpdate(stateManager);
 
-            if (stateManager.Character.Input.JumpPressed())
+            if (stateManager.Character.Input.JumpPressed() && wallJumpCountDown <= 0)
             {
                 needsToWallJump = true;
                 wallJumpCountDown = stateManager.Character.playerScriptableObject.wallJumpTime;
@@ -49,6 +50,10 @@ namespace OrkWizard
             {
                 stateManager.ChangeState(stateManager.InAirState);
             }
+            else
+            {
+                stateManager.Character.Animator.ChangeAnimation(_wallTouch);
+            }
         }
 
         private void PerformWallKick(StateManager stateManager)
@@ -59,8 +64,9 @@ namespace OrkWizard
 
                 stateManager.Character.Flip();
                 var direction = stateManager.Character.isFacingLeft ? Vector2.left.x : Vector2.right.x;
-                stateManager.Character.UpdateXSpeed(direction * stateManager.Character.playerScriptableObject.maxSpeed);
-                stateManager.Character.UpdateYSpeed(stateManager.Character.playerScriptableObject.maxJumpSpeed);
+                stateManager.Character.UpdateSpeed(direction * stateManager.Character.playerScriptableObject.maxSpeed, stateManager.Character.playerScriptableObject.maxJumpSpeed);
+                stateManager.Character.SetHorizontalMovement(false);
+
                 needsToWallJump = false;
             }
 
@@ -71,6 +77,7 @@ namespace OrkWizard
                 if (wallJumpCountDown <= 0)
                 {
                     stateManager.Character.UpdateYSpeed(0);
+                    stateManager.Character.SetHorizontalMovement(true);
                     wallJumpCountDown = 0;
                 }
             }

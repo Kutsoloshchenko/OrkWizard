@@ -27,6 +27,7 @@ namespace OrkWizard
 
         public override void OnFixedUpdate(StateManager stateManager)
         {
+            stateManager.Character.Animator.SetAttack(stateManager.Character.WeaponController.CurrentWeapon.GetAnimationName());
             return;
         }
 

@@ -23,7 +23,7 @@ namespace OrkWizard
         public override void OnUpdate(StateManager stateManager)
         {
             base.OnUpdate(stateManager);
-            if (stateManager.Character.Input.HorizontalInput == Vector2.zero)
+            if (stateManager.Character.Input.HorizontalInput == Vector2.zero && stateManager.Character.GetCurrentSpeed().x == 0)
             {
                 stateManager.ChangeState(stateManager.IdleState);
                 return;
