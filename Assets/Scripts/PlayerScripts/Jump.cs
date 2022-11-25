@@ -8,11 +8,8 @@ namespace OrkWizard
 {
     public class Jump : Abilities
     {
-        private float wallJumpCountDown;
         private float jumpCountDown;
         private float jumpTime;
-
-        private bool performWallKick;
 
         protected override void Initialization()
         {
@@ -28,22 +25,13 @@ namespace OrkWizard
         private void FixedUpdate()
         {
             ApplyJump();
-            PerformWallKick();
             GroundCheck();
         }
 
         private void CheckForJump()
         {
-            if (input.JumpPressed())
+            if (character.Input.JumpPressed())
             {
-                if (!character.isGrounded && character.WallCheck())
-                {
-                    // Performing Wall kick 
-                    performWallKick = true;
-                    wallJumpCountDown = character.playerScriptableObject.wallJumpTime;
-                    return;
-                }
-
                 // no air jumps
                 if (!character.isGrounded)
                 {
@@ -51,7 +39,7 @@ namespace OrkWizard
                     return;
                 }
 
-                rigidBody.velocity = new Vector2(rigidBody.velocity.x, 0);
+                character.UpdateYSpeed(0);
                 jumpCountDown = character.playerScriptableObject.timeToJump;
                 jumpTime = 0;
                 character.isJumping = true;
@@ -64,15 +52,16 @@ namespace OrkWizard
             {
                 // Jump countdown 
                 jumpTime += Time.deltaTime;
-                var multiplier = Mathf.Abs(rigidBody.velocity.x) >= character.playerScriptableObject.scatingSpeed ? 1 : 0.3f;
+                var speed = character.GetCurrentSpeed();
+                var multiplier = Mathf.Abs(speed.x) >= character.playerScriptableObject.scatingSpeed ? 1 : 0.3f;
                 //Apply initial speed
-                if (rigidBody.velocity.y == 0)
+                if (speed.y == 0)
                 {
-                    rigidBody.velocity = new Vector2(rigidBody.velocity.x, character.playerScriptableObject.initialJumpSpeed * multiplier);
+                    character.UpdateYSpeed(character.playerScriptableObject.initialJumpSpeed * multiplier);
                 }
 
                 // Extend jumping time
-                if (input.JumpBeingPressed && (jumpTime < jumpCountDown + character.playerScriptableObject.buttonHoldTime))
+                if (character.Input.JumpBeingPressed && (jumpTime < jumpCountDown + character.playerScriptableObject.buttonHoldTime))
                 {
                     jumpCountDown += Time.deltaTime;
 
@@ -81,7 +70,7 @@ namespace OrkWizard
                     var currentSpeed = (character.playerScriptableObject.maxJumpSpeed / character.playerScriptableObject.buttonHoldTime) * jumpTime;
                     currentSpeed = Mathf.Clamp(currentSpeed, character.playerScriptableObject.initialJumpSpeed, character.playerScriptableObject.maxJumpSpeed);
 
-                    rigidBody.velocity = new Vector2(rigidBody.velocity.x, currentSpeed);
+                    character.UpdateYSpeed(currentSpeed);
                 }
             }
 
@@ -94,31 +83,7 @@ namespace OrkWizard
                     jumpCountDown = 0;
                     jumpTime = 0;
                     character.isJumping = false;
-                    rigidBody.velocity = new Vector2(rigidBody.velocity.x, 0);
-                }
-            }
-        }
-
-        private void PerformWallKick()
-        {
-            if (performWallKick)
-            {
-                animator.SetWallTouch(false);
-                character.Flip();
-                var direction = character.isFacingLeft ? Vector2.left.x : Vector2.right.x;
-                character.SetHorizontalMovement(false);
-                rigidBody.velocity = new Vector2(direction * character.playerScriptableObject.maxSpeed, character.playerScriptableObject.maxJumpSpeed);
-                performWallKick = false;
-            }
-
-            if (wallJumpCountDown > 0)
-            {
-                wallJumpCountDown -= Time.deltaTime;
-
-                if (wallJumpCountDown <= 0)
-                {
-                    character.SetHorizontalMovement(true);
-                    rigidBody.velocity = new Vector2(rigidBody.velocity.x, 0);
+                    character.UpdateYSpeed(0);
                 }
             }
         }
@@ -128,23 +93,18 @@ namespace OrkWizard
             if (character.CheckGroundRayCast() && !character.isJumping)
             {
                 character.isGrounded = true;
-                animator.SetGrounded(true);
             }
             else
             {
                 if (character.Falling(0))
                 {
-                    var newVelocity = rigidBody.velocity.y + Physics2D.gravity.y * 1.5f * Time.deltaTime;
-                    newVelocity = rigidBody.velocity.y > character.playerScriptableObject.maxFallSpeed ? character.playerScriptableObject.maxFallSpeed : rigidBody.velocity.y;
-
-                    rigidBody.velocity = new Vector2(rigidBody.velocity.x, newVelocity);
+                    var ySpeed = character.GetCurrentSpeed().y;
+                    var newVelocity = ySpeed + Physics2D.gravity.y * 1.5f * Time.deltaTime;
+                    newVelocity = ySpeed > character.playerScriptableObject.maxFallSpeed ? character.playerScriptableObject.maxFallSpeed : ySpeed;
+                    character.UpdateYSpeed(newVelocity);
                 }
                 character.isGrounded = false;
-                animator.SetGrounded(false);
             }
-
-            character.UpdateDebugSpeed(rigidBody.velocity.y, true);
-            animator.SetVerticalSpeedValue(rigidBody.velocity.y);
         }
     }
 }

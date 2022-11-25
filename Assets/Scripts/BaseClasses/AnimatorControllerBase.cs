@@ -22,7 +22,7 @@ namespace OrkWizard
             animator = GetComponent<Animator>();
         }
 
-        protected void ChangeState(string state)
+        public void ChangeAnimation(string state)
         {
             if (currentAnimationName != state)
             {

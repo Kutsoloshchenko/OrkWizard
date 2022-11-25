@@ -17,11 +17,12 @@ MonoBehaviour:
   timeTillMaxSpeed: 3
   walkSpeed: 10
   manualSpeedMultiplier: 0.75
+  powerSlideSpeedMultiplier: 1.5
   dragMultiplier: 15
   buttonHoldTime: 0.1
   maxJumpSpeed: 40
   initialJumpSpeed: 20
-  maxFallSpeed: -35
+  maxFallSpeed: -45
   scatingSpeed: 10
   timeTillJumpSpeed: 0.25
   timeToJump: 0.2
