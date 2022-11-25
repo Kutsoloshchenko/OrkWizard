@@ -23,7 +23,7 @@ namespace OrkWizard
                 {
                     stateManager.ChangeState(stateManager.PowerSlide);
                 }
-                else if (stateManager.Character.HorizontalMovement.CurrentSpeed != 0)
+                else if (stateManager.Character.rbController.GetCurrentSpeed().x != 0)
                 {
                     stateManager.ChangeState(stateManager.MovingState);
                 }

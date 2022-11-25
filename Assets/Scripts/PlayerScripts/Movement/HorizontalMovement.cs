@@ -17,7 +17,10 @@ namespace OrkWizard
 
         private void OnEnable()
         {
-            CurrentSpeed = character.GetCurrentSpeed().x;
+            if (character.rbController != null)
+            {
+                CurrentSpeed = character.rbController.GetCurrentSpeed().x;
+            }
         }
 
         protected override void Initialization()
@@ -32,7 +35,7 @@ namespace OrkWizard
 
         private void Move()
         {
-            var direction = character.isFacingLeft ? -1 : 1;
+            var direction = character.IsFacingLeft ? -1 : 1;
             MoveVertically(direction);
 
             if (character.WallCheck() || character.PlatformSideCheck())
@@ -40,7 +43,7 @@ namespace OrkWizard
                 CurrentSpeed = 0.1f * direction;
             }
 
-            character.UpdateXSpeed(CurrentSpeed);
+            character.rbController.UpdateXSpeed(CurrentSpeed);
         }
 
         private void MoveVertically(int direction)
@@ -93,8 +96,8 @@ namespace OrkWizard
 
         private void CheckDirection()
         {
-            if ((CurrentSpeed < 0 && !character.isFacingLeft) ||
-                 CurrentSpeed > 0 && character.isFacingLeft)
+            if ((CurrentSpeed < 0 && !character.IsFacingLeft) ||
+                 CurrentSpeed > 0 && character.IsFacingLeft)
             {
                 runTime = character.playerScriptableObject.timeTillMaxSpeed / 2;
                 character.Flip();

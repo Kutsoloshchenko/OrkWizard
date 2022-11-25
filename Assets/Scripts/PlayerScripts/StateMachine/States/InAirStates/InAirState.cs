@@ -12,7 +12,7 @@ namespace OrkWizard
 
         public override void OnEnter(StateManager stateManager)
         {
-            stateManager.Character.Animator.ChangeAnimation(InAirAnimation(stateManager.Character.GetCurrentSpeed().y));
+            stateManager.Character.Animator.ChangeAnimation(InAirAnimation(stateManager.Character.rbController.GetCurrentSpeed().y));
         }
 
         public override void OnExit(StateManager stateManager)
@@ -36,7 +36,7 @@ namespace OrkWizard
                 return;
             }
 
-            stateManager.Character.Animator.ChangeAnimation(InAirAnimation(stateManager.Character.GetCurrentSpeed().y));
+            stateManager.Character.Animator.ChangeAnimation(InAirAnimation(stateManager.Character.rbController.GetCurrentSpeed().y));
         }
 
         private string InAirAnimation(float verticalSpeed)
