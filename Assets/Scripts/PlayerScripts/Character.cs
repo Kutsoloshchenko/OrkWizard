@@ -176,6 +176,13 @@ namespace OrkWizard
             return false;
         }
 
+        public void UpdateSpeed(float xSpeed, float ySpeed)
+        {
+            rigidBody.velocity = new Vector2(xSpeed, ySpeed);
+            horizontalSpeed.text = $"Horizontal speed: {xSpeed}";
+            verticalSpeed.text = $"Vertical speed: {ySpeed}";
+        }
+
         public void UpdateXSpeed(float speed)
         {
             rigidBody.velocity = new Vector2(speed, rigidBody.velocity.y);

@@ -11,7 +11,7 @@ namespace OrkWizard
     {
         public virtual void OnUpdate(StateManager stateManager)
         {
-            if (stateManager.Character.Input.AttackBeingPressed)
+            if (stateManager.Character.Input.AttackBeingPressed && stateManager.Character.WeaponController.CurrentWeapon.CanAttack())
             {
                 if (stateManager.Character.WeaponController.CurrentWeapon.IsThroable())
                 {
