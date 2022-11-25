@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fde876d356633f84c93afb368d3e6a5f, type: 3}
   m_Name: SpikeTrap
   m_EditorClassIdentifier: 
-  damage: 10
+  dmgType: 0
+  damage: 500
   trigeredByPlayer: 1
   dealDmgOnlyToPlayer: 1
   dmgCooldown: 2
   downTime: 0
   activeTime: 2
+  dmgOverTime: 0

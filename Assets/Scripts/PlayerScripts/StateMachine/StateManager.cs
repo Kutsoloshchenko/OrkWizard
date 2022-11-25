@@ -31,6 +31,13 @@ namespace OrkWizard
         public IState SpreaderState { get; private set; } = new SpreaderAttackingState();
         #endregion
 
+        #region DmgRecivedState
+
+        public IState DmgKnockbackState { get; private set; } = new DmgKnockbackState();
+        public IState DyingState { get; private set; } = new DyingState();
+
+        #endregion
+
         public Character Character { get; private set; }
 
         public void ChangeState(IState state)

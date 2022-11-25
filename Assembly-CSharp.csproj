@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\AttackingState\AttackSuperState.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\PowerSlideState.cs" />
     <Compile Include="Assets\Scripts\WeaponScripts\ThroableWeapon.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\Movement\HorizontalMovement.cs" />
     <Compile Include="Assets\Scripts\WeaponScripts\Projectiles\ProjectileController.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IState.cs" />
     <Compile Include="Assets\Scripts\WeaponScripts\SpreadWeapon.cs" />
@@ -83,6 +84,7 @@
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\StateManager.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\GroundedSuperState.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\PlatfromScripts\MovingPlatform.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\Movement\Jump.cs" />
     <Compile Include="Assets\Scripts\WeaponScripts\WeaponBase.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\Character.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\ManualState.cs" />
@@ -99,10 +101,10 @@
     <Compile Include="Assets\Scripts\ScriptableObjects\TrapSO.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\MovingState.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\Abilities.cs" />
-    <Compile Include="Assets\Scripts\EnvScripts\TrapScripts\TrapActivator.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\Movement\HorizontalMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\RigidbodyController.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\Movement\Jump.cs" />
+    <Compile Include="Assets\Scripts\EnvScripts\TrapScripts\TrapActivator.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\DmgRecivedState\DmgKnockbackState.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\DmgRecivedState\DyingState.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -48,11 +48,9 @@ namespace OrkWizard
             UpdateSpeed(rigidbody.velocity.x, speed);
         }
 
-
-
-
-
-
-
+        internal void ApplyForce(Vector2 force)
+        {
+            rigidbody.AddForce(force, ForceMode2D.Impulse);
+        }
     }
 }
