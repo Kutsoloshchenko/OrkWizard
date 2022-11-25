@@ -6,15 +6,18 @@ namespace OrkWizard
 {
     public class HorizontalMovement : Abilities
     {
-        private float currentSpeed;
+        public float CurrentSpeed { get; private set; }
         private float runTime;
 
         private void OnDisable()
         {
-            currentSpeed = 0;
+            CurrentSpeed = 0;
             runTime = 0;
-            animator.SetHorizontalSpeedValue(currentSpeed);
-            animator.SetMoving(false);
+        }
+
+        private void OnEnable()
+        {
+            CurrentSpeed = character.GetCurrentSpeed().x;
         }
 
         protected override void Initialization()
@@ -30,42 +33,25 @@ namespace OrkWizard
         private void Move()
         {
             var direction = character.isFacingLeft ? -1 : 1;
-            if (character.PowerSliding())
-            {
-                PowerSlide(direction);
-            }
-            else
-            {
-                animator.SetPowerSlide(false);
-                MoveVertically(direction);
-            }
+            MoveVertically(direction);
 
             if (character.WallCheck() || character.PlatformSideCheck())
             {
-                currentSpeed = 0.1f * direction;
+                CurrentSpeed = 0.1f * direction;
             }
 
-
-            character.UpdateDebugSpeed(currentSpeed, false);
-            rigidBody.velocity = new Vector2(currentSpeed, rigidBody.velocity.y);
-            animator.SetHorizontalSpeedValue(currentSpeed);
-        }
-
-        private void PowerSlide(int direction)
-        {
-            currentSpeed =  character.playerScriptableObject.maxSpeed * 1.5f * direction;
-            animator.SetPowerSlide(true);
+            character.UpdateXSpeed(CurrentSpeed);
         }
 
         private void MoveVertically(int direction)
         {
-            var horizontalMovement = input.HorizontalInput.x;
+            var horizontalMovement = character.Input.HorizontalInput.x;
 
-            if (horizontalMovement != 0 && Mathf.Abs(currentSpeed) <= character.playerScriptableObject.maxSpeed)
+            if (horizontalMovement != 0 && Mathf.Abs(CurrentSpeed) <= character.playerScriptableObject.maxSpeed)
             {
                 CalculateSpeed(horizontalMovement);
                 CheckDirection();
-                animator.SetMoving(true);
+                character.Animator.SetMoving(true);
             }
             else
             {
@@ -76,42 +62,39 @@ namespace OrkWizard
         private void CalculateSpeed(float horizontalMovement)
         {
             runTime += Time.deltaTime;
-            currentSpeed = (character.playerScriptableObject.maxSpeed / character.playerScriptableObject.timeTillMaxSpeed) * runTime;
+            CurrentSpeed = (character.playerScriptableObject.maxSpeed / character.playerScriptableObject.timeTillMaxSpeed) * runTime;
 
-            if (currentSpeed > character.playerScriptableObject.maxSpeed)
+            if (CurrentSpeed > character.playerScriptableObject.maxSpeed)
             {
-                currentSpeed = character.playerScriptableObject.maxSpeed;
+                CurrentSpeed = character.playerScriptableObject.maxSpeed;
             }
 
             ApplySpeedMultiplier();
-            currentSpeed *= horizontalMovement;
+            CurrentSpeed *= horizontalMovement;
         }
 
         private void CalculateDrag(int direction)
         {
-            if (currentSpeed != 0)
+            if (CurrentSpeed != 0)
             {
-                currentSpeed = Mathf.Abs(currentSpeed);
-                if (currentSpeed > 0)
+                CurrentSpeed = Mathf.Abs(CurrentSpeed);
+                CurrentSpeed -= Time.deltaTime * character.playerScriptableObject.dragMultiplier;
+                if (CurrentSpeed < 0)
                 {
-                    currentSpeed -= Time.deltaTime * character.playerScriptableObject.dragMultiplier;
-                    if (currentSpeed < 0)
-                    {
-                        currentSpeed = 0;
-                        animator.SetMoving(false);
-                        runTime = 0;
-                        return;
-                    }
-
-                    currentSpeed *= direction;
+                    CurrentSpeed = 0;
+                    character.Animator.SetMoving(false);
+                    runTime = 0;
+                    return;
                 }
-            } 
+
+                CurrentSpeed *= direction;
+            }
         }
 
         private void CheckDirection()
         {
-            if ((currentSpeed < 0 && !character.isFacingLeft) ||
-                 currentSpeed > 0 && character.isFacingLeft)
+            if ((CurrentSpeed < 0 && !character.isFacingLeft) ||
+                 CurrentSpeed > 0 && character.isFacingLeft)
             {
                 runTime = character.playerScriptableObject.timeTillMaxSpeed / 2;
                 character.Flip();
@@ -120,22 +103,21 @@ namespace OrkWizard
 
         private void ApplySpeedMultiplier()
         {
-            if (input.Walk)
+            if (character.Input.Walk)
             {
-                currentSpeed = character.playerScriptableObject.walkSpeed;
+                CurrentSpeed = character.playerScriptableObject.walkSpeed;
                 return;
             }
 
-
-            if (input.Manual)
-            {
-                currentSpeed *= character.playerScriptableObject.manualSpeedMultiplier;
-                animator.SetManual(true);
-            }
-            else
-            {
-                animator.SetManual(false);
-            }
+            //if (input.Manual)
+            //{
+            //    CurrentSpeed *= character.playerScriptableObject.manualSpeedMultiplier;
+            //    animator.SetManual(true);
+            //}
+            //else
+            //{
+            //    animator.SetManual(false);
+            //}
         }
     }
 

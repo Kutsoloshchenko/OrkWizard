@@ -13,15 +13,15 @@ namespace OrkWizard
         private bool needsToSwitchWeapons;
 
         private bool isAttacking;
-        private bool attackHeld;
 
         [SerializeField]
         private GameObject[] playerWeaponsInitialObjects;
 
         // This would be the list of weapons that we get from gameObjects passed by unity editor
         private List<IPlayerWeapon> playerWeapons = new List<IPlayerWeapon>();
-
         private int currentWeaponIndex = 0;
+
+        public IPlayerWeapon CurrentWeapon { get { return playerWeapons[currentWeaponIndex]; } }
 
         protected override void Initialization()
         {
@@ -40,14 +40,13 @@ namespace OrkWizard
 
             // We dont need to store this anymore, right
             playerWeaponsInitialObjects = null;
+
             character.UpdateDebugWeapon(playerWeapons[currentWeaponIndex].GetAnimationName());
         }
 
         private void Update()
         {
-            attackHeld = input.AttackBeingPressed;
-
-            if (input.SwitchWeaponPressed() && !isAttacking)
+            if (character.Input.SwitchWeaponPressed() && !isAttacking)
             {
                 needsToSwitchWeapons = true;
             }
@@ -55,54 +54,7 @@ namespace OrkWizard
 
         private void FixedUpdate()
         {
-            Attack();
             SwitchWeapons();
-        }
-
-        private void Attack()
-        {
-            if (attackHeld)
-            {
-                // need to check if we are attacking already
-                if (!isAttacking)
-                {
-                    LaunchAtack();
-                }
-
-                // Nothing needs to be done in this case
-                return;
-            }
-            else
-            {
-                // We are attacking already - we need to stop spreader weapon
-                if (isAttacking && !playerWeapons[currentWeaponIndex].IsThroable())
-                {
-                    isAttacking = false;
-                    animator.SetAttack(playerWeapons[currentWeaponIndex].GetAnimationName(), false);
-                    character.CapHorizontalSpeed(character.playerScriptableObject.originalMaxSpeed);
-                    playerWeapons[currentWeaponIndex].DisableNewAttacks();
-                }
-            }
-        }
-
-        private void LaunchAtack()
-        {
-            if (currentWeaponIndex >= 0 && playerWeapons[currentWeaponIndex].CanAttack())
-            {
-                if (playerWeapons[currentWeaponIndex].IsThroable())
-                {
-                    StartCoroutine(AtackCourutine());
-                }
-                else
-                {
-                    isAttacking = true;
-                    character.CapHorizontalSpeed(playerWeapons[currentWeaponIndex].GetMaxHorizontalSpeed());
-                    animator.SetAttack(playerWeapons[currentWeaponIndex].GetAnimationName(), true);
-                    var direction = character.isFacingLeft ? Vector2.left : Vector2.right;
-                    var possition = FindStartLocation(direction);
-                    playerWeapons[currentWeaponIndex].Attack(possition, direction, new Vector2(rigidBody.velocity.x, 0));
-                }
-            }
         }
 
         private void SwitchWeapons()
@@ -124,27 +76,10 @@ namespace OrkWizard
             }
         }
 
-        private Vector2 FindStartLocation(Vector2 direction)
+        public void SetAttacking(bool value)
         {
-            var weaponOffsetX = playerWeapons[currentWeaponIndex].GetWeaponOffsetX();
-            var weaponOffsetY = playerWeapons[currentWeaponIndex].GetWeaponOffsetY();
-
-            float x = gameObject.transform.position.x + (playerCollider.size.x * 0.5f + weaponOffsetX) * direction.x;
-            float y = gameObject.transform.position.y + weaponOffsetY;
-
-            return new Vector2(x, y);
+            isAttacking = value;
         }
 
-        private IEnumerator AtackCourutine()
-        {
-            isAttacking = true;
-            animator.SetAttack(playerWeapons[currentWeaponIndex].GetAnimationName(), true);
-            yield return new WaitForSeconds(playerWeapons[currentWeaponIndex].GetAnimationLength());
-            animator.SetAttack(playerWeapons[currentWeaponIndex].GetAnimationName(), false);
-            var direction = character.isFacingLeft ? Vector2.left : Vector2.right;
-            var startingPossition = FindStartLocation(direction);
-            playerWeapons[currentWeaponIndex].Attack(startingPossition, direction, new Vector2(rigidBody.velocity.x, 0));
-            isAttacking = false;
-        }
     }
 }

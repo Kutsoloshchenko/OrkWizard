@@ -72,7 +72,7 @@ namespace OrkWizard
 
             transform.rotation = Quaternion.identity;
 
-            ChangeState(projectileSO.name + _explosionPostfix);
+            ChangeAnimation(projectileSO.name + _explosionPostfix);
 
             yield return new WaitForSeconds(projectileSO.explosionAnimationClip.length);
 
