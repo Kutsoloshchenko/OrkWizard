@@ -12,7 +12,7 @@ namespace OrkWizard
         public abstract void OnEnter(StateManager stateManager);
         public abstract void OnExit(StateManager stateManager);
 
-        public override void OnFixedUpdate(StateManager stateManager)
+        public virtual void OnFixedUpdate(StateManager stateManager)
         {
             if (!stateManager.Character.CheckGroundRayCast())
             {

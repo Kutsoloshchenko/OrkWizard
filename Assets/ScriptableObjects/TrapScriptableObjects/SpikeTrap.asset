@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SpikeTrap
   m_EditorClassIdentifier: 
   dmgType: 0
-  damage: 500
+  damage: 10
   trigeredByPlayer: 1
   dealDmgOnlyToPlayer: 1
   dmgCooldown: 2

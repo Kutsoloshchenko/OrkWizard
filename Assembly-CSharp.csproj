@@ -63,7 +63,6 @@
     <Compile Include="Assets\Scripts\Enums\Enums.cs" />
     <Compile Include="Assets\Scripts\BaseClasses\AnimatorControllerBase.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\AttackingState\SpreaderAttackingState.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\PlayerSO.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\MovingPlatformSO.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\WeaponScripts\PlayerWeaponController.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\AttackingState\AttackSuperState.cs" />
@@ -90,8 +89,10 @@
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\ManualState.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\IdleState.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IHange.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\DmgRecivedState\DmgKnockbackState.cs" />
     <Compile Include="Assets\Scripts\InputDetection\InputDetection.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\AnimatorController.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\DmgRecivedState\DyingState.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\PlatfromScripts\PlatformHandler.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\InAirStates\InAirSuperState.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\TrapScripts\TrapManager.cs" />
@@ -103,8 +104,9 @@
     <Compile Include="Assets\Scripts\PlayerScripts\Abilities.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\RigidbodyController.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\TrapScripts\TrapActivator.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\DmgRecivedState\DmgKnockbackState.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\DmgRecivedState\DyingState.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\PlayerHealthManager.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\PlayerSO\PlayerHealthSO.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\PlayerSO\PlayerSO.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

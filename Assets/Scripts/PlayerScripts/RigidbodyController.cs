@@ -48,9 +48,16 @@ namespace OrkWizard
             UpdateSpeed(rigidbody.velocity.x, speed);
         }
 
-        internal void ApplyForce(Vector2 force)
+        public void ApplyForce(Vector2 force)
         {
             rigidbody.AddForce(force, ForceMode2D.Impulse);
+        }
+
+        public void ApplyKnockBackForce()
+        {
+            var direction = character.IsFacingLeft ? 1 : -1;
+            Vector2 force = new Vector2(character.playerScriptableObject.dmgKnockbackXForce * direction, character.playerScriptableObject.dmgKnockbackYForce);
+            ApplyForce(force);
         }
     }
 }

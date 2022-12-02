@@ -24,13 +24,5 @@ namespace OrkWizard
                 return;
             }
         }
-
-        public virtual void OnFixedUpdate(StateManager stateManager)
-        {
-            if (stateManager.Character.RecivedOneTimeDmg)
-            {
-                
-            }
-        }
     }
 }
