@@ -17,6 +17,7 @@ namespace OrkWizard
         public float dmgCooldown;
         public float downTime;
         public float activeTime;
+        public int ticksAfterStop;
         public bool dmgOverTime;
     }
 }

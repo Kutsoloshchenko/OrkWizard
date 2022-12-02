@@ -24,7 +24,7 @@ namespace OrkWizard
         public override void OnUpdate(StateManager stateManager)
         {
             base.OnUpdate(stateManager);
-            if (stateManager.Character.GetCurrentSpeed().x != 0)
+            if (stateManager.Character.rbController.GetCurrentSpeed().x != 0)
             {
                  stateManager.ChangeState(stateManager.MovingState);
             }

@@ -13,9 +13,10 @@ namespace OrkWizard
         {
             stateManager.Character.WeaponController.SetAttacking(true);
             stateManager.Character.Animator.SetAttack(stateManager.Character.WeaponController.CurrentWeapon.GetAnimationName());
-            var direction = stateManager.Character.isFacingLeft ? Vector2.left : Vector2.right;
+            stateManager.Character.CapHorizontalSpeed(stateManager.Character.WeaponController.CurrentWeapon.GetMaxHorizontalSpeed());
+            var direction = stateManager.Character.IsFacingLeft ? Vector2.left : Vector2.right;
             var possition = FindStartLocation(stateManager, direction);
-            stateManager.Character.WeaponController.CurrentWeapon.Attack(possition, direction, new Vector2(stateManager.Character.GetCurrentSpeed().x, 0));
+            stateManager.Character.WeaponController.CurrentWeapon.Attack(possition, direction, new Vector2(stateManager.Character.rbController.GetCurrentSpeed().x, 0));
         }
 
         public override void OnExit(StateManager stateManager)

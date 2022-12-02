@@ -36,9 +36,9 @@ namespace OrkWizard
             stateManager.Character.Animator.SetAttack(stateManager.Character.WeaponController.CurrentWeapon.GetAnimationName());
             yield return new WaitForSeconds(stateManager.Character.WeaponController.CurrentWeapon.GetAnimationLength());
 
-            var direction = stateManager.Character.isFacingLeft ? Vector2.left : Vector2.right;
+            var direction = stateManager.Character.IsFacingLeft ? Vector2.left : Vector2.right;
             var startingPossition = FindStartLocation(stateManager, direction);
-            stateManager.Character.WeaponController.CurrentWeapon.Attack(startingPossition, direction, new Vector2(stateManager.Character.GetCurrentSpeed().x, 0));
+            stateManager.Character.WeaponController.CurrentWeapon.Attack(startingPossition, direction, new Vector2(stateManager.Character.rbController.GetCurrentSpeed().x, 0));
 
             HandleChangeState(stateManager);
         }        

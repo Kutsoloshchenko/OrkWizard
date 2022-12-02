@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9c2d0a586d4c344c95aaaa69f6966b8, type: 3}
-  m_Name: PlayerScriptableObject
+  m_Script: {fileID: 11500000, guid: 957f314cf9ca5784389e75f0e9237976, type: 3}
+  m_Name: PlayerScriptableObject 1
   m_EditorClassIdentifier: 
   maxSpeed: 50
   originalMaxSpeed: 50
@@ -18,15 +18,19 @@ MonoBehaviour:
   walkSpeed: 10
   manualSpeedMultiplier: 0.75
   powerSlideSpeedMultiplier: 1.5
-  dragMultiplier: 15
-  buttonHoldTime: 0.1
+  dragMultiplier: 10
+  buttonHoldTime: 0.5
   maxJumpSpeed: 40
   initialJumpSpeed: 20
-  maxFallSpeed: -45
+  maxFallSpeed: -35
   scatingSpeed: 10
-  timeTillJumpSpeed: 0.25
-  timeToJump: 0.2
+  timeTillJumpSpeed: 0.5
+  timeToJump: 0.1
   wallJumpTime: 0.5
   platformHangTimeOut: 0.3
   platformClimbTime: 0.5
   weaponOffset: 2
+  dmgKnockbackDuration: 0.5
+  dmgKnockbackXForce: 50
+  dmgKnockbackYForce: 12
+  flickerFrequency: 0.4

@@ -10,6 +10,8 @@ namespace OrkWizard
     {
         private float jumpCountDown;
         private float jumpTime;
+        private bool isJumping;
+        private bool isGrounded;
 
         protected override void Initialization()
         {
@@ -35,29 +37,29 @@ namespace OrkWizard
                 // no air jumps
                 if (!character.isGrounded)
                 {
-                    character.isJumping = false;
+                    isJumping = false;
                     return;
                 }
 
-                character.UpdateYSpeed(0);
+                character.rbController.UpdateYSpeed(0);
                 jumpCountDown = character.playerScriptableObject.timeToJump;
                 jumpTime = 0;
-                character.isJumping = true;
+                isJumping = true;
             }
         }
 
         private void ApplyJump()
         {
-            if (character.isJumping)
+            if (isJumping)
             {
                 // Jump countdown 
                 jumpTime += Time.deltaTime;
-                var speed = character.GetCurrentSpeed();
+                var speed = character.rbController.GetCurrentSpeed();
                 var multiplier = Mathf.Abs(speed.x) >= character.playerScriptableObject.scatingSpeed ? 1 : 0.3f;
                 //Apply initial speed
                 if (speed.y == 0)
                 {
-                    character.UpdateYSpeed(character.playerScriptableObject.initialJumpSpeed * multiplier);
+                    character.rbController.UpdateYSpeed(character.playerScriptableObject.initialJumpSpeed * multiplier);
                 }
 
                 // Extend jumping time
@@ -70,7 +72,7 @@ namespace OrkWizard
                     var currentSpeed = (character.playerScriptableObject.maxJumpSpeed / character.playerScriptableObject.buttonHoldTime) * jumpTime;
                     currentSpeed = Mathf.Clamp(currentSpeed, character.playerScriptableObject.initialJumpSpeed, character.playerScriptableObject.maxJumpSpeed);
 
-                    character.UpdateYSpeed(currentSpeed);
+                    character.rbController.UpdateYSpeed(currentSpeed);
                 }
             }
 
@@ -82,26 +84,26 @@ namespace OrkWizard
                 {
                     jumpCountDown = 0;
                     jumpTime = 0;
-                    character.isJumping = false;
-                    character.UpdateYSpeed(0);
+                    isJumping = false;
+                    character.rbController.UpdateYSpeed(0);
                 }
             }
         }
 
         private void GroundCheck()
         {
-            if (character.CheckGroundRayCast() && !character.isJumping)
+            if (character.CheckGroundRayCast() && !isJumping)
             {
                 character.isGrounded = true;
             }
             else
             {
-                if (character.Falling(0))
+                var ySpeed = character.rbController.GetCurrentSpeed().y;
+                if (ySpeed < 0)
                 {
-                    var ySpeed = character.GetCurrentSpeed().y;
                     var newVelocity = ySpeed + Physics2D.gravity.y * 1.5f * Time.deltaTime;
                     newVelocity = ySpeed > character.playerScriptableObject.maxFallSpeed ? character.playerScriptableObject.maxFallSpeed : ySpeed;
-                    character.UpdateYSpeed(newVelocity);
+                    character.rbController.UpdateYSpeed(newVelocity);
                 }
                 character.isGrounded = false;
             }

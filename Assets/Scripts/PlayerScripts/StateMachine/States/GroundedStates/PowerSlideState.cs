@@ -45,9 +45,9 @@ namespace OrkWizard
 
         private void PowerSlide(StateManager stateManager)
         {
-            var direction = stateManager.Character.isFacingLeft ? -1 : 1;
+            var direction = stateManager.Character.IsFacingLeft ? -1 : 1;
             var currentSpeed = stateManager.Character.playerScriptableObject.maxSpeed * stateManager.Character.playerScriptableObject.powerSlideSpeedMultiplier * direction;
-            stateManager.Character.UpdateXSpeed(currentSpeed);
+            stateManager.Character.rbController.UpdateXSpeed(currentSpeed);
         }
     }
 }

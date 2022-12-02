@@ -86,7 +86,7 @@ namespace OrkWizard
             var dmgApplyer = collision.gameObject.GetComponent<IDamagable>();
             if (dmgApplyer != null && trapSO.dmgOverTime)
             {
-                dmgApplyer.StopTickDmg();
+                dmgApplyer.StopTickDmg(trapSO.ticksAfterStop);
             }
         }
     }

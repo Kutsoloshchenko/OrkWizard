@@ -6,7 +6,7 @@ namespace OrkWizard
     public class PlayerSO : ScriptableObject
     {
 
-        // How do i make it serializeble but still a private set?
+        // Maybe we change this to multiple SO?
 
         [Header("Horizontal Movement")]
         public float maxSpeed = 50;
@@ -31,6 +31,13 @@ namespace OrkWizard
         public float platformHangTimeOut = 0.3f;
         public float platformClimbTime = 0.5f;
 
+        [Header("Weapons")]
         public float weaponOffset = 2f;
+
+        [Header("Dmg receiver")]
+        public float dmgKnockbackDuration = 0.5f;
+        public float dmgKnockbackXForce = 10;
+        public float dmgKnockbackYForce = 7;
+        public float flickerFrequency = 0.2f;
     }
 }
