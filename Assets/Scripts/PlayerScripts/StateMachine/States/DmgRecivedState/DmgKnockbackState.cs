@@ -19,6 +19,7 @@ namespace OrkWizard
             stateManager.Character.SetHorizontalMovement(false);
             stateManager.Character.SetVerticalMovement(false);
             stateManager.Character.SetWeaponControls(false);
+            stateManager.Character.SetRecivedDmg(true);
         }
 
         public void OnExit(StateManager stateManager)
@@ -27,7 +28,7 @@ namespace OrkWizard
             stateManager.Character.SetHorizontalMovement(true);
             stateManager.Character.SetVerticalMovement(true);
             stateManager.Character.SetWeaponControls(true);
-            stateManager.Character.RecivedOneTimeDmg = false;
+            stateManager.Character.SetRecivedDmg(false);
         }
 
         public void OnFixedUpdate(StateManager stateManager)

@@ -8,10 +8,6 @@ namespace OrkWizard
 
         // Maybe we change this to multiple SO?
 
-        [Header("Player Stats")]
-        public float maxHealth = 100;
-        public float currentHealth;
-
         [Header("Horizontal Movement")]
         public float maxSpeed = 50;
         public float originalMaxSpeed = 50;
@@ -42,5 +38,6 @@ namespace OrkWizard
         public float dmgKnockbackDuration = 0.5f;
         public float dmgKnockbackXForce = 10;
         public float dmgKnockbackYForce = 7;
+        public float flickerFrequency = 0.2f;
     }
 }

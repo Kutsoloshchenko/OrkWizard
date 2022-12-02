@@ -11,6 +11,6 @@ namespace OrkWizard
         void ApplyDmg(float dmg);
         void ApplyDmg(float dmg, DamageType type);
         void ApplyDmg(float dmg, DamageType type, float tickTime);
-        void StopTickDmg();
+        void StopTickDmg(int ticksAfterStop = 0);
     }
 }

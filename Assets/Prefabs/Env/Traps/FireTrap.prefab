@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7432030953380658639}
   - component: {fileID: 7432030953380658638}
   - component: {fileID: 7432030953380658625}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FireTrap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,6 +107,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

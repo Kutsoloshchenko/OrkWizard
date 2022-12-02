@@ -7,23 +7,20 @@ using UnityEngine.SceneManagement;
 
 namespace OrkWizard
 {
-    public class Character : MonoBehaviour, IDamagable
+    public class Character : MonoBehaviour
     {
         public InputDetection Input { get; private set; }
         public PlayerWeaponController WeaponController { get; private set; }
         public AnimatorController Animator { get; private set; }
         public RigidbodyController rbController { get; private set; }
 
-
         public bool IsPowerSliding { get; private set; }
+        public bool RecivedOneTimeDmg { get; private set; }
 
         private CapsuleCollider2D playerCollider;
         private GameObject currentPlatform;
         private Jump jumpMovement;
         private HorizontalMovement horizontalMovement;
-        private StateManager stateManager;
-
-        private bool applyDmgFromTick = false;
 
         [SerializeField]
         private Text horizontalSpeed;
@@ -33,7 +30,6 @@ namespace OrkWizard
         private Text weapon;
         [SerializeField]
         private Text hp;
-
 
         [SerializeField]
         private LayerMask platformCollisionLayer;
@@ -49,9 +45,6 @@ namespace OrkWizard
         [HideInInspector]
         public bool isGrounded;
 
-        [HideInInspector]
-        public bool RecivedOneTimeDmg { get; set; }
-
         [SerializeField]
         public PlayerSO playerScriptableObject;
 
@@ -62,9 +55,6 @@ namespace OrkWizard
 
         protected virtual void Initialization()
         {
-
-            playerScriptableObject.currentHealth = playerScriptableObject.maxHealth;
-
             rbController = new RigidbodyController(GetComponent<Rigidbody2D>(), this);
             playerCollider = GetComponent<CapsuleCollider2D>();
             Animator = GetComponent<AnimatorController>();
@@ -72,7 +62,6 @@ namespace OrkWizard
             jumpMovement = GetComponent<Jump>();
             WeaponController = GetComponent<PlayerWeaponController>();
             horizontalMovement = GetComponent<HorizontalMovement>();
-            stateManager = GetComponent<StateManager>();
         }
 
         private void Update()
@@ -83,11 +72,9 @@ namespace OrkWizard
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
             Debug.DrawRay(transform.position, Vector2.down * ((playerCollider.size.y / 2) + distanceToCollider), Color.green);
-
-            UpdateHp(playerScriptableObject.currentHealth);
         }
 
-        internal Vector2 GetColliderSize()
+        public Vector2 GetColliderSize()
         {
             return playerCollider.size;
         }
@@ -98,14 +85,19 @@ namespace OrkWizard
             transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
         }
 
+        public void SetRecivedDmg(bool value)
+        {
+            RecivedOneTimeDmg = value;
+        }
+
 
         #region Debug information update
-        internal void UpdateDebugWeapon(string weaponName)
+        public void UpdateDebugWeapon(string weaponName)
         {
             weapon.text = $"Weapon: {weaponName}";
         }
 
-        internal void UpdateHp(float number)
+        public void UpdateHp(float number)
         {
             hp.text = $"HP: {number}";
         }
@@ -201,67 +193,6 @@ namespace OrkWizard
         {
             var hit = Physics2D.Raycast(originPoint, direction, distance, collision);
             return hit;
-        }
-
-        #endregion
-
-        #region IDamagable implementation
-
-
-        public void ApplyDmg(float dmg)
-        {
-            ApplyDmg(dmg, DamageType.Physical);
-        }
-
-        public void ApplyDmg(float dmg, DamageType type)
-        {
-            // Apply dmg
-            if (!RecivedOneTimeDmg)
-            {
-                rbController.UpdateSpeed(0, 0);
-                stateManager.ChangeState(stateManager.DmgKnockbackState);
-                var direction = IsFacingLeft ? 1 : -1;
-
-                Vector2 force = new Vector2(playerScriptableObject.dmgKnockbackXForce*direction, playerScriptableObject.dmgKnockbackYForce);
-
-                rbController.ApplyForce(force);
-
-                SubtractPlayerHealth(dmg);
-            }
-        }
-
-        public void ApplyDmg(float dmg, DamageType type, float tickTime)
-        {
-            // apply tick dmg;
-            if (!applyDmgFromTick)
-            {
-                StartCoroutine(TickDmgCorutine(dmg, type, tickTime));
-            }
-        }
-
-        public void StopTickDmg()
-        {
-            applyDmgFromTick = false;
-        }
-
-        public IEnumerator TickDmgCorutine(float dmg, DamageType type, float tickTime)
-        {
-            applyDmgFromTick = true;
-            while (applyDmgFromTick)
-            {
-                SubtractPlayerHealth(dmg);
-                yield return new WaitForSeconds(tickTime);
-            }
-        }
-
-        public void SubtractPlayerHealth(float number)
-        {
-            playerScriptableObject.currentHealth -= number;
-
-            if (playerScriptableObject.currentHealth <= 0)
-            {
-                stateManager.ChangeState(stateManager.DyingState);
-            }
         }
 
         #endregion
