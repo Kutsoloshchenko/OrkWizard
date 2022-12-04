@@ -7,8 +7,8 @@ namespace OrkWizard
     {
         private bool applyDmgFromTick = false;
 
-        private Character character;
-        private StateManager stateManager;
+        private PlayerCharacter character;
+        private PlayerStateManager stateManager;
         private SpriteRenderer spriteRenderer;
 
         private int ticksAfterStop = 0;
@@ -21,14 +21,14 @@ namespace OrkWizard
 
         private void Awake()
         {
-            character = GetComponent<Character>();
-            stateManager = GetComponent<StateManager>();
+            character = GetComponent<PlayerCharacter>();
+            stateManager = GetComponent<PlayerStateManager>();
             spriteRenderer = GetComponent<SpriteRenderer>();
             healthSO.currentHealth = healthSO.maxHealth;
             character.UpdateHp(healthSO.currentHealth);
         }
 
-        private IEnumerator TickDmgCorutine(float dmg, DamageType type, float tickTime)
+        private IEnumerator TickDmgCorutine(float dmg, Element type, float tickTime)
         {
             applyDmgFromTick = true;
             while (applyDmgFromTick)
@@ -81,7 +81,7 @@ namespace OrkWizard
 
             if (healthSO.currentHealth <= 0)
             {
-                stateManager.ChangeState(stateManager.DyingState);
+                stateManager.ChangeState(new DyingState());
             }
 
             character.UpdateHp(healthSO.currentHealth);
@@ -100,23 +100,23 @@ namespace OrkWizard
 
         public void ApplyDmg(float dmg)
         {
-            ApplyDmg(dmg, DamageType.Physical);
+            ApplyDmg(dmg, Element.Physical);
         }
 
-        public void ApplyDmg(float dmg, DamageType type)
+        public void ApplyDmg(float dmg, Element type)
         {
             // Apply dmg
             if (!character.RecivedOneTimeDmg)
             {
                 character.rbController.UpdateSpeed(0, 0);
-                stateManager.ChangeState(stateManager.DmgKnockbackState);
+                stateManager.ChangeState(new DmgKnockbackState());
                 StartCoroutine(TurnOnInvul());
                 character.rbController.ApplyKnockBackForce();
                 SubtractPlayerHealth(dmg);
             }
         }
 
-        public void ApplyDmg(float dmg, DamageType type, float tickTime)
+        public void ApplyDmg(float dmg, Element type, float tickTime)
         {
             // apply tick dmg;
             if (!applyDmgFromTick && ticksAfterStop == 0)

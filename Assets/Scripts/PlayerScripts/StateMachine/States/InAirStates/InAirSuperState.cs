@@ -12,24 +12,24 @@ namespace OrkWizard
         protected const string _ollie = "Ollie";
         protected const string _fall = "Fall";
 
-        public abstract void OnEnter(StateManager stateManager);
-        public abstract void OnExit(StateManager stateManager);
+        public abstract void OnEnter(BaseStateManager stateManager);
+        public abstract void OnExit(BaseStateManager stateManager);
 
-        public virtual void OnFixedUpdate(StateManager stateManager)
+        public virtual void OnFixedUpdate(BaseStateManager stateManager)
         {
             if (stateManager.Character.CheckGroundRayCast())
             {
                 if (stateManager.Character.PowerSliding())
                 {
-                    stateManager.ChangeState(stateManager.PowerSlide);
+                    stateManager.ChangeState(new PowerSlideState());
                 }
                 else if (stateManager.Character.rbController.GetCurrentSpeed().x != 0)
                 {
-                    stateManager.ChangeState(stateManager.MovingState);
+                    stateManager.ChangeState(new MovingState());
                 }
                 else
                 {
-                    stateManager.ChangeState(stateManager.IdleState);
+                    stateManager.ChangeState(new IdleState());
                 }
 
                 return;

@@ -9,12 +9,12 @@ namespace OrkWizard
 {
     public abstract class AttackSuperState : IState
     {
-        public abstract void OnEnter(StateManager stateManager);
-        public abstract void OnExit(StateManager stateManager);
-        public abstract void OnFixedUpdate(StateManager stateManager);
-        public abstract void OnUpdate(StateManager stateManager);
+        public abstract void OnEnter(BaseStateManager stateManager);
+        public abstract void OnExit(BaseStateManager stateManager);
+        public abstract void OnFixedUpdate(BaseStateManager stateManager);
+        public abstract void OnUpdate(BaseStateManager stateManager);
 
-        protected void HandleChangeState(StateManager stateManager)
+        protected void HandleChangeState(BaseStateManager stateManager)
         {
             if (stateManager.Character.CheckGroundRayCast())
             {
@@ -27,16 +27,16 @@ namespace OrkWizard
                 //}
                 //else
                 //{
-                stateManager.ChangeState(stateManager.IdleState);
+                stateManager.ChangeState(new IdleState());
                 //}
             }
             else
             {
-                stateManager.ChangeState(stateManager.InAirState);
+                stateManager.ChangeState(new InAirState());
             }
         }
 
-        protected Vector2 FindStartLocation(StateManager stateManager, Vector2 direction)
+        protected Vector2 FindStartLocation(BaseStateManager stateManager, Vector2 direction)
         {
             var weaponOffsetX = stateManager.Character.WeaponController.CurrentWeapon.GetWeaponOffsetX();
             var weaponOffsetY = stateManager.Character.WeaponController.CurrentWeapon.GetWeaponOffsetY();

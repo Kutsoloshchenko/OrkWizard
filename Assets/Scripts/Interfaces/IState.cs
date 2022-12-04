@@ -8,9 +8,9 @@ namespace OrkWizard
 {
     public interface IState
     {
-        void OnEnter(StateManager stateManager);
-        void OnExit(StateManager stateManager);
-        void OnUpdate(StateManager stateManager);
-        void OnFixedUpdate(StateManager stateManager);
+        void OnEnter(BaseStateManager stateManager);
+        void OnExit(BaseStateManager stateManager);
+        void OnUpdate(BaseStateManager stateManager);
+        void OnFixedUpdate(BaseStateManager stateManager);
     }
 }

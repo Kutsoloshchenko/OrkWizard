@@ -7,13 +7,13 @@ namespace OrkWizard
 {
     public class CameraMovementScript : MonoBehaviour
     {
-        private Character character;
+        private PlayerCharacter character;
 
 
         // Start is called before the first frame update
         void Start()
         {
-            character = FindObjectOfType<Character>();
+            character = FindObjectOfType<PlayerCharacter>();
         }
 
         // Update is called once per frame

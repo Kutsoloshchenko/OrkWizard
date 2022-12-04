@@ -14,18 +14,18 @@ namespace OrkWizard
         private float wallJumpCountDown = 0;
         private bool needsToWallJump = false;
 
-        public override void OnEnter(StateManager stateManager)
+        public override void OnEnter(BaseStateManager stateManager)
         {
             stateManager.Character.Animator.ChangeAnimation(_wallTouch);
         }
 
-        public override void OnExit(StateManager stateManager)
+        public override void OnExit(BaseStateManager stateManager)
         {
             stateManager.Character.SetHorizontalMovement(true);
             return;
         }
 
-        public override void OnUpdate(StateManager stateManager)
+        public override void OnUpdate(BaseStateManager stateManager)
         {
             base.OnUpdate(stateManager);
 
@@ -36,7 +36,7 @@ namespace OrkWizard
             }
         }
 
-        public override void OnFixedUpdate(StateManager stateManager)
+        public override void OnFixedUpdate(BaseStateManager stateManager)
         {
             base.OnFixedUpdate(stateManager);
 
@@ -48,7 +48,7 @@ namespace OrkWizard
 
             if (!stateManager.Character.WallCheck())
             {
-                stateManager.ChangeState(stateManager.InAirState);
+                stateManager.ChangeState(new InAirState());
             }
             else
             {
@@ -56,7 +56,7 @@ namespace OrkWizard
             }
         }
 
-        private void PerformWallKick(StateManager stateManager)
+        private void PerformWallKick(BaseStateManager stateManager)
         {
             if (needsToWallJump)
             {

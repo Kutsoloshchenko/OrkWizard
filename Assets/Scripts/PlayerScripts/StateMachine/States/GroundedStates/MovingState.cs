@@ -10,33 +10,33 @@ namespace OrkWizard
         private const string _skating = "Skate";
 
 
-        public override void OnEnter(StateManager stateManager)
+        public override void OnEnter(BaseStateManager stateManager)
         {
             stateManager.Character.Animator.ChangeAnimation(SetAppropriateAnimation(stateManager.Character.rbController.GetCurrentSpeed().x, stateManager.Character.playerScriptableObject.walkSpeed));
         }
 
-        public override void OnExit(StateManager stateManager)
+        public override void OnExit(BaseStateManager stateManager)
         {
             return;
         }
 
-        public override void OnUpdate(StateManager stateManager)
+        public override void OnUpdate(BaseStateManager stateManager)
         {
             base.OnUpdate(stateManager);
             if (stateManager.Character.Input.HorizontalInput == Vector2.zero && stateManager.Character.rbController.GetCurrentSpeed().x == 0)
             {
-                stateManager.ChangeState(stateManager.IdleState);
+                stateManager.ChangeState(new IdleState());
                 return;
             }
 
             if (stateManager.Character.Input.Manual)
             {
-                stateManager.ChangeState(stateManager.Manual);
+                stateManager.ChangeState(new ManualState());
                 return;
             }
         }
 
-        public override void OnFixedUpdate(StateManager stateManager)
+        public override void OnFixedUpdate(BaseStateManager stateManager)
         {
             base.OnFixedUpdate(stateManager);
             stateManager.Character.Animator.ChangeAnimation(SetAppropriateAnimation(stateManager.Character.rbController.GetCurrentSpeed().x, stateManager.Character.playerScriptableObject.walkSpeed));

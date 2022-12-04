@@ -7,7 +7,7 @@ namespace OrkWizard
     {
         public float force;
         public float dmgValue;
-        public DamageType damageType;
+        public Element damageType;
         public float impactDmg;
         public float explosionRadius;
         public string dmgTag;

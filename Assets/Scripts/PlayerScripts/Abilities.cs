@@ -6,11 +6,11 @@ namespace OrkWizard
 {
     public class Abilities : MonoBehaviour
     {
-        protected Character character;
+        protected PlayerCharacter character;
 
         protected virtual void Initialization()
         {
-            character = GetComponent<Character>();
+            character = GetComponent<PlayerCharacter>();
         }
 
         // Start is called before the first frame update

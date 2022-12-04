@@ -10,7 +10,7 @@ namespace OrkWizard
     [CreateAssetMenu(fileName = "TrapScriptableObject", menuName = "ScriptableObjects/TrapObjects/Trap")]
     public class TrapSO : ScriptableObject
     {
-        public DamageType dmgType;
+        public Element dmgType;
         public float damage;
         public bool trigeredByPlayer;
         public bool dealDmgOnlyToPlayer;

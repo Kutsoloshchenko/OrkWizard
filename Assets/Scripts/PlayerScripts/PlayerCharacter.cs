@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,12 +7,12 @@ using UnityEngine.SceneManagement;
 
 namespace OrkWizard
 {
-    public class Character : MonoBehaviour
+    public class PlayerCharacter : Character
     {
         public InputDetection Input { get; private set; }
         public PlayerWeaponController WeaponController { get; private set; }
         public AnimatorController Animator { get; private set; }
-        public RigidbodyController rbController { get; private set; }
+        public PlayerRigidbodyController rbController { get; private set; }
 
         public bool IsPowerSliding { get; private set; }
         public bool RecivedOneTimeDmg { get; private set; }
@@ -40,9 +40,6 @@ namespace OrkWizard
         private float distanceToCollider;
 
         [HideInInspector]
-        public bool IsFacingLeft { get; private set; }
-
-        [HideInInspector]
         public bool isGrounded;
 
         [SerializeField]
@@ -55,7 +52,7 @@ namespace OrkWizard
 
         protected virtual void Initialization()
         {
-            rbController = new RigidbodyController(GetComponent<Rigidbody2D>(), this);
+            rbController = new PlayerRigidbodyController(GetComponent<Rigidbody2D>(), this);
             playerCollider = GetComponent<CapsuleCollider2D>();
             Animator = GetComponent<AnimatorController>();
             Input = GetComponent<InputDetection>();
@@ -77,12 +74,6 @@ namespace OrkWizard
         public Vector2 GetColliderSize()
         {
             return playerCollider.size;
-        }
-
-        public virtual void Flip()
-        {
-            IsFacingLeft = !IsFacingLeft;
-            transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
         }
 
         public void SetRecivedDmg(bool value)
@@ -186,12 +177,6 @@ namespace OrkWizard
             var checkSide = IsFacingLeft ? Vector2.left : Vector2.right;
             var origin = new Vector2(transform.position.x, transform.position.y + (playerCollider.size.y / 4));
             var hit = CollisionCheckRayCast(checkSide, origin, (playerCollider.size.x / 2) + distanceToCollider, platformCollisionLayer);
-            return hit;
-        }
-
-        private RaycastHit2D CollisionCheckRayCast(Vector2 direction, Vector2 originPoint, float distance, LayerMask collision)
-        {
-            var hit = Physics2D.Raycast(originPoint, direction, distance, collision);
             return hit;
         }
 

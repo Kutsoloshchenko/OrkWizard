@@ -11,22 +11,22 @@ namespace OrkWizard
     {
         private const string _idleAnimation = "Idle";
 
-        public override void OnEnter(StateManager stateManager)
+        public override void OnEnter(BaseStateManager stateManager)
         {
             stateManager.Character.Animator.ChangeAnimation(_idleAnimation);
         }
 
-        public override void OnExit(StateManager stateManager)
+        public override void OnExit(BaseStateManager stateManager)
         {
             return;
         }
 
-        public override void OnUpdate(StateManager stateManager)
+        public override void OnUpdate(BaseStateManager stateManager)
         {
             base.OnUpdate(stateManager);
             if (stateManager.Character.rbController.GetCurrentSpeed().x != 0)
             {
-                 stateManager.ChangeState(stateManager.MovingState);
+                 stateManager.ChangeState(new MovingState());
             }
         }
     }

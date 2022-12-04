@@ -10,7 +10,7 @@ namespace OrkWizard
     {
         private const string _death = "Rip";
 
-        public void OnEnter(StateManager stateManager)
+        public void OnEnter(BaseStateManager stateManager)
         {
             if (stateManager.Character.IsFacingLeft)
             {
@@ -23,7 +23,7 @@ namespace OrkWizard
             stateManager.Character.SetWeaponControls(false);
         }
 
-        public void OnExit(StateManager stateManager)
+        public void OnExit(BaseStateManager stateManager)
         {
             stateManager.Character.SetHorizontalMovement(true);
             stateManager.Character.SetVerticalMovement(true);
@@ -31,12 +31,12 @@ namespace OrkWizard
             return;
         }
 
-        public void OnFixedUpdate(StateManager stateManager)
+        public void OnFixedUpdate(BaseStateManager stateManager)
         {
             return;
         }
 
-        public void OnUpdate(StateManager stateManager)
+        public void OnUpdate(BaseStateManager stateManager)
         {
             return;
         }

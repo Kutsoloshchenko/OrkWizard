@@ -50,7 +50,7 @@ namespace OrkWizard
 
                 if (dmgApplier != null)
                 {
-                    dmgApplier.ApplyDmg(projectileSO.impactDmg, DamageType.Physical);
+                    dmgApplier.ApplyDmg(projectileSO.impactDmg, Element.Physical);
                 }
             }
 

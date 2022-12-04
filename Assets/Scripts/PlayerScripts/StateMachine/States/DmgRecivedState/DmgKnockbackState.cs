@@ -12,7 +12,7 @@ namespace OrkWizard
         private const string _dmgAnimation = "Damaged";
         private float countDown = 0;
 
-        public void OnEnter(StateManager stateManager)
+        public void OnEnter(BaseStateManager stateManager)
         {
             countDown = 0;
             stateManager.Character.Animator.ChangeAnimation(_dmgAnimation);
@@ -22,7 +22,7 @@ namespace OrkWizard
             stateManager.Character.SetRecivedDmg(true);
         }
 
-        public void OnExit(StateManager stateManager)
+        public void OnExit(BaseStateManager stateManager)
         {
             stateManager.Character.rbController.UpdateSpeed(0,0);
             stateManager.Character.SetHorizontalMovement(true);
@@ -31,7 +31,7 @@ namespace OrkWizard
             stateManager.Character.SetRecivedDmg(false);
         }
 
-        public void OnFixedUpdate(StateManager stateManager)
+        public void OnFixedUpdate(BaseStateManager stateManager)
         {
             if (countDown < stateManager.Character.playerScriptableObject.dmgKnockbackDuration)
             {
@@ -41,15 +41,15 @@ namespace OrkWizard
 
             if (stateManager.Character.isGrounded)
             {
-                stateManager.ChangeState(stateManager.IdleState);
+                stateManager.ChangeState(new IdleState());
             }
             else
             {
-                stateManager.ChangeState(stateManager.InAirState);
+                stateManager.ChangeState(new InAirState());
             }
         }
 
-        public void OnUpdate(StateManager stateManager)
+        public void OnUpdate(BaseStateManager stateManager)
         {
             return;
         }

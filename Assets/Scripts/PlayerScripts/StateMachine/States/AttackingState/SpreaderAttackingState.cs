@@ -9,7 +9,7 @@ namespace OrkWizard
 {
     public class SpreaderAttackingState : AttackSuperState, IState
     {
-        public override void OnEnter(StateManager stateManager)
+        public override void OnEnter(BaseStateManager stateManager)
         {
             stateManager.Character.WeaponController.SetAttacking(true);
             stateManager.Character.Animator.SetAttack(stateManager.Character.WeaponController.CurrentWeapon.GetAnimationName());
@@ -19,20 +19,20 @@ namespace OrkWizard
             stateManager.Character.WeaponController.CurrentWeapon.Attack(possition, direction, new Vector2(stateManager.Character.rbController.GetCurrentSpeed().x, 0));
         }
 
-        public override void OnExit(StateManager stateManager)
+        public override void OnExit(BaseStateManager stateManager)
         {
             stateManager.Character.WeaponController.SetAttacking(false);
             stateManager.Character.WeaponController.CurrentWeapon.DisableNewAttacks();
             stateManager.Character.CapHorizontalSpeed(stateManager.Character.playerScriptableObject.originalMaxSpeed);
         }
 
-        public override void OnFixedUpdate(StateManager stateManager)
+        public override void OnFixedUpdate(BaseStateManager stateManager)
         {
             stateManager.Character.Animator.SetAttack(stateManager.Character.WeaponController.CurrentWeapon.GetAnimationName());
             return;
         }
 
-        public override void OnUpdate(StateManager stateManager)
+        public override void OnUpdate(BaseStateManager stateManager)
         {
             if (!stateManager.Character.Input.AttackBeingPressed)
             {

@@ -11,39 +11,39 @@ namespace OrkWizard
     {
         private const string _powerSlide = "PowerSlide";
 
-        public override void OnEnter(StateManager stateManager)
+        public override void OnEnter(BaseStateManager stateManager)
         {
             stateManager.Character.Animator.ChangeAnimation(_powerSlide);
             stateManager.Character.SetHorizontalMovement(false);
             stateManager.Character.SetWeaponControls(false);
         }
 
-        public override void OnExit(StateManager stateManager)
+        public override void OnExit(BaseStateManager stateManager)
         {
             stateManager.Character.SetHorizontalMovement(true);
             stateManager.Character.SetWeaponControls(true);
         }
 
-        public override void OnUpdate(StateManager stateManager)
+        public override void OnUpdate(BaseStateManager stateManager)
         {
             // we dont need to check the input for attack because attaking is not allowed on powerslide
             return;
         }
 
-        public override void OnFixedUpdate(StateManager stateManager)
+        public override void OnFixedUpdate(BaseStateManager stateManager)
         {
             base.OnFixedUpdate(stateManager);
 
             // If we are still on the ground by the end of powerslide, we just transition to regular movement
             if (!stateManager.Character.IsPowerSliding)
             {
-                stateManager.ChangeState(stateManager.MovingState);
+                stateManager.ChangeState(new MovingState());
             }
 
             PowerSlide(stateManager);
         }
 
-        private void PowerSlide(StateManager stateManager)
+        private void PowerSlide(BaseStateManager stateManager)
         {
             var direction = stateManager.Character.IsFacingLeft ? -1 : 1;
             var currentSpeed = stateManager.Character.playerScriptableObject.maxSpeed * stateManager.Character.playerScriptableObject.powerSlideSpeedMultiplier * direction;

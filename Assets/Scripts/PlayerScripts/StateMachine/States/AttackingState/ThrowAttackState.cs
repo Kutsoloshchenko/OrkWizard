@@ -10,28 +10,28 @@ namespace OrkWizard
 {
     public class ThrowAttackState : AttackSuperState, IState
     {
-        public override void OnEnter(StateManager stateManager)
+        public override void OnEnter(BaseStateManager stateManager)
         {
             stateManager.Character.WeaponController.SetAttacking(true);
             stateManager.StartCoroutine(ThrowCoroutine(stateManager));
         }
 
-        public override void OnExit(StateManager stateManager)
+        public override void OnExit(BaseStateManager stateManager)
         {
             stateManager.Character.WeaponController.SetAttacking(false);
         }
 
-        public override void OnFixedUpdate(StateManager stateManager)
+        public override void OnFixedUpdate(BaseStateManager stateManager)
         {
             return;
         }
 
-        public override void OnUpdate(StateManager stateManager)
+        public override void OnUpdate(BaseStateManager stateManager)
         {
             return;
         }
 
-        private IEnumerator ThrowCoroutine(StateManager stateManager)
+        private IEnumerator ThrowCoroutine(BaseStateManager stateManager)
         {
             stateManager.Character.Animator.SetAttack(stateManager.Character.WeaponController.CurrentWeapon.GetAnimationName());
             yield return new WaitForSeconds(stateManager.Character.WeaponController.CurrentWeapon.GetAnimationLength());

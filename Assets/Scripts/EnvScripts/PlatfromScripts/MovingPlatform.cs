@@ -196,8 +196,8 @@ namespace OrkWizard
             foreach (var possition in possitionsToMove)
             {
                 Gizmos.color = Color.white;
-                Handles.color = Color.white;
-                Handles.Label(possition, $"Possition {number}");
+                //Handles.color = Color.white;
+                //Handles.Label(possition, $"Possition {number}");
                 Gizmos.DrawWireCube(possition, new Vector2(boxColliderGizmos.size.x, boxColliderGizmos.size.y));
                 number++;
             }

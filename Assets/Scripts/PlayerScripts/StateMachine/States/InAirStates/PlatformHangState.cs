@@ -18,7 +18,7 @@ namespace OrkWizard
 
         private IHange currentHangTarget;
 
-        public override void OnEnter(StateManager stateManager)
+        public override void OnEnter(BaseStateManager stateManager)
         {
             var hit = stateManager.Character.PlatformSideCheck();
             currentHangTarget = hit.collider.GetComponent<IHange>();
@@ -40,7 +40,7 @@ namespace OrkWizard
             }
         }
 
-        public override void OnExit(StateManager stateManager)
+        public override void OnExit(BaseStateManager stateManager)
         {
             stateManager.Character.rbController.SetGravity(1);
             stateManager.Character.SetVerticalMovement(true);
@@ -48,7 +48,7 @@ namespace OrkWizard
             stateManager.Character.SetWeaponControls(true);
         }
 
-        public override void OnUpdate(StateManager stateManager)
+        public override void OnUpdate(BaseStateManager stateManager)
         {
             // Bassically need to check if they try to get up, or disingage 
             if (stateManager.Character.Input.JumpPressed())
@@ -61,13 +61,13 @@ namespace OrkWizard
             }
         }
 
-        public override void OnFixedUpdate(StateManager stateManager)
+        public override void OnFixedUpdate(BaseStateManager stateManager)
         {
             PerformPlatformClimb(stateManager);
             PerformPlatformDisengage(stateManager);
         }
 
-        private void PerformPlatformClimb(StateManager stateManager)
+        private void PerformPlatformClimb(BaseStateManager stateManager)
         {
             if (currentHangTarget != null && performPlatformClimb)
             {
@@ -81,7 +81,7 @@ namespace OrkWizard
             }
         }
 
-        private void PerformPlatformDisengage(StateManager stateManager)
+        private void PerformPlatformDisengage(BaseStateManager stateManager)
         {
             if (currentHangTarget != null && performDisengage)
             {
@@ -92,7 +92,7 @@ namespace OrkWizard
             }
         }
 
-        private IEnumerator ClimbLedge(StateManager stateManager, Vector2 destination)
+        private IEnumerator ClimbLedge(BaseStateManager stateManager, Vector2 destination)
         {
             float time = 0;
             Vector2 startingPoint = stateManager.Character.transform.position;
@@ -105,13 +105,13 @@ namespace OrkWizard
                 yield return null;
             }
 
-            stateManager.ChangeState(stateManager.IdleState);
+            stateManager.ChangeState(new IdleState());
         }
 
-        private IEnumerator SwitchToInAir(StateManager stateManager)
+        private IEnumerator SwitchToInAir(BaseStateManager stateManager)
         {
             yield return new WaitForSeconds(stateManager.Character.playerScriptableObject.platformHangTimeOut);
-            stateManager.ChangeState(stateManager.InAirState);
+            stateManager.ChangeState(new IdleState());
         }
     }
 }

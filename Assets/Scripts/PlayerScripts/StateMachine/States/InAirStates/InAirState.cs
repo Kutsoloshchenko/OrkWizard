@@ -10,29 +10,29 @@ namespace OrkWizard
     public class InAirState : InAirSuperState, IState
     {
 
-        public override void OnEnter(StateManager stateManager)
+        public override void OnEnter(BaseStateManager stateManager)
         {
             stateManager.Character.Animator.ChangeAnimation(InAirAnimation(stateManager.Character.rbController.GetCurrentSpeed().y));
         }
 
-        public override void OnExit(StateManager stateManager)
+        public override void OnExit(BaseStateManager stateManager)
         {
             return;
         }
 
-        public override void OnFixedUpdate(StateManager stateManager)
+        public override void OnFixedUpdate(BaseStateManager stateManager)
         {
             base.OnFixedUpdate(stateManager);
 
             if (stateManager.Character.WallCheck())
             {
-                stateManager.ChangeState(stateManager.WallTouchState);
+                stateManager.ChangeState(new WallTouchState());
                 return;
             }
 
             if (stateManager.Character.PlatformSideCheck())
             {
-                stateManager.ChangeState(stateManager.PlatformHangState);
+                stateManager.ChangeState(new PlatformHangState());
                 return;
             }
 

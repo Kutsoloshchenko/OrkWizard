@@ -6,7 +6,7 @@
         ReverseOrderOnFinish
     }
 
-    public enum DamageType
+    public enum Element
     {
         Fire,
         Ice,
@@ -21,5 +21,11 @@
         Wall = 9,
         Trap = 10,
         Enemy = 11
+    }
+
+    public enum ColliderType
+    {
+        Box,
+        Sphere
     }
 }

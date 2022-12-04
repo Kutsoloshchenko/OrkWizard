@@ -9,17 +9,17 @@ namespace OrkWizard
 {
     public abstract class TransitionToAttackSupperState
     {
-        public virtual void OnUpdate(StateManager stateManager)
+        public virtual void OnUpdate(BaseStateManager stateManager)
         {
             if (stateManager.Character.Input.AttackBeingPressed && (stateManager.Character.WeaponController.enabled && stateManager.Character.WeaponController.CurrentWeapon.CanAttack()))
             {
                 if (stateManager.Character.WeaponController.CurrentWeapon.IsThroable())
                 {
-                    stateManager.ChangeState(stateManager.ThrowingState);
+                    stateManager.ChangeState(new ThrowAttackState());
                 }
                 else
                 {
-                    stateManager.ChangeState(stateManager.SpreaderState);
+                    stateManager.ChangeState(new SpreaderAttackingState());
                 }
                 return;
             }

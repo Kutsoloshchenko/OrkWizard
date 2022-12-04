@@ -9,19 +9,19 @@ namespace OrkWizard
 {
     public abstract class GroundedSuperState : TransitionToAttackSupperState, IState
     {
-        public abstract void OnEnter(StateManager stateManager);
-        public abstract void OnExit(StateManager stateManager);
+        public abstract void OnEnter(BaseStateManager stateManager);
+        public abstract void OnExit(BaseStateManager stateManager);
 
-        public virtual void OnFixedUpdate(StateManager stateManager)
+        public virtual void OnFixedUpdate(BaseStateManager stateManager)
         {
             if (!stateManager.Character.CheckGroundRayCast())
             {
-                stateManager.ChangeState(stateManager.InAirState);
+                stateManager.ChangeState(new InAirState());
             }
 
             if (stateManager.Character.PowerSliding())
             {
-                stateManager.ChangeState(stateManager.PowerSlide);
+                stateManager.ChangeState(new PowerSlideState());
             }
         }
 
