@@ -4,7 +4,7 @@ namespace OrkWizard
 {
     public class BaseStateManager : MonoBehaviour//, IStateManager
     {
-        private IState _currentState;
+        protected IState _currentState;
 
         public PlayerCharacter Character { get; protected set; }
         public Enemy Enemy { get; protected set; }

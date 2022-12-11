@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace OrkWizard
 {
-    public class ThroableWeapon : WeaponBase, IPlayerWeapon
+    public class ThroableWeapon : WeaponBase, IWeapon
     {
         [SerializeField]
         private GameObject projectile;
@@ -15,19 +10,9 @@ namespace OrkWizard
         protected override void Initialize()
         {
             base.Initialize();
+            var projController = projectile.GetComponent<ProjectileController>();
+            weaponDistance = projController.GetProjectileMaxDistance();
         }
-
-        //public void Attack()
-        //{
-        //    canAttack = false;
-        //    Invoke("ResetAtack", weaponSO.coolDownTime);
-        //}
-
-        //public void Attack(GameObject player)
-        //{
-        //    canAttack = false;
-        //    Invoke("ResetAtack", weaponSO.coolDownTime);
-        //}
 
         public void Attack(Vector2 projectileStartingPoint, Vector2 direction, Vector2 initialSpeed)
         {

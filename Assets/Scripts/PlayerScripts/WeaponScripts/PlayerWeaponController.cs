@@ -18,10 +18,10 @@ namespace OrkWizard
         private GameObject[] playerWeaponsInitialObjects;
 
         // This would be the list of weapons that we get from gameObjects passed by unity editor
-        private List<IPlayerWeapon> playerWeapons = new List<IPlayerWeapon>();
+        private List<IWeapon> playerWeapons = new List<IWeapon>();
         private int currentWeaponIndex = 0;
 
-        public IPlayerWeapon CurrentWeapon { get { return playerWeapons[currentWeaponIndex]; } }
+        public IWeapon CurrentWeapon { get { return playerWeapons[currentWeaponIndex]; } }
 
         protected override void Initialization()
         {
@@ -29,7 +29,7 @@ namespace OrkWizard
 
             foreach (var gameObj in playerWeaponsInitialObjects)
             {
-                var weapon = gameObj.GetComponent<IPlayerWeapon>();
+                var weapon = gameObj.GetComponent<IWeapon>();
 
                 if (weapon != null)
                 {

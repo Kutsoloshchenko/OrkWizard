@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace OrkWizard 
 {
-    public class SpreadWeapon : WeaponBase, IPlayerWeapon
+    public class SpreadWeapon : WeaponBase, IWeapon
     {
 
         [SerializeField]
@@ -18,6 +18,7 @@ namespace OrkWizard
         protected override void Initialize()
         {
             base.Initialize();
+            weaponDistance = projectile.GetComponent<Collider2D>().bounds.size.x;
         }
 
         public void Attack(Vector2 originalPossition, Vector2 direction, Vector2 initialSpeed)

@@ -6,26 +6,23 @@ using System.Threading.Tasks;
 
 namespace OrkWizard
 {
-    public class PersueState : IState
+    public class PersueState : BaseEnemyState, IState
     {
-        public void OnEnter(BaseStateManager stateManager)
+        private const string _moveAnimation = "Move";
+
+        public override void OnEnter(BaseStateManager stateManager)
         {
-            throw new NotImplementedException();
+            stateManager.Enemy.Animator.ChangeAnimation(_moveAnimation);
+            stateManager.Enemy.SetMovement(true);
+            stateManager.Enemy.Movement.SetCurrentMovementType(MovementType.Patrol);
         }
 
-        public void OnExit(BaseStateManager stateManager)
+        public override void OnExit(BaseStateManager stateManager)
         {
-            throw new NotImplementedException();
-        }
-
-        public void OnFixedUpdate(BaseStateManager stateManager)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void OnUpdate(BaseStateManager stateManager)
-        {
-            throw new NotImplementedException();
+            stateManager.Enemy.SetMovement(false);
+            stateManager.Enemy.Movement.SetCurrentMovementType(MovementType.NoMovement);
         }
     }
 }
+
+

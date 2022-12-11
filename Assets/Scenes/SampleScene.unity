@@ -1416,6 +1416,8 @@ GameObject:
   - component: {fileID: 1872984586}
   - component: {fileID: 1872984587}
   - component: {fileID: 1872984588}
+  - component: {fileID: 1872984589}
+  - component: {fileID: 1872984590}
   m_Layer: 11
   m_Name: IceElemental
   m_TagString: Enemy
@@ -1440,7 +1442,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 9.72, y: 10.26}
+    oldSize: {x: 14.22, y: 13.14}
     newSize: {x: 9.72, y: 10.26}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1529,7 +1531,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1872984581}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -265.3, y: -41.45, z: 0}
+  m_LocalPosition: {x: -296.86, y: -39.66, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1549,6 +1551,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemySO: {fileID: 11400000, guid: 7b906f8900e8a6b4281576fd23a94f3f, type: 2}
   detectorSO: {fileID: 11400000, guid: f5a446463c547ec45913c58988ea7174, type: 2}
+  weaponsInitialObjects:
+  - {fileID: 524613356860312748, guid: cb010f486fc11744dbf99ec3123c5756, type: 3}
 --- !u!114 &1872984587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1581,6 +1585,30 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1872984589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872984581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7eb2e327887cca4fa67110a716b4094, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1872984590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872984581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1294ede2a2ba294e8b0f45d6602499d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1967521032
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2121,12 +2149,12 @@ PrefabInstance:
     - target: {fileID: 8230919764732228918, guid: a8d12364c33b84e43a96a72be7fef811,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -318.8
+      value: -366.6
       objectReference: {fileID: 0}
     - target: {fileID: 8230919764732228918, guid: a8d12364c33b84e43a96a72be7fef811,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -39.1
+      value: -17.3
       objectReference: {fileID: 0}
     - target: {fileID: 8230919764732228918, guid: a8d12364c33b84e43a96a72be7fef811,
         type: 3}

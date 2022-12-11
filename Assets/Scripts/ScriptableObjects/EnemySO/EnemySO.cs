@@ -6,7 +6,7 @@ namespace OrkWizard
     public class EnemySO : ScriptableObject
     {
         public float maxHp;
-        public float currentHp;
+        public float attackCoolDown;
 
         public Element element;
 

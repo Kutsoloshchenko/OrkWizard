@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3571cd4d73ffa24eaa904708c86556c, type: 3}
   m_Name: IceElementalProjectile
   m_EditorClassIdentifier: 
-  force: 0
+  force: 30
   dmgValue: 10
   damageType: 1
   impactDmg: 10
   explosionRadius: 0
   dmgTag: Player
-  lifeTime: 2
+  lifeTime: 100
   torque: 0
   explosionAnimationClip: {fileID: 0}
   gravityScale: 0

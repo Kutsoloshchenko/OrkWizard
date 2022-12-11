@@ -8,6 +8,8 @@ namespace OrkWizard
 
         protected bool canAttack = true;
 
+        protected float weaponDistance;
+
         [SerializeField]
         protected WeaponSO weaponSO;
 
@@ -64,6 +66,11 @@ namespace OrkWizard
         public bool IsThroable()
         {
             return weaponSO.throwable;
+        }
+
+        public float GetWeaponDistance()
+        {
+            return weaponDistance;
         }
     }
 }

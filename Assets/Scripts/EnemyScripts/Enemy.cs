@@ -10,25 +10,88 @@ namespace OrkWizard
         public EnemySO EnemySO;
         [SerializeField]
         public PlayerDetectorSO detectorSO;
+
+        [SerializeField]
+        private GameObject[] weaponsInitialObjects;
+
+
         public EnemyRigidBodyController RbController { get; private set; }
+        public GroundEnemyMovement Movement { get; private set; }
+        public AnimatorControllerBase Animator { get; private set; }
         public PlayerDetector PlayerDetector { get; private set; }
+        public EnemyWeaponController WeaponController { get; private set; }
+
+        public PlayerCharacter PlayerReference { get; private set; }
 
         private BoxCollider2D collider;
 
+        private float currentAttackCoolDownTime = 0;
+
+        private float currentHp;
+
+        public const string playerTag = "Player";
+
         private void Awake()
         {
-            EnemySO.currentHp = EnemySO.maxHp;
+            currentHp = EnemySO.maxHp;
             collider = GetComponent<BoxCollider2D>();
+            Animator = GetComponent<AnimatorControllerBase>();
+            Movement = GetComponent<GroundEnemyMovement>();
             RbController = new EnemyRigidBodyController(GetComponent<Rigidbody2D>(), this);
             PlayerDetector = new PlayerDetector(this, detectorSO);
+
+            var weapons = new IWeapon[weaponsInitialObjects.Length];
+
+            for (var i = 0; i < weaponsInitialObjects.Length; i++)
+            {
+                weapons[i] = weaponsInitialObjects[i].GetComponent<IWeapon>();
+                weapons[i].ResetAtack();
+            }
+            weaponsInitialObjects = null;
+            WeaponController = new EnemyWeaponController(this, weapons);
         }
 
         private void FixedUpdate()
         {
-            if (PlayerDetector.Detect())
+            if (currentAttackCoolDownTime > 0)
             {
-                Debug.Log("I see player");
+                currentAttackCoolDownTime -= Time.deltaTime;
             }
+        }
+
+        public bool CanAttack()
+        {
+            if (currentAttackCoolDownTime <= 0)
+            {
+                return WeaponController.CanAttack();
+            }
+
+            return false;
+        }
+
+        public void StartAttackCoolDown()
+        {
+            currentAttackCoolDownTime = EnemySO.attackCoolDown + Random.Range(0, 0.3f);
+        }
+
+        public void SetPlayerReference(RaycastHit2D raycastHit)
+        {
+            PlayerReference = raycastHit.collider.gameObject.GetComponent<PlayerCharacter>();
+        }
+
+        public void ForgetPlayer()
+        {
+            PlayerReference = null;
+        }
+
+        public void SetMovement(bool enabled)
+        {
+            Movement.enabled = enabled;
+        }
+
+        public Vector2 GetColliderSize()
+        {
+            return collider.size;
         }
 
         public bool CollisionCheck(float distance, LayerMask layers)
@@ -40,6 +103,24 @@ namespace OrkWizard
                 return true;
             }
             return false;
+        }
+
+        public void Flip(bool towardsPlayer)
+        {
+            if (PlayerReference != null)
+            {
+                bool playerIsToTheLeft = transform.position.x >= PlayerReference.transform.position.x;
+
+                if ((IsFacingLeft && towardsPlayer && !playerIsToTheLeft)
+                    || IsFacingLeft && !towardsPlayer && playerIsToTheLeft
+                    || !IsFacingLeft && towardsPlayer && playerIsToTheLeft
+                    || !IsFacingLeft && !towardsPlayer && !playerIsToTheLeft)
+                {
+                    Flip();
+                }
+            }
+            
+        
         }
 
         private void OnDrawGizmos()

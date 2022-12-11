@@ -2,26 +2,21 @@
 
 namespace OrkWizard
 {
-    public class PatrolState : IState
+    public class PatrolState : BaseEnemyState, IState
     {
-        public void OnEnter(BaseStateManager stateManager)
+        private const string _moveAnimation = "Move";
+
+        public override void OnEnter(BaseStateManager stateManager)
         {
-            throw new System.NotImplementedException();
+            stateManager.Enemy.Animator.ChangeAnimation(_moveAnimation);
+            stateManager.Enemy.SetMovement(true);
+            stateManager.Enemy.Movement.SetCurrentMovementType(MovementType.Patrol);
         }
 
-        public void OnExit(BaseStateManager stateManager)
+        public override void OnExit(BaseStateManager stateManager)
         {
-            throw new System.NotImplementedException();
-        }
-
-        public void OnFixedUpdate(BaseStateManager stateManager)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void OnUpdate(BaseStateManager stateManager)
-        {
-            throw new System.NotImplementedException();
+            stateManager.Enemy.SetMovement(false) ;
+            stateManager.Enemy.Movement.SetCurrentMovementType(MovementType.NoMovement);
         }
     }
 }

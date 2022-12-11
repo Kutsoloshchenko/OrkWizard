@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49546c626b39a83469556abcfd585001, type: 3}
   m_Name: IceElementalDetector
   m_EditorClassIdentifier: 
-  size: {x: 40, y: 15}
+  size: {x: 90, y: 15}
   offset: {x: 0, y: 0}
   angle: 0
   detectionLayer:

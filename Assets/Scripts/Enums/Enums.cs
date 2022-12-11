@@ -28,4 +28,13 @@
         Box,
         Sphere
     }
+
+    public enum MovementType
+    {
+        Patrol,
+        Pursue,
+        RunAway,
+        Defend,
+        NoMovement
+    }
 }

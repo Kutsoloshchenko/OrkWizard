@@ -2,10 +2,8 @@
 
 namespace OrkWizard
 {
-    public interface IPlayerWeapon
+    public interface IWeapon
     {
-        //void Attack();
-        //void Attack(GameObject player);
         void Attack(Vector2 originalPossition, Vector2 direction, Vector2 initialSpeed);
         float GetAnimationLength();
         float GetMaxHorizontalSpeed();
@@ -16,5 +14,6 @@ namespace OrkWizard
         bool IsThroable();
         float GetWeaponOffsetY();
         float GetWeaponOffsetX();
+        float GetWeaponDistance();
     }
 }

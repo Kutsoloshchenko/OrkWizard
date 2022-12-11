@@ -14,7 +14,7 @@ namespace OrkWizard
 
         private void Start()
         {
-            //ChangeState(new EnemyIdleState());
+            ChangeState(new EnemyIdleState());
         }
     }
 }

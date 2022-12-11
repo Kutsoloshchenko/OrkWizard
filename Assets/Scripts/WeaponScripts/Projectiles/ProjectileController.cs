@@ -24,6 +24,8 @@ namespace OrkWizard
         public void ApplyInitialForce(Vector2 direction, Vector2 initialSpeed)
         {
 
+            transform.localScale = new Vector2(direction.x, 1);
+
             rb.velocity = initialSpeed;
             
             rb.gravityScale = projectileSO.gravityScale;
@@ -93,6 +95,11 @@ namespace OrkWizard
             }
 
             Destroy(gameObject);
+        }
+
+        public float GetProjectileMaxDistance()
+        {
+            return projectileSO.lifeTime * projectileSO.force;
         }
     }
 }
