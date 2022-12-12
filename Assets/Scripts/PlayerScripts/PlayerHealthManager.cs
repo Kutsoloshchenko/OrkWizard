@@ -91,11 +91,13 @@ namespace OrkWizard
         {
             Physics2D.IgnoreLayerCollision((int)Layers.Player, (int)Layers.Trap, true);
             Physics2D.IgnoreLayerCollision((int)Layers.Player, (int)Layers.Enemy, true);
+            Physics2D.IgnoreLayerCollision((int)Layers.Player, (int)Layers.Projectile, true);
 
             yield return new WaitForSeconds(healthSO.invulDuration);
 
             Physics2D.IgnoreLayerCollision((int)Layers.Player, (int)Layers.Trap, false);
             Physics2D.IgnoreLayerCollision((int)Layers.Player, (int)Layers.Enemy, false);
+            Physics2D.IgnoreLayerCollision((int)Layers.Player, (int)Layers.Projectile, true);
         }
 
         public void ApplyDmg(float dmg)

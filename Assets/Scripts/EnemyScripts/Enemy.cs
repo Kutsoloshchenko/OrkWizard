@@ -20,6 +20,7 @@ namespace OrkWizard
         public AnimatorControllerBase Animator { get; private set; }
         public PlayerDetector PlayerDetector { get; private set; }
         public EnemyWeaponController WeaponController { get; private set; }
+        public EnemyStateManager StateManager { get; private set; }
 
         public PlayerCharacter PlayerReference { get; private set; }
 
@@ -37,6 +38,7 @@ namespace OrkWizard
             collider = GetComponent<BoxCollider2D>();
             Animator = GetComponent<AnimatorControllerBase>();
             Movement = GetComponent<GroundEnemyMovement>();
+            StateManager = GetComponent<EnemyStateManager>();
             RbController = new EnemyRigidBodyController(GetComponent<Rigidbody2D>(), this);
             PlayerDetector = new PlayerDetector(this, detectorSO);
 
@@ -74,9 +76,14 @@ namespace OrkWizard
             currentAttackCoolDownTime = EnemySO.attackCoolDown + Random.Range(0, 0.3f);
         }
 
-        public void SetPlayerReference(RaycastHit2D raycastHit)
+        public void SetPlayerReference(Collider2D collider)
         {
-            PlayerReference = raycastHit.collider.gameObject.GetComponent<PlayerCharacter>();
+            PlayerReference = collider.gameObject.GetComponent<PlayerCharacter>();
+        }
+
+        public void SetPlayerReference(PlayerCharacter character)
+        {
+            PlayerReference = character;
         }
 
         public void ForgetPlayer()
@@ -119,8 +126,17 @@ namespace OrkWizard
                     Flip();
                 }
             }
-            
-        
+
+
+        }
+
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (collision.collider.CompareTag(playerTag))
+            {
+                SetPlayerReference(collision.collider);
+                StateManager.ChangeState(new GrappleState());
+            }
         }
 
         private void OnDrawGizmos()

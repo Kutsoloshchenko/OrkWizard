@@ -16,3 +16,5 @@ MonoBehaviour:
   attackCoolDown: 2
   element: 1
   detectRange: 50
+  grappleClip: {fileID: 7400000, guid: 17a5d918c584ecf41b7c7c9d5ee14b5e, type: 2}
+  grappleDmg: 10

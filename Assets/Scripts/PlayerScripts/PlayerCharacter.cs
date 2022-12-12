@@ -24,6 +24,7 @@ namespace OrkWizard
 
         [SerializeField]
         private Text horizontalSpeed;
+
         [SerializeField]
         private Text verticalSpeed;
         [SerializeField]
@@ -119,6 +120,11 @@ namespace OrkWizard
         public void SetWeaponControls(bool enabled)
         {
             WeaponController.enabled = enabled;
+        }
+
+        public void ChangePlayerActiveStatus(bool active)
+        {
+            gameObject.SetActive(active);
         }
         #endregion
 

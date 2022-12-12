@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\TransitionToAttackSupperState.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\PlatfromScripts\FallingPlatfrom.cs" />
     <Compile Include="Assets\Scripts\Enums\Enums.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\EnemyIdleState.cs" />
     <Compile Include="Assets\Scripts\BaseClasses\AnimatorControllerBase.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\AttackingState\SpreaderAttackingState.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\EnemyStateManager.cs" />
@@ -72,7 +73,7 @@
     <Compile Include="Assets\Scripts\WeaponScripts\ThroableWeapon.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\Movement\HorizontalMovement.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EnemySO\EnemyMovementSO.cs" />
-    <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\PersueState.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\PursueState.cs" />
     <Compile Include="Assets\Scripts\WeaponScripts\Projectiles\ProjectileController.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IState.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\PlayerDetection\PlayerDetector.cs" />
@@ -121,10 +122,15 @@
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\MovingState.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\Abilities.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerRigidbodyController.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\GrappleState.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\BaseEnemyState.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\TrapScripts\TrapActivator.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyRigidBodyController.cs" />
-    <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\EnemyIdleState.cs" />
-    <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\BaseEnemyState.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\DisengageState.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\BaseMovementState.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\EnemyHealthManager.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\EnemySO\EnemyHealthSO.cs" />
+    <Compile Include="Assets\Scripts\BaseClasses\BaseHealthManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

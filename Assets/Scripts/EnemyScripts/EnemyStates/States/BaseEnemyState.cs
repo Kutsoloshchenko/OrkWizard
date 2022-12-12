@@ -8,13 +8,12 @@ namespace OrkWizard
 
         public abstract void OnExit(BaseStateManager stateManager);
 
-
         public virtual void OnFixedUpdate(BaseStateManager stateManager)
         {
             var raycastHit = stateManager.Enemy.PlayerDetector.Detect();
             if (raycastHit)
             {
-                stateManager.Enemy.SetPlayerReference(raycastHit);
+                stateManager.Enemy.SetPlayerReference(raycastHit.collider);
                 return;
             }
             stateManager.Enemy.ForgetPlayer();
@@ -22,9 +21,16 @@ namespace OrkWizard
 
         public virtual void OnUpdate(BaseStateManager stateManager)
         {
-            if (stateManager.Enemy.PlayerReference != null && stateManager.Enemy.CanAttack())
+            if (stateManager.Enemy.PlayerReference != null)
             {
-                stateManager.ChangeState(new AttackPlayerState());
+                if (stateManager.Enemy.CanAttack())
+                {
+                    stateManager.ChangeState(new AttackPlayerState());
+                }
+                else
+                {
+                    stateManager.ChangeState(new PursueState());
+                }
             }
         }
     }

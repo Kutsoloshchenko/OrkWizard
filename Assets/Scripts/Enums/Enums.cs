@@ -20,7 +20,8 @@
         Platform = 8,
         Wall = 9,
         Trap = 10,
-        Enemy = 11
+        Enemy = 11,
+        Projectile = 12
     }
 
     public enum ColliderType
