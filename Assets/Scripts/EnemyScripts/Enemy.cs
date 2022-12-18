@@ -21,20 +21,18 @@ namespace OrkWizard
         public PlayerDetector PlayerDetector { get; private set; }
         public EnemyWeaponController WeaponController { get; private set; }
         public EnemyStateManager StateManager { get; private set; }
-
         public PlayerCharacter PlayerReference { get; private set; }
+        public bool IsCriticallyHit { get;  set; }
+
 
         private BoxCollider2D collider;
 
         private float currentAttackCoolDownTime = 0;
 
-        private float currentHp;
-
         public const string playerTag = "Player";
 
         private void Awake()
         {
-            currentHp = EnemySO.maxHp;
             collider = GetComponent<BoxCollider2D>();
             Animator = GetComponent<AnimatorControllerBase>();
             Movement = GetComponent<GroundEnemyMovement>();

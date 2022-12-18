@@ -1428,6 +1428,7 @@ GameObject:
   - component: {fileID: 1872984588}
   - component: {fileID: 1872984589}
   - component: {fileID: 1872984590}
+  - component: {fileID: 1872984591}
   m_Layer: 11
   m_Name: IceElemental
   m_TagString: Enemy
@@ -1452,7 +1453,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 14.22, y: 13.14}
+    oldSize: {x: 9.72, y: 10.26}
     newSize: {x: 9.72, y: 10.26}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1619,6 +1620,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1294ede2a2ba294e8b0f45d6602499d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1872984591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872984581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c883aa918a2633145980003527fc7b40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthSO: {fileID: 11400000, guid: c2d4fbc982900cb47996619694cbae98, type: 2}
 --- !u!1001 &1967521032
 PrefabInstance:
   m_ObjectHideFlags: 0

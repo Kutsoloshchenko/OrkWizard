@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\CamerScripts\CameraMovementScript.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\PlayerSO\PlayerSO.cs" />
+    <Compile Include="Assets\Scripts\BaseClasses\BaseHealthManager.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\TransitionToAttackSupperState.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\PlatfromScripts\FallingPlatfrom.cs" />
     <Compile Include="Assets\Scripts\Enums\Enums.cs" />
@@ -89,11 +90,14 @@
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\AttackPlayerState.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerHealthManager.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\PatrolState.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\EnemyHealthManager.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EnemySO\PlayerDetectorSO.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyWeaponController\EnemyWeaponController.cs" />
     <Compile Include="Assets\Scripts\WeaponScripts\Projectiles\SpreadController.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\PlayerStateManager.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\DisengageState.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\PlayerSO\PlayerHealthSO.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\EnemySO\EnemyHealthSO.cs" />
     <Compile Include="Assets\Scripts\BaseClasses\BaseRigidbodyController.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\GroundedSuperState.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\PlatfromScripts\MovingPlatform.cs" />
@@ -109,11 +113,14 @@
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\DmgRecivedState\DmgKnockbackState.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\Movement\GroundEnemyMovement.cs" />
     <Compile Include="Assets\Scripts\InputDetection\InputDetection.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\DmgStates\EnemyDyingState.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\AnimatorController.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\DmgRecivedState\DyingState.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\PlatfromScripts\PlatformHandler.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\InAirStates\InAirSuperState.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\TrapScripts\TrapManager.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\BaseMovementState.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\DmgStates\EnemyCriticallyHit.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EnemySO\EnemySO.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\InAirStates\WallTouchState.cs" />
     <Compile Include="Assets\Scripts\InputDetection\InputMapper.cs" />
@@ -126,11 +133,6 @@
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\BaseEnemyState.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\TrapScripts\TrapActivator.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyRigidBodyController.cs" />
-    <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\DisengageState.cs" />
-    <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\BaseMovementState.cs" />
-    <Compile Include="Assets\Scripts\EnemyScripts\EnemyHealthManager.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\EnemySO\EnemyHealthSO.cs" />
-    <Compile Include="Assets\Scripts\BaseClasses\BaseHealthManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Brick
   m_EditorClassIdentifier: 
   force: 25
-  dmgValue: 10
+  dmgValue: 1
   damageType: 3
-  impactDmg: 0
+  impactDmg: 1
   explosionRadius: 0
   dmgTag: All
   lifeTime: 10

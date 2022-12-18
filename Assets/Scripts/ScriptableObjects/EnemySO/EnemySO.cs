@@ -6,9 +6,15 @@ namespace OrkWizard
     public class EnemySO : ScriptableObject
     {
         public float attackCoolDown;
-        public float detectRange;
+
+        public Vector2 knockBackForce;
+        public float knockBackTime;
+        public AnimationClip knockBackClip;
+
+        public AnimationClip deathAnimation;
 
         public AnimationClip grappleClip;
+        
         public float grappleDmg;
     }
 }

@@ -16,6 +16,7 @@ namespace OrkWizard
 
         public void OnExit(BaseStateManager stateManager)
         {
+            stateManager.StopAllCoroutines();
             return;
         }
 

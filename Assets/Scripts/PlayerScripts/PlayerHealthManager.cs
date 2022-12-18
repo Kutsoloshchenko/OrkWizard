@@ -3,48 +3,22 @@ using UnityEngine;
 
 namespace OrkWizard
 {
-    public class PlayerHealthManager : MonoBehaviour, IDamagable
+    public class PlayerHealthManager : BaseHealthManager, IDamagable
     {
-        private bool applyDmgFromTick = false;
-
         private PlayerCharacter character;
         private PlayerStateManager stateManager;
-        private SpriteRenderer spriteRenderer;
-
-        private int ticksAfterStop = 0;
-
-        private Color currentColor = Color.white;
-        private Color pink = new Color(1, 0.5f, 0.5f);
 
         [SerializeField]
         private PlayerHealthSO healthSO;
 
-        private void Awake()
+        protected override void Awake()
         {
+            base.Awake();
+
             character = GetComponent<PlayerCharacter>();
             stateManager = GetComponent<PlayerStateManager>();
-            spriteRenderer = GetComponent<SpriteRenderer>();
             healthSO.currentHealth = healthSO.maxHealth;
             character.UpdateHp(healthSO.currentHealth);
-        }
-
-        private IEnumerator TickDmgCorutine(float dmg, Element type, float tickTime)
-        {
-            applyDmgFromTick = true;
-            while (applyDmgFromTick)
-            {
-                SubtractPlayerHealth(dmg);
-                yield return new WaitForSeconds(tickTime);
-            }
-
-            while (ticksAfterStop > 0)
-            {
-                SubtractPlayerHealth(dmg);
-                yield return new WaitForSeconds(tickTime);
-                ticksAfterStop--;
-            }
-            // just in case
-            ticksAfterStop = 0;
         }
 
         private IEnumerator TintFlickCorutine()
@@ -61,32 +35,6 @@ namespace OrkWizard
             }
         }
 
-        private void SwapColor()
-        {
-            if (currentColor == Color.white)
-            {
-                currentColor = pink;
-            }
-            else
-            {
-                currentColor = Color.white;
-            }
-
-            spriteRenderer.material.SetColor("_Color", currentColor);
-        }
-
-        private void SubtractPlayerHealth(float number)
-        {
-            healthSO.currentHealth -= number;
-
-            if (healthSO.currentHealth <= 0)
-            {
-                stateManager.ChangeState(new DyingState());
-            }
-
-            character.UpdateHp(healthSO.currentHealth);
-        }
-
         private IEnumerator TurnOnInvul()
         {
             Physics2D.IgnoreLayerCollision((int)Layers.Player, (int)Layers.Trap, true);
@@ -100,12 +48,7 @@ namespace OrkWizard
             Physics2D.IgnoreLayerCollision((int)Layers.Player, (int)Layers.Projectile, true);
         }
 
-        public void ApplyDmg(float dmg)
-        {
-            ApplyDmg(dmg, Element.Physical);
-        }
-
-        public void ApplyDmg(float dmg, Element type)
+        public override void ApplyDmg(float dmg, Element type)
         {
             // Apply dmg
             if (!character.RecivedOneTimeDmg)
@@ -114,11 +57,11 @@ namespace OrkWizard
                 stateManager.ChangeState(new DmgKnockbackState());
                 StartCoroutine(TurnOnInvul());
                 character.rbController.ApplyKnockBackForce();
-                SubtractPlayerHealth(dmg);
+                SubtractHealth(dmg);
             }
         }
 
-        public void ApplyDmg(float dmg, Element type, float tickTime)
+        public override void ApplyDmg(float dmg, Element type, float tickTime)
         {
             // apply tick dmg;
             if (!applyDmgFromTick && ticksAfterStop == 0)
@@ -128,18 +71,16 @@ namespace OrkWizard
             }
         }
 
-        public void StopTickDmg(int ticks)
+        protected override void SubtractHealth(float number)
         {
-            if (applyDmgFromTick == true)
+            healthSO.currentHealth -= number;
+
+            if (healthSO.currentHealth <= 0)
             {
-                ticksAfterStop = ticks;
-                applyDmgFromTick = false;
+                stateManager.ChangeState(new DyingState());
             }
-            else
-            {
-                ticksAfterStop = 0;
-                applyDmgFromTick = false;
-            }
+
+            character.UpdateHp(healthSO.currentHealth);
         }
     }
 }

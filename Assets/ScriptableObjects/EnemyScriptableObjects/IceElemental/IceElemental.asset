@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8241049cfb8c51b4a955f539b815d776, type: 3}
   m_Name: IceElemental
   m_EditorClassIdentifier: 
-  maxHp: 100
   attackCoolDown: 2
-  element: 1
-  detectRange: 50
+  knockBackForce: {x: 25, y: 7}
+  knockBackTime: 1
+  knockBackClip: {fileID: 7400000, guid: df6596d4aa6277247819adee28ebff3b, type: 2}
+  deathAnimation: {fileID: 7400000, guid: 4bcf068a6b071ae4a82518a50310cbcb, type: 2}
   grappleClip: {fileID: 7400000, guid: 17a5d918c584ecf41b7c7c9d5ee14b5e, type: 2}
   grappleDmg: 10
