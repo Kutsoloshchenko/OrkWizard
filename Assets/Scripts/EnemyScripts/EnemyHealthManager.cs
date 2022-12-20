@@ -32,14 +32,16 @@ namespace OrkWizard
                     currentHp = currentHp + dmg > healthSO.maxHp ? healthSO.maxHp : currentHp + dmg;
                 }
             }
-            else if (type == healthSO.weakElement && !enemy.IsCriticallyHit) // Regular hit if its being critically hit already at this point
+            else if (type == healthSO.weakElement) // Regular hit if its being critically hit already at this point
             {
                 // Apply critical dmg
                 // Knockback + bigger dmg + imune to critical hit for short while
+                
+                // always bigger dmg
+                SubtractHealth(dmg * criticalHitMultipliler);
 
-                if (!enemy.IsCriticallyHit)
+                if (!enemy.IsCriticallyHit && healthSO.canBeCritHit)
                 {
-                    SubtractHealth(dmg * criticalHitMultipliler);
                     enemy.StateManager.ChangeState(new EnemyCriticallyHit());
                 }
             }

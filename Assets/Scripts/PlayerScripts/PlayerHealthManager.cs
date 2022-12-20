@@ -45,7 +45,7 @@ namespace OrkWizard
 
             Physics2D.IgnoreLayerCollision((int)Layers.Player, (int)Layers.Trap, false);
             Physics2D.IgnoreLayerCollision((int)Layers.Player, (int)Layers.Enemy, false);
-            Physics2D.IgnoreLayerCollision((int)Layers.Player, (int)Layers.Projectile, true);
+            Physics2D.IgnoreLayerCollision((int)Layers.Player, (int)Layers.Projectile, false);
         }
 
         public override void ApplyDmg(float dmg, Element type)

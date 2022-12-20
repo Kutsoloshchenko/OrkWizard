@@ -33,9 +33,16 @@
     public enum MovementType
     {
         Patrol,
-        Pursue,
+        OffensiveManuvers,
         RunAway,
         Defend,
+        Bombard,
         NoMovement
+    }
+
+    public enum EnemyBehaviourType
+    {
+        Pursuer,
+        Bombardier
     }
 }

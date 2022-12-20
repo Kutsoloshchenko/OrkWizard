@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 8230919764258715206}
   - component: {fileID: 8230919764258715207}
   - component: {fileID: 8230919764258715208}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: OrkWizard
   m_TagString: Player
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ namespace OrkWizard
             var raycastHit = stateManager.Enemy.PlayerDetector.Detect();
             if (raycastHit)
             {
-                stateManager.Enemy.SetPlayerReference(raycastHit.collider);
+                stateManager.Enemy.SetPlayerReference(raycastHit);
                 return;
             }
             stateManager.Enemy.ForgetPlayer();
@@ -29,8 +29,8 @@ namespace OrkWizard
                 }
                 else
                 {
-                    stateManager.ChangeState(new PursueState());
-                }
+                    stateManager.ChangeState(new OffensiveManuversState());
+                };
             }
         }
     }

@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace OrkWizard
 {
-    public class PursueState : BaseMovementState, IState
+    public class OffensiveManuversState : BaseMovementState, IState
     {
 
         public override void OnEnter(BaseStateManager stateManager)
         {
-            movementType = MovementType.Pursue;
+            movementType = MovementType.OffensiveManuvers;
             base.OnEnter(stateManager);
         }
 

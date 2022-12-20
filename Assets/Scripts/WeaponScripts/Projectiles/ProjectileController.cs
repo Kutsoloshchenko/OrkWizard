@@ -78,14 +78,14 @@ namespace OrkWizard
 
             yield return new WaitForSeconds(projectileSO.explosionAnimationClip.length);
 
-            var hitByBlownUp = Physics2D.CircleCastAll(transform.position, projectileSO.explosionRadius, Vector2.up);
+            var hitByBlownUp = Physics2D.OverlapCircleAll(transform.position, projectileSO.explosionRadius);
 
             foreach (var hit in hitByBlownUp)
             {
 
-                if (projectileSO.dmgTag == _allTag || hit.collider.gameObject.CompareTag(projectileSO.dmgTag))
+                if (projectileSO.dmgTag == _allTag || hit.gameObject.CompareTag(projectileSO.dmgTag))
                 {
-                    var dmgApplier = hit.collider.gameObject.GetComponent<IDamagable>();
+                    var dmgApplier = hit.gameObject.GetComponent<IDamagable>();
 
                     if (dmgApplier != null)
                     {

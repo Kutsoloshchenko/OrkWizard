@@ -16,7 +16,7 @@ namespace OrkWizard
 
 
         public EnemyRigidBodyController RbController { get; private set; }
-        public GroundEnemyMovement Movement { get; private set; }
+        public IEnemyMovement Movement { get; private set; }
         public AnimatorControllerBase Animator { get; private set; }
         public PlayerDetector PlayerDetector { get; private set; }
         public EnemyWeaponController WeaponController { get; private set; }
@@ -35,7 +35,7 @@ namespace OrkWizard
         {
             collider = GetComponent<BoxCollider2D>();
             Animator = GetComponent<AnimatorControllerBase>();
-            Movement = GetComponent<GroundEnemyMovement>();
+            Movement = GetComponent<IEnemyMovement>();
             StateManager = GetComponent<EnemyStateManager>();
             RbController = new EnemyRigidBodyController(GetComponent<Rigidbody2D>(), this);
             PlayerDetector = new PlayerDetector(this, detectorSO);
@@ -91,7 +91,7 @@ namespace OrkWizard
 
         public void SetMovement(bool enabled)
         {
-            Movement.enabled = enabled;
+            Movement.Enable(enabled);
         }
 
         public Vector2 GetColliderSize()
@@ -102,7 +102,12 @@ namespace OrkWizard
         public bool CollisionCheck(float distance, LayerMask layers)
         {
             var checkSide = IsFacingLeft ? Vector2.left : Vector2.right;
-            var hit = CollisionCheckRayCast(checkSide, transform.position, (collider.size.x / 2) + distance, layers);
+            return CollisionCheck(distance, layers, checkSide);
+        }
+
+        public bool CollisionCheck(float distance, LayerMask layers, Vector2 side)
+        {
+            var hit = CollisionCheckRayCast(side, transform.position, (collider.size.x / 2) + distance, layers);
             if (hit)
             {
                 return true;
@@ -112,7 +117,7 @@ namespace OrkWizard
 
         public void Flip(bool towardsPlayer)
         {
-            if (PlayerReference != null)
+            if (PlayerReference != null && transform.position.x != PlayerReference.transform.position.x)
             {
                 bool playerIsToTheLeft = transform.position.x >= PlayerReference.transform.position.x;
 

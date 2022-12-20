@@ -8,6 +8,7 @@ namespace OrkWizard
         public void OnEnter(BaseStateManager stateManager)
         {
             stateManager.Enemy.SetMovement(false);
+            stateManager.Enemy.RbController.SetGravity(10);
             stateManager.StartCoroutine(Death(stateManager));
         }
 

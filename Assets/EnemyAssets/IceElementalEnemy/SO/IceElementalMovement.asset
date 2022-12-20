@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9940cf2e6b3e8df46a5d602c77094486, type: 3}
   m_Name: IceElementalMovement
   m_EditorClassIdentifier: 
-  maxSpeed: 10
+  maxSpeed: 0
   collisionDistance: 8
   collistionLayers:
     serializedVersion: 2

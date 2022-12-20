@@ -14,7 +14,8 @@ namespace OrkWizard
         public AnimationClip deathAnimation;
 
         public AnimationClip grappleClip;
-        
         public float grappleDmg;
+
+        public EnemyBehaviourType behaviourType;
     }
 }

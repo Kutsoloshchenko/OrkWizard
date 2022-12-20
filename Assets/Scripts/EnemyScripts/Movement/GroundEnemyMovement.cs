@@ -3,20 +3,8 @@ using UnityEngine;
 
 namespace OrkWizard
 {
-    public class GroundEnemyMovement : MonoBehaviour
+    public class GroundEnemyMovement : BaseEnemyMovement, IEnemyMovement
     {
-        private Enemy enemy;
-
-        private MovementType currentMovementType;
-        private Action moveFunction;
-
-        [SerializeField]
-        private EnemyMovementSO movementSO;
-
-        private void Awake()
-        {
-            enemy = GetComponent<Enemy>();
-        }
 
         private void Start()
         {
@@ -29,47 +17,12 @@ namespace OrkWizard
             enemy.RbController.UpdateXSpeed(0);
         }
 
-        private void FixedUpdate()
-        {
-            moveFunction();
-        }
-
         private void CheckCollisionWithLayers()
         {
             if (enemy.CollisionCheck(movementSO.collisionDistance, movementSO.collistionLayers))
             {
                 enemy.Flip();
             }
-        }
-
-        private void AdjustMovementFunction()
-        {
-            switch (currentMovementType)
-            {
-
-                case MovementType.Patrol:
-                    moveFunction = Patrol;
-                    break;
-
-                case MovementType.Pursue:
-                    moveFunction = Pursue;
-                    break;
-
-                case MovementType.RunAway:
-                    moveFunction = RunAway;
-                    break;
-
-                case MovementType.NoMovement:
-                default:
-                    moveFunction = () => { return; };
-                    break;
-            }
-        }
-
-        private void Patrol()
-        {
-            CheckCollisionWithLayers();
-            ApplySpeed();
         }
 
         private void PlayerRelatedMovement(bool towardsPlayer)
@@ -88,26 +41,26 @@ namespace OrkWizard
             }
         }
 
-        private void Pursue()
-        {
-            PlayerRelatedMovement(true);
-        }
-
-        private void RunAway()
-        {
-            PlayerRelatedMovement(false);
-        }
-
         private void ApplySpeed()
         {
             var direction = enemy.IsFacingLeft ? -1 : 1;
             enemy.RbController.UpdateXSpeed(movementSO.maxSpeed * direction);
         }
 
-        public void SetCurrentMovementType(MovementType type)
+        protected override void Patrol()
         {
-            currentMovementType = type;
-            AdjustMovementFunction();
+            CheckCollisionWithLayers();
+            ApplySpeed();
+        }
+
+        protected override void OffensiveManuvers()
+        {
+            PlayerRelatedMovement(true);
+        }
+
+        protected override void RunAway()
+        {
+            PlayerRelatedMovement(false);
         }
     }
 }

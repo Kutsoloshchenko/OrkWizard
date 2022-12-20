@@ -9,5 +9,6 @@ namespace OrkWizard
         public float maxHp;
         public Element enemyElement;
         public Element weakElement;
+        public bool canBeCritHit;
     }
 }
