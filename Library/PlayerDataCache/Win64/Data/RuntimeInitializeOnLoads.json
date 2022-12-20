@@ -1,1 +1,3 @@
-{"root":[{"assemblyName":"Unity.InputSystem","nameSpace":"UnityEngine.InputSystem","className":"InputSystem","methodName":"RunInitializeInPlayer","loadTypes":4,"isUnityClass":true},{"assemblyName":"Unity.InputSystem","nameSpace":"UnityEngine.InputSystem","className":"InputSystem","methodName":"RunInitialUpdate","loadTypes":1,"isUnityClass":true}]}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0897a75dc3e077a573a3f6f92a815d014e169432f02335ddc284a1fd5a3acd4a
+size 350
