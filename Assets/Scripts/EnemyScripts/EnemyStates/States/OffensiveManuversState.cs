@@ -1,36 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OrkWizard
-{
-    public class OffensiveManuversState : BaseMovementState, IState
-    {
-
-        public override void OnEnter(BaseStateManager stateManager)
-        {
-            movementType = MovementType.OffensiveManuvers;
-            base.OnEnter(stateManager);
-        }
-
-        public override void OnUpdate(BaseStateManager stateManager)
-        {
-            if (stateManager.Enemy.PlayerReference != null)
-            {
-                if (stateManager.Enemy.CanAttack())
-                {
-                    stateManager.ChangeState(new AttackPlayerState());
-                }
-            }
-            else
-            {
-                stateManager.ChangeState(new PatrolState());
-            }
-
-        }
-    }
-}
-
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:10650e7c021fd6ef038e01bdf28f38fc7705a8f04a2c2ee2f5194fec83e297be
+size 858

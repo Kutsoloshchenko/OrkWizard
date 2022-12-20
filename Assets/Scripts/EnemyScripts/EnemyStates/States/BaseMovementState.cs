@@ -1,24 +1,3 @@
-﻿using UnityEngine;
-
-namespace OrkWizard
-{
-    public abstract class BaseMovementState : BaseEnemyState
-    {
-        private const string _moveAnimation = "Move";
-        protected MovementType movementType = MovementType.NoMovement;
-
-        public override void OnEnter(BaseStateManager stateManager)
-        {
-            stateManager.Enemy.Animator.ChangeAnimation(_moveAnimation);
-            stateManager.Enemy.SetMovement(true);
-            stateManager.Enemy.Movement.SetCurrentMovementType(movementType);
-        }
-
-        public override void OnExit(BaseStateManager stateManager)
-        {
-            stateManager.Enemy.SetMovement(false);
-            stateManager.Enemy.Movement.SetCurrentMovementType(MovementType.NoMovement);
-        }
-
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cb553fce2c19fbfaf04b1281c63ea7fda88b3e91014d4717efd4c4ef813ec0f0
+size 764

@@ -1,21 +1,3 @@
-﻿using UnityEngine;
-
-namespace OrkWizard
-{
-    public class DisengageState : BaseMovementState, IState
-    {
-        public override void OnEnter(BaseStateManager stateManager)
-        {
-            movementType = MovementType.RunAway;
-            base.OnEnter(stateManager);
-        }
-
-        public override void OnUpdate(BaseStateManager stateManager)
-        {
-            if (stateManager.Enemy.PlayerReference == null)
-            {
-                stateManager.ChangeState(new PatrolState());
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:84de6086108cc609046529af16895261949c4b9c739d2439d3412011edfd1a21
+size 535

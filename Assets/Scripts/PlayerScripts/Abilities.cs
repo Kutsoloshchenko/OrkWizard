@@ -1,22 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace OrkWizard
-{
-    public class Abilities : MonoBehaviour
-    {
-        protected PlayerCharacter character;
-
-        protected virtual void Initialization()
-        {
-            character = GetComponent<PlayerCharacter>();
-        }
-
-        // Start is called before the first frame update
-        void Awake()
-        {
-            Initialization();
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4661f5120e14c4bb440e41742bc80f2840013fc643025db07d3bb0c2594e3e61
+size 462
