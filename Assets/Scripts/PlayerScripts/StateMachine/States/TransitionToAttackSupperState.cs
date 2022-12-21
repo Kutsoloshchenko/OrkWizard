@@ -1,28 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
-
-namespace OrkWizard
-{
-    public abstract class TransitionToAttackSupperState
-    {
-        public virtual void OnUpdate(BaseStateManager stateManager)
-        {
-            if (stateManager.Character.Input.AttackBeingPressed && (stateManager.Character.WeaponController.enabled && stateManager.Character.WeaponController.CurrentWeapon.CanAttack()))
-            {
-                if (stateManager.Character.WeaponController.CurrentWeapon.IsThroable())
-                {
-                    stateManager.ChangeState(new ThrowAttackState());
-                }
-                else
-                {
-                    stateManager.ChangeState(new SpreaderAttackingState());
-                }
-                return;
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:efeb224dcb120f81af36da0f0509590f3d89b6e02f3c71832ac8858cff2f039a
+size 1133

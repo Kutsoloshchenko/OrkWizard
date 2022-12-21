@@ -1,26 +1,3 @@
-﻿using System;
-using UnityEngine;
-
-namespace OrkWizard
-{
-    public abstract class Character : MonoBehaviour
-    {
-
-        [HideInInspector]
-        public bool IsFacingLeft { get; private set; }
-
-        public virtual void Flip()
-        {
-            IsFacingLeft = !IsFacingLeft;
-            transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
-        }
-
-
-        protected RaycastHit2D CollisionCheckRayCast(Vector2 direction, Vector2 originPoint, float distance, LayerMask collision)
-        {
-            var hit = Physics2D.Raycast(originPoint, direction, distance, collision);
-            return hit;
-        }
-
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:bc94de93f32aeec3b13dd797df85b414a2426de7fe9940e575464309838ca2eb
+size 668

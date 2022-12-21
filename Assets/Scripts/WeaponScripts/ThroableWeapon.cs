@@ -1,29 +1,3 @@
-﻿using UnityEngine;
-
-namespace OrkWizard
-{
-    public class ThroableWeapon : WeaponBase, IWeapon
-    {
-        [SerializeField]
-        private GameObject projectile;
-
-        protected override void Initialize()
-        {
-            base.Initialize();
-            var projController = projectile.GetComponent<ProjectileController>();
-            weaponDistance = projController.GetProjectileMaxDistance();
-        }
-
-        public void Attack(Vector2 projectileStartingPoint, Vector2 direction, Vector2 initialSpeed)
-        {
-            canAttack = false;
-            var projectileObject = Instantiate(projectile, projectileStartingPoint, Quaternion.identity);
-            var projController = projectileObject.GetComponent<ProjectileController>();
-            if (projController != null)
-            {
-                projController.ApplyInitialForce(direction, initialSpeed);
-            }
-            Invoke("ResetAtack", weaponSO.coolDownTime);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3c5b9c9bc047351c935b8d4beb72ec84896a2cbacffb6d9e2d215ecc0bb9b350
+size 928
