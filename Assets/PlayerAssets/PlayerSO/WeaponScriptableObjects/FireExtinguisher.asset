@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: FireExtinguisher
   m_EditorClassIdentifier: 
   speedAllowed: 10
-  animationName: FireExtinguisher
   coolDownTime: 0
   animationClip: {fileID: 7400000, guid: 6fed07f8de789b0458d52a2468302591, type: 2}
   throwable: 0
   offsetX: 4.7
   offsetY: -0.5
+  projectile: {fileID: 7087920762181560723, guid: f32510cbe672f554c9fae6d8eb85fd2e,
+    type: 3}

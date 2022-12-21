@@ -1,30 +1,3 @@
-﻿using UnityEngine;
-
-namespace OrkWizard
-{
-    public class AnimatorControllerBase : MonoBehaviour
-    {
-        protected Animator animator;
-        protected string currentAnimationName;
-
-        protected void Awake()
-        {
-            Initialize();
-        }
-
-        protected virtual void Initialize()
-        {
-            animator = GetComponent<Animator>();
-        }
-
-        public void ChangeAnimation(string state)
-        {
-            if (currentAnimationName != state)
-            {
-                animator.Play(state);
-                currentAnimationName = state;
-            }
-            
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fd990dcc6315f8505fcf7cad1793d9ca5b2dfe85337d9eda612d97306055787e
+size 634

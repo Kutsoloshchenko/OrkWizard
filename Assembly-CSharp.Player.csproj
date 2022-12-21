@@ -67,7 +67,7 @@
     <Compile Include="Assets\Scripts\BaseClasses\AnimatorControllerBase.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\AttackingState\SpreaderAttackingState.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\EnemyStateManager.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\MovingPlatformSO.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\EnvSO\PlatformSO\MovingPlatformSO.cs" />
     <Compile Include="Assets\Scripts\Interfaces\EnemyInterfaces\IEnemyMovement.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\Movement\BaseEnemyMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\WeaponScripts\PlayerWeaponController.cs" />
@@ -88,7 +88,7 @@
     <Compile Include="Assets\Scripts\Interfaces\IWeapon.cs" />
     <Compile Include="Assets\Scripts\WeaponScripts\Projectiles\BaseProjectile.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\WeaponSO.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\FallingPlatformSO.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\EnvSO\PlatformSO\FallingPlatformSO.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\AttackPlayerState.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerHealthManager.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\PatrolState.cs" />
@@ -127,7 +127,7 @@
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\InAirStates\WallTouchState.cs" />
     <Compile Include="Assets\Scripts\InputDetection\InputMapper.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\InAirStates\PlatformHangState.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\TrapSO.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\EnvSO\TrapSO\TrapSO.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\MovingState.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\Abilities.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerRigidbodyController.cs" />
@@ -135,6 +135,10 @@
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\BaseEnemyState.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\TrapScripts\TrapActivator.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyRigidBodyController.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IInteractable.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\EnvSO\InteractableSO\InteractableSO.cs" />
+    <Compile Include="Assets\Scripts\EnvScripts\InteractableScripts\InteractableController.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\InteractState.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

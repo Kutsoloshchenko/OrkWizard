@@ -18,3 +18,5 @@ MonoBehaviour:
   throwable: 1
   offsetX: 7
   offsetY: 0
+  projectile: {fileID: 7096515040477210438, guid: 2e5033bfd9c892c46a198fd7ccb0ebae,
+    type: 3}
