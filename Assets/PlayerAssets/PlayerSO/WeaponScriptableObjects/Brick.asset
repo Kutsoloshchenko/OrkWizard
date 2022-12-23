@@ -16,6 +16,9 @@ MonoBehaviour:
   coolDownTime: 0.5
   animationClip: {fileID: 7400000, guid: 0829b92993dc50647bf870a51b037eaf, type: 2}
   throwable: 1
+  requiresAmmunition: 0
+  ammoName: 
+  ammoPerShot: 0
   offsetX: 2
   offsetY: 3.125
   projectile: {fileID: 7087920762181560723, guid: 6cecedf5bcdaad940917d5f4108c54c6,
