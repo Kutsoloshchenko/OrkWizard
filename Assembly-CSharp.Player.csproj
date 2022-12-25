@@ -152,6 +152,9 @@
     <Compile Include="Assets\Scripts\EnvScripts\TrapScripts\TrapActivator.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyRigidBodyController.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\InteractableScripts\PickUpController.cs" />
+    <Compile Include="Assets\Scripts\EnvScripts\DoorScripts\DoorController.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\EnvSO\DoorSO\DoorSO.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IRemoteActor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
