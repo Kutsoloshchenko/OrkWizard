@@ -19,7 +19,7 @@ MonoBehaviour:
   requiresAmmunition: 0
   ammoName: 
   ammoPerShot: 0
-  offsetX: 2
-  offsetY: 3.125
+  offset: {x: 2, y: 3}
   projectile: {fileID: 7087920762181560723, guid: 6cecedf5bcdaad940917d5f4108c54c6,
     type: 3}
+  weaponIcon: {fileID: 21300000, guid: 1cee075ed0b2a1c4eadb5e6c76413102, type: 3}

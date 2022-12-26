@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdb48afb62b95474a99323da3256ca91, type: 3}
   m_Name: HealthPotion
   m_EditorClassIdentifier: 
-  name: HealthPotion
+  shortName: HealthPotion
   fullName: PortableHealthPotion
-  maxNumberInInventory: 5
+  maxNumberInInventory: 2
   usableFromInventory: 1
   numericValue: 10
+  icon: {fileID: 21300000, guid: 2c98fb41df7b5bc45868ce079ac53fb2, type: 3}

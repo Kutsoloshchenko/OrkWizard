@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5be3373739abd344a7a74469c10ea8c, type: 3}
   m_Name: BrickDoor
   m_EditorClassIdentifier: 
-  OpenedByWeapon: 1
+  openedByWeapon: 1
   nameOfTheProjectile: Brick

@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdb48afb62b95474a99323da3256ca91, type: 3}
   m_Name: MolotovAmmo
   m_EditorClassIdentifier: 
-  name: MolotovAmmo
+  shortName: MolotovAmmo
   fullName: EmptyAction
-  maxNumberInInventory: 4
+  maxNumberInInventory: 2
   usableFromInventory: 0
   numericValue: 0
+  icon: {fileID: 21300000, guid: 475dc633fe0aa2a41ae6001f77380f20, type: 3}
