@@ -74,10 +74,12 @@
     <Compile Include="Assets\Scripts\ScriptableObjects\EnvSO\PlatformSO\MovingPlatformSO.cs" />
     <Compile Include="Assets\Scripts\Interfaces\EnemyInterfaces\IEnemyMovement.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\Movement\BaseEnemyMovement.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\UISO\InventoryCountChangeEventSO.cs" />
     <Compile Include="Assets\Scripts\BaseClasses\PlayerTagReferenceClass.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\WeaponScripts\PlayerWeaponController.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\AttackingState\AttackSuperState.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\PowerSlideState.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IRemoteActor.cs" />
     <Compile Include="Assets\Scripts\WeaponScripts\ThroableWeapon.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\Movement\HorizontalMovement.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EnemySO\EnemyMovementSO.cs" />
@@ -93,6 +95,7 @@
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\InAirStates\InAirState.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\AttackingState\ThrowAttackState.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\InteractableScripts\PickUps\InstantPickUpObjects\MaxHealthUpgradePickUp.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\EnvSO\DoorSO\DoorSO.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IWeapon.cs" />
     <Compile Include="Assets\Scripts\WeaponScripts\Projectiles\BaseProjectile.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\WeaponSO.cs" />
@@ -101,6 +104,7 @@
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerHealthManager.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\PatrolState.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyHealthManager.cs" />
+    <Compile Include="Assets\Scripts\EnvScripts\DoorScripts\DoorController.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EnemySO\PlayerDetectorSO.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyWeaponController\EnemyWeaponController.cs" />
     <Compile Include="Assets\Scripts\WeaponScripts\Projectiles\SpreadController.cs" />
@@ -109,6 +113,7 @@
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\PlayerStateManager.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\DisengageState.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IPickable.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\UISO\WeaponChangedEventSO.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\PlayerSO\PlayerHealthSO.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EnemySO\EnemyHealthSO.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EnvSO\InteractableSO\PickUps\InventoryItemSO.cs" />
@@ -117,6 +122,7 @@
     <Compile Include="Assets\Scripts\EnvScripts\PlatfromScripts\MovingPlatform.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\Movement\Jump.cs" />
     <Compile Include="Assets\Scripts\WeaponScripts\WeaponBase.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\UISO\HealthUpdatedEventSO.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerCharacter.cs" />
     <Compile Include="Assets\Scripts\BaseClasses\Character.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\ManualState.cs" />
@@ -132,6 +138,7 @@
     <Compile Include="Assets\Scripts\InputDetection\InputDetection.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\DmgStates\EnemyDyingState.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\AnimatorController.cs" />
+    <Compile Include="Assets\Scripts\UIScripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\DmgRecivedState\DyingState.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\PlatfromScripts\PlatformHandler.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\InAirStates\InAirSuperState.cs" />
@@ -152,9 +159,29 @@
     <Compile Include="Assets\Scripts\EnvScripts\TrapScripts\TrapActivator.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyRigidBodyController.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\InteractableScripts\PickUpController.cs" />
-    <Compile Include="Assets\Scripts\EnvScripts\DoorScripts\DoorController.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\EnvSO\DoorSO\DoorSO.cs" />
-    <Compile Include="Assets\Scripts\Interfaces\IRemoteActor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

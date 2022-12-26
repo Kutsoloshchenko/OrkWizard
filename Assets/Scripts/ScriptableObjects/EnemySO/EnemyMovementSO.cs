@@ -1,14 +1,3 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
-
-namespace OrkWizard
-{
-    [CreateAssetMenu(fileName = "EnemyMovementSO", menuName = "ScriptableObjects/EnemiesScriptableObjects/EnemyMovement")]
-    public class EnemyMovementSO : ScriptableObject
-    {
-        public float maxSpeed = 50;
-        public float collisionDistance = 4;
-        public LayerMask collistionLayers;
-    }
-}
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:60885be6be78b9803fbbbad00fc87b6488813f0890ae82ab790b2eb890252ef9
+size 685

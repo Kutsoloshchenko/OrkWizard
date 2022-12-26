@@ -19,7 +19,7 @@ MonoBehaviour:
   requiresAmmunition: 1
   ammoName: MolotovAmmo
   ammoPerShot: 1
-  offsetX: 2
-  offsetY: 3.125
+  offset: {x: 2, y: 3}
   projectile: {fileID: 7087920762181560723, guid: da9a54558e34b7847b67214913df7ad0,
     type: 3}
+  weaponIcon: {fileID: 21300000, guid: 475dc633fe0aa2a41ae6001f77380f20, type: 3}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3571cd4d73ffa24eaa904708c86556c, type: 3}
   m_Name: IceElementalProjectile
   m_EditorClassIdentifier: 
-  force: 30
+  force: {x: 35, y: 0}
   dmgValue: 10
   damageType: 1
   impactDmg: 10

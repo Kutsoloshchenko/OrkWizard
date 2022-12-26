@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3571cd4d73ffa24eaa904708c86556c, type: 3}
   m_Name: Brick
   m_EditorClassIdentifier: 
-  force: 25
-  dmgValue: 1
+  force: {x: 25, y: 0}
+  dmgValue: 10
   damageType: 3
   impactDmg: 10
   explosionRadius: 0
