@@ -22,3 +22,4 @@ MonoBehaviour:
   torque: -50
   explosionAnimationClip: {fileID: 0}
   gravityScale: 2
+  audioClip: {fileID: 8300000, guid: d07947af94c94df4183d9d465aa925ff, type: 3}

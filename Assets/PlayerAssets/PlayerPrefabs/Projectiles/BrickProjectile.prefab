@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7087920762181560726}
   - component: {fileID: 7087920762181560721}
   - component: {fileID: 7087920762181560720}
+  - component: {fileID: 722371157238212650}
   m_Layer: 12
   m_Name: BrickProjectile
   m_TagString: Projectile
@@ -69,6 +70,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSO: {fileID: 11400000, guid: 582d0af040076dd4981111daa12555c4, type: 2}
+  eventSO: {fileID: 11400000, guid: fb2fa8ae17627dd46bbc916f3b4ddf93, type: 2}
 --- !u!95 &7087920762181560726
 Animator:
   serializedVersion: 3
@@ -165,3 +167,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.96, y: 1.6045389}
   m_EdgeRadius: 0
+--- !u!114 &722371157238212650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7087920762181560723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7eb2e327887cca4fa67110a716b4094, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
