@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4544099898866182480}
   - component: {fileID: 3694699654301442103}
   - component: {fileID: 6790522867232177711}
+  - component: {fileID: 3189618716181465568}
   m_Layer: 12
   m_Name: BeeBombardierProjectile
   m_TagString: Untagged
@@ -139,6 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSO: {fileID: 11400000, guid: 46f01ba511c17de40b30f015435f9dd6, type: 2}
+  eventSO: {fileID: 11400000, guid: fb2fa8ae17627dd46bbc916f3b4ddf93, type: 2}
 --- !u!61 &6790522867232177711
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -165,3 +167,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.76, y: 4.14}
   m_EdgeRadius: 0
+--- !u!114 &3189618716181465568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3483626933981439310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7eb2e327887cca4fa67110a716b4094, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

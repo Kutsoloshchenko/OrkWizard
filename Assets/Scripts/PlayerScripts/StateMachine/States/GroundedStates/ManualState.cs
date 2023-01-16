@@ -1,35 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OrkWizard
-{
-    public class ManualState : GroundedSuperState, IState
-    {
-        private const string _manual = "Manual";
-
-        public override void OnEnter(BaseStateManager stateManager)
-        {
-            stateManager.Character.Animator.ChangeAnimation(_manual);
-            stateManager.Character.CapHorizontalSpeed(stateManager.Character.playerScriptableObject.maxSpeed * stateManager.Character.playerScriptableObject.manualSpeedMultiplier);
-        }
-
-        public override void OnExit(BaseStateManager stateManager)
-        {
-            stateManager.Character.CapHorizontalSpeed(stateManager.Character.playerScriptableObject.originalMaxSpeed);
-        }
-
-        public override void OnFixedUpdate(BaseStateManager stateManager)
-        {
-            base.OnFixedUpdate(stateManager);
-
-            if (!stateManager.Character.Input.Manual)
-            {
-                stateManager.ChangeState(new IdleState());
-            }
-        }
-
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c6886ad15055435f5fef8f6d9d7b44357c1faefecbadd0db22efedbdda1e6cca
+size 1170

@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\ScriptableObjects\EnvSO\PlatformSO\MovingPlatformSO.cs" />
     <Compile Include="Assets\Scripts\Interfaces\EnemyInterfaces\IEnemyMovement.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\Movement\BaseEnemyMovement.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\SoundSO\SoundLibrarySO.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\UISO\InventoryCountChangeEventSO.cs" />
     <Compile Include="Assets\Scripts\BaseClasses\PlayerTagReferenceClass.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\WeaponScripts\PlayerWeaponController.cs" />
@@ -127,6 +128,7 @@
     <Compile Include="Assets\Scripts\BaseClasses\Character.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\ManualState.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\InteractableScripts\PickUps\InventoryPickUpObject\PortableHealthPotion.cs" />
+    <Compile Include="Assets\Scripts\SoundScripts\SoundManager.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EnvSO\InteractableSO\PickUps\MaxHelathUpPickUpSO.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\IdleState.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IHange.cs" />
@@ -145,14 +147,17 @@
     <Compile Include="Assets\Scripts\EnvScripts\TrapScripts\TrapManager.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\BaseMovementState.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\DmgStates\EnemyCriticallyHit.cs" />
+    <Compile Include="Assets\Scripts\BaseClasses\SoundPlayingComponent.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EnemySO\EnemySO.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\InAirStates\WallTouchState.cs" />
     <Compile Include="Assets\Scripts\InputDetection\InputMapper.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\SoundSO\OneTimeSoundEventSO.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\InAirStates\PlatformHangState.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EnvSO\TrapSO\TrapSO.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\MovingState.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\Abilities.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerRigidbodyController.cs" />
+    <Compile Include="Assets\Scripts\SoundScripts\BaseAudioManager.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\GrappleState.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IInteractable.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\BaseEnemyState.cs" />

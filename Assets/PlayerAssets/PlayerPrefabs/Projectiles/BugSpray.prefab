@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7087920762181560721}
   - component: {fileID: 7087920762181560720}
   - component: {fileID: 8387297845375884609}
+  - component: {fileID: 722371157238212650}
   m_Layer: 0
   m_Name: BugSpray
   m_TagString: Untagged
@@ -90,6 +91,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -164,3 +166,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSO: {fileID: 11400000, guid: 025932e042cda584a8e3937258fec3b3, type: 2}
+  eventSO: {fileID: 11400000, guid: fb2fa8ae17627dd46bbc916f3b4ddf93, type: 2}
+--- !u!114 &722371157238212650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7087920762181560723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7eb2e327887cca4fa67110a716b4094, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

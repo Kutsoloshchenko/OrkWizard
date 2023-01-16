@@ -23,3 +23,4 @@ MonoBehaviour:
   explosionAnimationClip: {fileID: 7400000, guid: ee7e103544ef6ef439754e729eef6991,
     type: 2}
   gravityScale: 2
+  audioClip: {fileID: 8300000, guid: d07947af94c94df4183d9d465aa925ff, type: 3}
