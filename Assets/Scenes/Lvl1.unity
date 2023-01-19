@@ -140,6 +140,7 @@ GameObject:
   - component: {fileID: 62450561}
   - component: {fileID: 62450560}
   - component: {fileID: 62450559}
+  - component: {fileID: 62450562}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -216,6 +217,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &62450562
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62450558}
+  m_Enabled: 1
 --- !u!4 &81294206 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7363416839933459223, guid: 1b8573114324225418b82b591dce2039,
@@ -571,6 +580,54 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1435191314141633952}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &469174423
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 469174425}
+  - component: {fileID: 469174424}
+  m_Layer: 0
+  m_Name: OnLevelLoadManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &469174424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469174423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5be2536e71fe0c4397b84b6af6dd9cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  finilizedEventSO: {fileID: 11400000, guid: ba40e1c7a2c949c4f924527f1a757998, type: 2}
+  lvlLoadedSo: {fileID: 11400000, guid: 9034318d71091c84a960a48cfd1f9e09, type: 2}
+  startingLocations:
+  - {x: -450, y: -20}
+  - {x: -370, y: 85}
+--- !u!4 &469174425
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469174423}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &582370275 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1012306979771817019, guid: bf91be022a3b3ae4ab2bafd1f1718ac8,

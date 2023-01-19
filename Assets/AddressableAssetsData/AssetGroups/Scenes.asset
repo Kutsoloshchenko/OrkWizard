@@ -23,10 +23,14 @@ MonoBehaviour:
     m_SerializedLabels:
     - Managers
   - m_GUID: 2cda990e2423bbf4892e6590ba056729
-    m_Address: SampleScene
+    m_Address: Lvl1
     m_ReadOnly: 0
     m_SerializedLabels:
     - Level
+  - m_GUID: ec7eeefee4a9309429feebf4270374cf
+    m_Address: Lvl0
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: da31cbc848a90aa4f9386b034853464c, type: 2}
   m_SchemaSet:

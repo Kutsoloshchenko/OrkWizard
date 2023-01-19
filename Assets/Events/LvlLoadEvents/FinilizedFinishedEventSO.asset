@@ -9,15 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fde876d356633f84c93afb368d3e6a5f, type: 3}
-  m_Name: FireTrap
+  m_Script: {fileID: 11500000, guid: 969a8bbffb759d2409752001fbd53c0d, type: 3}
+  m_Name: FinilizedFinishedEventSO
   m_EditorClassIdentifier: 
-  dmgType: 0
-  damage: 5
-  trigeredByPlayer: 0
-  dealDmgOnlyToPlayer: 0
-  dmgCooldown: 1
-  downTime: 2
-  activeTime: 5
-  ticksAfterStop: 10
-  dmgOverTime: 1

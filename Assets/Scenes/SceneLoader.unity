@@ -228,6 +228,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadLvlEventSo: {fileID: 11400000, guid: ae0fae822d275a7429608e8eecb22b97, type: 2}
+  loadLvlFinishedEventSO: {fileID: 11400000, guid: 9034318d71091c84a960a48cfd1f9e09,
+    type: 2}
+  finilizationFinishedEventSO: {fileID: 11400000, guid: ba40e1c7a2c949c4f924527f1a757998,
+    type: 2}
   loadingScreen: {fileID: 1625494922}
 --- !u!4 &1382416796
 Transform:

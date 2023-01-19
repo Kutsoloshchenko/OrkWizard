@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\Interfaces\IDamagable.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\InAirStates\InAirState.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EnvSO\DoorSO\DoorSO.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\FinilizeLvlLoadFinishedEventSO.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\WeaponSO.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyHealthManager.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyWeaponController\EnemyWeaponController.cs" />
@@ -101,6 +102,7 @@
     <Compile Include="Assets\Scripts\EnvScripts\TrapScripts\TrapManager.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\BaseMovementState.cs" />
     <Compile Include="Assets\Scripts\BaseClasses\SoundPlayingComponent.cs" />
+    <Compile Include="Assets\Scripts\SceneManagment\TransitionManager.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EnemySO\EnemySO.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\InAirStates\WallTouchState.cs" />
     <Compile Include="Assets\Scripts\InputDetection\InputMapper.cs" />
@@ -124,6 +126,7 @@
     <Compile Include="Assets\Scripts\BaseClasses\PlayerTagReferenceClass.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\WeaponScripts\PlayerWeaponController.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\AttackingState\AttackSuperState.cs" />
+    <Compile Include="Assets\Scripts\SceneManagment\OnLevelLoadManager.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IRemoteActor.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\Movement\HorizontalMovement.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\OffensiveManuversState.cs" />
@@ -131,6 +134,7 @@
     <Compile Include="Assets\Scripts\Interfaces\IState.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\ProjectileSO.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\InteractableScripts\PickUps\InventoryPickUpObject\EmptyAction.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\LoadLvlFinishedEventSO.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\AttackingState\ThrowAttackState.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\InteractableScripts\PickUps\InstantPickUpObjects\MaxHealthUpgradePickUp.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IWeapon.cs" />
