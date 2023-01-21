@@ -171,6 +171,7 @@
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\GrappleState.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\BaseEnemyState.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\TrapScripts\TrapActivator.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\PauseGameEventSO.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

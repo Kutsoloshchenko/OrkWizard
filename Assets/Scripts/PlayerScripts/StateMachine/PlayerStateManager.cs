@@ -1,23 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
-
-namespace OrkWizard
-{
-    public class PlayerStateManager : BaseStateManager
-    {
-        private void Awake()
-        {
-            Character = GetComponent<PlayerCharacter>();
-            // Switch to state Idle
-        }
-
-        private void Start()
-        {
-            ChangeState(new IdleState());
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:513f3653cafe2c6116156fcb43316c5a6f410f3f048ed3b8d7a38d66f41ab381
+size 882

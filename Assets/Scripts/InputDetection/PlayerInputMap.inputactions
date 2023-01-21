@@ -85,6 +85,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ToggleMainMenu",
+                    "type": "Button",
+                    "id": "a09478d8-f7b7-4eaa-a898-95c6a24d67b3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -305,6 +314,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "ChangeItem",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cad460ee-5870-49f9-b1e8-7048fe3bf013",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keboard",
+                    "action": "ToggleMainMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ba2bb1c4-1a04-4aa0-a2b7-36d0881dfcf8",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "ToggleMainMenu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

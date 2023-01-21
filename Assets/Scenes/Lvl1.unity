@@ -1742,18 +1742,6 @@ PrefabInstance:
     - {fileID: 2347465473053366372, guid: bf91be022a3b3ae4ab2bafd1f1718ac8, type: 3}
     - {fileID: 9049852958769304752, guid: bf91be022a3b3ae4ab2bafd1f1718ac8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bf91be022a3b3ae4ab2bafd1f1718ac8, type: 3}
---- !u!114 &1533529931 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8230919764732228921, guid: a8d12364c33b84e43a96a72be7fef811,
-    type: 3}
-  m_PrefabInstance: {fileID: 8230919764258715200}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 875148716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a69556095023a0479faa2b98a700923, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1543044593
 GameObject:
   m_ObjectHideFlags: 0
@@ -2643,6 +2631,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundLib: {fileID: 11400000, guid: 80ce46e13bf21f84f9a710b2e88d0425, type: 2}
+  eventSO: {fileID: 11400000, guid: 64842c31ba0980e469d28fa5566708b1, type: 2}
   EnemySO: {fileID: 11400000, guid: 191248bdd760cb542b7cd2792f81e21d, type: 2}
   detectorSO: {fileID: 11400000, guid: 4d3ce0839374aee4a8b221d47b71e8ea, type: 2}
   weaponsInitialObjects:
@@ -3000,37 +2989,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7158694381433640202, guid: b4ca0f234d7fedb4b9c52e1a6d1c5f73,
-        type: 3}
-      propertyPath: Pan2D
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7158694381433640202, guid: b4ca0f234d7fedb4b9c52e1a6d1c5f73,
-        type: 3}
-      propertyPath: MaxDistance
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 7158694381433640202, guid: b4ca0f234d7fedb4b9c52e1a6d1c5f73,
-        type: 3}
-      propertyPath: MinDistance
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7158694381433640202, guid: b4ca0f234d7fedb4b9c52e1a6d1c5f73,
-        type: 3}
-      propertyPath: rolloffMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7158694381433640202, guid: b4ca0f234d7fedb4b9c52e1a6d1c5f73,
-        type: 3}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7280305865203831813, guid: b4ca0f234d7fedb4b9c52e1a6d1c5f73,
-        type: 3}
-      propertyPath: soundLib
-      value: 
-      objectReference: {fileID: 11400000, guid: 8091c208ee47e1e49ac6153e7050f8cf,
-        type: 2}
     - target: {fileID: 7280305865203831814, guid: b4ca0f234d7fedb4b9c52e1a6d1c5f73,
         type: 3}
       propertyPath: m_RootOrder
@@ -3106,6 +3064,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundLib: {fileID: 0}
+  eventSO: {fileID: 0}
   EnemySO: {fileID: 11400000, guid: 040645dd0cca58140912f5d8099ed53d, type: 2}
   detectorSO: {fileID: 11400000, guid: 1a1da48cea054b543bdceb1809832455, type: 2}
   weaponsInitialObjects: []
@@ -3332,7 +3291,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ActionEvents.Array.data[7].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1533529931}
+      objectReference: {fileID: 0}
     - target: {fileID: 8230919764258715203, guid: a8d12364c33b84e43a96a72be7fef811,
         type: 3}
       propertyPath: m_ActionEvents.Array.data[7].m_PersistentCalls.m_Calls.Array.data[0].m_CallState

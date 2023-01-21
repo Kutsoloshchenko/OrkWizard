@@ -602,26 +602,6 @@ PrefabInstance:
     - {fileID: 2347465473053366372, guid: bf91be022a3b3ae4ab2bafd1f1718ac8, type: 3}
     - {fileID: 9049852958769304752, guid: bf91be022a3b3ae4ab2bafd1f1718ac8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bf91be022a3b3ae4ab2bafd1f1718ac8, type: 3}
---- !u!1 &875148716 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8230919764732228916, guid: a8d12364c33b84e43a96a72be7fef811,
-    type: 3}
-  m_PrefabInstance: {fileID: 8230919764258715200}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &875148730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 875148716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9feb00788ebecb64f94a15dddb0987e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventory: {fileID: 11400000, guid: 320707d656ee7f24e85e6e9f2606f9d0, type: 2}
-  inventoryEvents: {fileID: 11400000, guid: 812e8b3d5b2ba6244b6fe8bdc027b016, type: 2}
 --- !u!1 &960206276
 GameObject:
   m_ObjectHideFlags: 0
@@ -892,18 +872,6 @@ MonoBehaviour:
   eventSO: {fileID: 11400000, guid: ae0fae822d275a7429608e8eecb22b97, type: 2}
   lvlName: Lvl1
   lvlEntry: 0
---- !u!114 &1533529931 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8230919764732228921, guid: a8d12364c33b84e43a96a72be7fef811,
-    type: 3}
-  m_PrefabInstance: {fileID: 8230919764258715200}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 875148716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a69556095023a0479faa2b98a700923, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1543044593
 GameObject:
   m_ObjectHideFlags: 0
@@ -1489,6 +1457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundLib: {fileID: 0}
+  eventSO: {fileID: 0}
   EnemySO: {fileID: 11400000, guid: 040645dd0cca58140912f5d8099ed53d, type: 2}
   detectorSO: {fileID: 11400000, guid: 1a1da48cea054b543bdceb1809832455, type: 2}
   weaponsInitialObjects: []
@@ -1512,115 +1481,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5260682525493862354, guid: a8d12364c33b84e43a96a72be7fef811,
-        type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5260682525493862354, guid: a8d12364c33b84e43a96a72be7fef811,
-        type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: -88589875899535465, guid: 5dcaed0bd01c7074aaeb54df60ff1bc1,
-        type: 2}
-    - target: {fileID: 8230919764258715202, guid: a8d12364c33b84e43a96a72be7fef811,
-        type: 3}
-      propertyPath: eventSO
-      value: 
-      objectReference: {fileID: 11400000, guid: 972ae4344b5133046a2281711c1fc0a9,
-        type: 2}
-    - target: {fileID: 8230919764258715202, guid: a8d12364c33b84e43a96a72be7fef811,
-        type: 3}
-      propertyPath: playerWeaponsInitialObjects.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8230919764258715203, guid: a8d12364c33b84e43a96a72be7fef811,
-        type: 3}
-      propertyPath: m_ActionEvents.Array.size
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8230919764258715203, guid: a8d12364c33b84e43a96a72be7fef811,
-        type: 3}
-      propertyPath: m_ActionEvents.Array.data[7].m_ActionId
-      value: 7d9794c8-597d-4aef-b1f1-d69077824807
-      objectReference: {fileID: 0}
-    - target: {fileID: 8230919764258715203, guid: a8d12364c33b84e43a96a72be7fef811,
-        type: 3}
-      propertyPath: m_ActionEvents.Array.data[7].m_ActionName
-      value: Gameplay/Interact[/Keyboard/e]
-      objectReference: {fileID: 0}
-    - target: {fileID: 8230919764258715203, guid: a8d12364c33b84e43a96a72be7fef811,
-        type: 3}
-      propertyPath: m_ActionEvents.Array.data[7].m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8230919764258715203, guid: a8d12364c33b84e43a96a72be7fef811,
-        type: 3}
-      propertyPath: m_ActionEvents.Array.data[7].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8230919764258715203, guid: a8d12364c33b84e43a96a72be7fef811,
-        type: 3}
-      propertyPath: m_ActionEvents.Array.data[7].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1533529931}
-    - target: {fileID: 8230919764258715203, guid: a8d12364c33b84e43a96a72be7fef811,
-        type: 3}
-      propertyPath: m_ActionEvents.Array.data[7].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8230919764258715203, guid: a8d12364c33b84e43a96a72be7fef811,
-        type: 3}
-      propertyPath: m_ActionEvents.Array.data[7].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnInteract
-      objectReference: {fileID: 0}
-    - target: {fileID: 8230919764258715203, guid: a8d12364c33b84e43a96a72be7fef811,
-        type: 3}
-      propertyPath: m_ActionEvents.Array.data[7].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: OrkWizard.InputDetection, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8230919764258715203, guid: a8d12364c33b84e43a96a72be7fef811,
-        type: 3}
-      propertyPath: m_ActionEvents.Array.data[7].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 8230919764258715208, guid: a8d12364c33b84e43a96a72be7fef811,
-        type: 3}
-      propertyPath: healthUpdatedEvent
-      value: 
-      objectReference: {fileID: 11400000, guid: 2e371edabbe1b9c448eb9c4ca8040e3b,
-        type: 2}
-    - target: {fileID: 8230919764258715209, guid: a8d12364c33b84e43a96a72be7fef811,
-        type: 3}
-      propertyPath: hp
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8230919764258715209, guid: a8d12364c33b84e43a96a72be7fef811,
-        type: 3}
-      propertyPath: item
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8230919764258715209, guid: a8d12364c33b84e43a96a72be7fef811,
-        type: 3}
-      propertyPath: weapon
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8230919764258715209, guid: a8d12364c33b84e43a96a72be7fef811,
-        type: 3}
-      propertyPath: soundLib
-      value: 
-      objectReference: {fileID: 11400000, guid: 8780b9539cb55e747965c5be35518c4d,
-        type: 2}
-    - target: {fileID: 8230919764258715209, guid: a8d12364c33b84e43a96a72be7fef811,
-        type: 3}
-      propertyPath: verticalSpeed
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8230919764258715209, guid: a8d12364c33b84e43a96a72be7fef811,
-        type: 3}
-      propertyPath: horizontalSpeed
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 8230919764732228916, guid: a8d12364c33b84e43a96a72be7fef811,
         type: 3}
       propertyPath: m_Name
