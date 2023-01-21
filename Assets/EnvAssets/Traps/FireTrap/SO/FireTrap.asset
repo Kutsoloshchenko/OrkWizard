@@ -16,8 +16,8 @@ MonoBehaviour:
   damage: 5
   trigeredByPlayer: 0
   dealDmgOnlyToPlayer: 0
-  dmgCooldown: 2
+  dmgCooldown: 1
   downTime: 2
   activeTime: 5
-  ticksAfterStop: 2
+  ticksAfterStop: 10
   dmgOverTime: 1

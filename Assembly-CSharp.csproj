@@ -56,85 +56,41 @@
     <Analyzer Include="O:\VS\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\ScriptableObjects\PlayerSO\PlayerInventorySO.cs" />
     <Compile Include="Assets\Scripts\CamerScripts\CameraMovementScript.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\PlayerSO\PlayerSO.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EnvSO\InteractableSO\InteractableSO.cs" />
-    <Compile Include="Assets\Scripts\BaseClasses\BaseHealthManager.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\InteractableScripts\BaseInteractableObject\BaseInteractableObject.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\TransitionToAttackSupperState.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\Movement\FlyingBombardierEnemyMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\Inventory\PlayerInventoryManager.cs" />
-    <Compile Include="Assets\Scripts\EnvScripts\PlatfromScripts\FallingPlatfrom.cs" />
     <Compile Include="Assets\Scripts\Enums\Enums.cs" />
-    <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\EnemyIdleState.cs" />
-    <Compile Include="Assets\Scripts\BaseClasses\AnimatorControllerBase.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\AttackingState\SpreaderAttackingState.cs" />
-    <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\EnemyStateManager.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EnvSO\PlatformSO\MovingPlatformSO.cs" />
     <Compile Include="Assets\Scripts\Interfaces\EnemyInterfaces\IEnemyMovement.cs" />
-    <Compile Include="Assets\Scripts\EnemyScripts\Movement\BaseEnemyMovement.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\SoundSO\SoundLibrarySO.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\UISO\InventoryCountChangeEventSO.cs" />
-    <Compile Include="Assets\Scripts\BaseClasses\PlayerTagReferenceClass.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\WeaponScripts\PlayerWeaponController.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\AttackingState\AttackSuperState.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\LoadLvlEventSo.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\PowerSlideState.cs" />
-    <Compile Include="Assets\Scripts\Interfaces\IRemoteActor.cs" />
     <Compile Include="Assets\Scripts\WeaponScripts\ThroableWeapon.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\Movement\HorizontalMovement.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EnemySO\EnemyMovementSO.cs" />
-    <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\OffensiveManuversState.cs" />
-    <Compile Include="Assets\Scripts\WeaponScripts\Projectiles\ProjectileController.cs" />
-    <Compile Include="Assets\Scripts\Interfaces\IState.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\PlayerDetection\PlayerDetector.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\InteractableScripts\InteractableController.cs" />
     <Compile Include="Assets\Scripts\WeaponScripts\SpreadWeapon.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\ProjectileSO.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IDamagable.cs" />
-    <Compile Include="Assets\Scripts\EnvScripts\InteractableScripts\PickUps\InventoryPickUpObject\EmptyAction.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\InAirStates\InAirState.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\AttackingState\ThrowAttackState.cs" />
-    <Compile Include="Assets\Scripts\EnvScripts\InteractableScripts\PickUps\InstantPickUpObjects\MaxHealthUpgradePickUp.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EnvSO\DoorSO\DoorSO.cs" />
-    <Compile Include="Assets\Scripts\Interfaces\IWeapon.cs" />
-    <Compile Include="Assets\Scripts\WeaponScripts\Projectiles\BaseProjectile.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\FinilizeLvlLoadFinishedEventSO.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\WeaponSO.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\EnvSO\PlatformSO\FallingPlatformSO.cs" />
-    <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\AttackPlayerState.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\PlayerHealthManager.cs" />
-    <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\PatrolState.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyHealthManager.cs" />
-    <Compile Include="Assets\Scripts\EnvScripts\DoorScripts\DoorController.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\EnemySO\PlayerDetectorSO.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyWeaponController\EnemyWeaponController.cs" />
-    <Compile Include="Assets\Scripts\WeaponScripts\Projectiles\SpreadController.cs" />
-    <Compile Include="Assets\Scripts\Interfaces\IInventoryItem.cs" />
-    <Compile Include="Assets\Scripts\EnvScripts\InteractableScripts\PickUps\InventoryPickUpObject\InventoryPickUp.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\PlayerStateManager.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\DisengageState.cs" />
-    <Compile Include="Assets\Scripts\Interfaces\IPickable.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\UISO\WeaponChangedEventSO.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\PlayerSO\PlayerHealthSO.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EnemySO\EnemyHealthSO.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\EnvSO\InteractableSO\PickUps\InventoryItemSO.cs" />
     <Compile Include="Assets\Scripts\BaseClasses\BaseRigidbodyController.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\GroundedSuperState.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\PlatfromScripts\MovingPlatform.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\GroundedSuperState.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\Movement\Jump.cs" />
-    <Compile Include="Assets\Scripts\WeaponScripts\WeaponBase.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\UISO\HealthUpdatedEventSO.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerCharacter.cs" />
-    <Compile Include="Assets\Scripts\BaseClasses\Character.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\ManualState.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\InteractableScripts\PickUps\InventoryPickUpObject\PortableHealthPotion.cs" />
-    <Compile Include="Assets\Scripts\SoundScripts\SoundManager.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EnvSO\InteractableSO\PickUps\MaxHelathUpPickUpSO.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\IdleState.cs" />
-    <Compile Include="Assets\Scripts\Interfaces\IHange.cs" />
     <Compile Include="Assets\Scripts\BaseClasses\BaseStateManager.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\Enemy.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\InteractState.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\DmgRecivedState\DmgKnockbackState.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\Movement\GroundEnemyMovement.cs" />
     <Compile Include="Assets\Scripts\InputDetection\InputDetection.cs" />
@@ -143,27 +99,79 @@
     <Compile Include="Assets\Scripts\UIScripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\DmgRecivedState\DyingState.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\PlatfromScripts\PlatformHandler.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\InAirStates\InAirSuperState.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\TrapScripts\TrapManager.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\BaseMovementState.cs" />
-    <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\DmgStates\EnemyCriticallyHit.cs" />
     <Compile Include="Assets\Scripts\BaseClasses\SoundPlayingComponent.cs" />
+    <Compile Include="Assets\Scripts\SceneManagment\TransitionManager.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EnemySO\EnemySO.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\InAirStates\WallTouchState.cs" />
     <Compile Include="Assets\Scripts\InputDetection\InputMapper.cs" />
+    <Compile Include="Assets\Scripts\SceneManagment\SceneManager.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\EnvSO\TrapSO\TrapSO.cs" />
+    <Compile Include="Assets\Scripts\SoundScripts\BaseAudioManager.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IInteractable.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\EnemyRigidBodyController.cs" />
+    <Compile Include="Assets\Scripts\EnvScripts\InteractableScripts\PickUpController.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\PlayerSO\PlayerInventorySO.cs" />
+    <Compile Include="Assets\Scripts\BaseClasses\BaseHealthManager.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\TransitionToAttackSupperState.cs" />
+    <Compile Include="Assets\Scripts\EnvScripts\PlatfromScripts\FallingPlatfrom.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\EnemyIdleState.cs" />
+    <Compile Include="Assets\Scripts\BaseClasses\AnimatorControllerBase.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\AttackingState\SpreaderAttackingState.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\EnemyStateManager.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\Movement\BaseEnemyMovement.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\SoundSO\SoundLibrarySO.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\UISO\InventoryCountChangeEventSO.cs" />
+    <Compile Include="Assets\Scripts\BaseClasses\PlayerTagReferenceClass.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\WeaponScripts\PlayerWeaponController.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\AttackingState\AttackSuperState.cs" />
+    <Compile Include="Assets\Scripts\SceneManagment\OnLevelLoadManager.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IRemoteActor.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\Movement\HorizontalMovement.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\OffensiveManuversState.cs" />
+    <Compile Include="Assets\Scripts\WeaponScripts\Projectiles\ProjectileController.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IState.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\ProjectileSO.cs" />
+    <Compile Include="Assets\Scripts\EnvScripts\InteractableScripts\PickUps\InventoryPickUpObject\EmptyAction.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\LoadLvlFinishedEventSO.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\AttackingState\ThrowAttackState.cs" />
+    <Compile Include="Assets\Scripts\EnvScripts\InteractableScripts\PickUps\InstantPickUpObjects\MaxHealthUpgradePickUp.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IWeapon.cs" />
+    <Compile Include="Assets\Scripts\WeaponScripts\Projectiles\BaseProjectile.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\EnvSO\PlatformSO\FallingPlatformSO.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\AttackPlayerState.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\PlayerHealthManager.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\PatrolState.cs" />
+    <Compile Include="Assets\Scripts\EnvScripts\DoorScripts\DoorController.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\EnemySO\PlayerDetectorSO.cs" />
+    <Compile Include="Assets\Scripts\WeaponScripts\Projectiles\SpreadController.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IInventoryItem.cs" />
+    <Compile Include="Assets\Scripts\EnvScripts\InteractableScripts\PickUps\InventoryPickUpObject\InventoryPickUp.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\PlayerStateManager.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IPickable.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\PlayerSO\PlayerHealthSO.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\EnvSO\InteractableSO\PickUps\InventoryItemSO.cs" />
+    <Compile Include="Assets\Scripts\WeaponScripts\WeaponBase.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\UISO\HealthUpdatedEventSO.cs" />
+    <Compile Include="Assets\Scripts\BaseClasses\Character.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\ManualState.cs" />
+    <Compile Include="Assets\Scripts\SoundScripts\SoundManager.cs" />
+    <Compile Include="Assets\Scripts\UIScripts\UIMenuManager.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\IdleState.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IHange.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\InteractState.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\InAirStates\InAirSuperState.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\DmgStates\EnemyCriticallyHit.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\SoundSO\OneTimeSoundEventSO.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\InAirStates\PlatformHangState.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\EnvSO\TrapSO\TrapSO.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\MovingState.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\Abilities.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerRigidbodyController.cs" />
-    <Compile Include="Assets\Scripts\SoundScripts\BaseAudioManager.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\GrappleState.cs" />
-    <Compile Include="Assets\Scripts\Interfaces\IInteractable.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\BaseEnemyState.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\TrapScripts\TrapActivator.cs" />
-    <Compile Include="Assets\Scripts\EnemyScripts\EnemyRigidBodyController.cs" />
-    <Compile Include="Assets\Scripts\EnvScripts\InteractableScripts\PickUpController.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\PauseGameEventSO.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -774,8 +782,14 @@
     <Reference Include="Unity.2D.Tilemap.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.CacheServer">
+      <HintPath>Library\ScriptAssemblies\UnityEditor.CacheServer.dll</HintPath>
+    </Reference>
     <Reference Include="PsdPlugin">
       <HintPath>Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Addressables">
+      <HintPath>Library\ScriptAssemblies\Unity.Addressables.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
@@ -804,8 +818,8 @@
     <Reference Include="Unity.2D.Path.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Path.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.InternalAPIEditorBridge.001">
-      <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
+    <Reference Include="Unity.ResourceManager">
+      <HintPath>Library\ScriptAssemblies\Unity.ResourceManager.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
@@ -821,6 +835,9 @@
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InternalAPIEditorBridge.001">
+      <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics">
       <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
@@ -849,8 +866,17 @@
     <Reference Include="Unity.2D.Common.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.ScriptableBuildPipeline">
+      <HintPath>Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.2D.SpriteShape.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Addressables.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Addressables.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ScriptableBuildPipeline.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Common.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
