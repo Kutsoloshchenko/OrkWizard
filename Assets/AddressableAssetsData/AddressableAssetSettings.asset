@@ -82,6 +82,7 @@ MonoBehaviour:
     - default
     - Managers
     - LoadingScreen
+    - Events
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: d18c1683c4901fb4da4500639c0e0c01, type: 2}

@@ -25,10 +25,13 @@ MonoBehaviour:
   - m_GUID: 2cda990e2423bbf4892e6590ba056729
     m_Address: Lvl1
     m_ReadOnly: 0
-    m_SerializedLabels:
-    - Level
+    m_SerializedLabels: []
   - m_GUID: ec7eeefee4a9309429feebf4270374cf
     m_Address: Lvl0
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 082cf8c29d9d7924d9273be3969deec7
+    m_Address: SceneLoader
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0
