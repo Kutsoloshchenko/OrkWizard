@@ -125,7 +125,7 @@
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keboard",
+                    "groups": "Keyboard",
                     "action": "HorizontalInput",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -136,7 +136,7 @@
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keboard",
+                    "groups": "Keyboard",
                     "action": "HorizontalInput",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -147,7 +147,7 @@
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keboard",
+                    "groups": "Keyboard",
                     "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -180,7 +180,7 @@
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keboard",
+                    "groups": "Keyboard",
                     "action": "Down",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -191,7 +191,7 @@
                     "path": "<Keyboard>/r",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keboard",
+                    "groups": "Keyboard",
                     "action": "ChangeWeapon",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -213,7 +213,7 @@
                     "path": "<Keyboard>/enter",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keboard",
+                    "groups": "Keyboard",
                     "action": "Attack",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -257,7 +257,7 @@
                     "path": "<Keyboard>/leftShift",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keboard",
+                    "groups": "Keyboard",
                     "action": "Walk",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -279,7 +279,7 @@
                     "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keboard",
+                    "groups": "Keyboard",
                     "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -301,7 +301,7 @@
                     "path": "<Keyboard>/tab",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keboard",
+                    "groups": "Keyboard",
                     "action": "ChangeItem",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -323,7 +323,7 @@
                     "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keboard",
+                    "groups": "Keyboard",
                     "action": "ToggleMainMenu",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -344,8 +344,8 @@
     ],
     "controlSchemes": [
         {
-            "name": "Keboard",
-            "bindingGroup": "Keboard",
+            "name": "Keyboard",
+            "bindingGroup": "Keyboard",
             "devices": [
                 {
                     "devicePath": "<Keyboard>",
