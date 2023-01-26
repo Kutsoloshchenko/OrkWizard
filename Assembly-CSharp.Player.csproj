@@ -141,6 +141,7 @@
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\AttackingState\ThrowAttackState.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\InteractableScripts\PickUps\InstantPickUpObjects\MaxHealthUpgradePickUp.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IWeapon.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\InputsEventsSO.cs" />
     <Compile Include="Assets\Scripts\WeaponScripts\Projectiles\BaseProjectile.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EnvSO\PlatformSO\FallingPlatformSO.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\AttackPlayerState.cs" />
@@ -176,7 +177,6 @@
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\GrappleState.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\BaseEnemyState.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\TrapScripts\TrapActivator.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\InputsEventsSO.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
