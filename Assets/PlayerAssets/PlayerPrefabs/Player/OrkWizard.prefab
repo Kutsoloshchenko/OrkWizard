@@ -216,6 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseGameEventSO: {fileID: 11400000, guid: 64842c31ba0980e469d28fa5566708b1, type: 2}
+  inputComboEventSO: {fileID: 11400000, guid: 2842315003e2bac4e951386633cd485b, type: 2}
 --- !u!114 &8230919764258715206
 MonoBehaviour:
   m_ObjectHideFlags: 0

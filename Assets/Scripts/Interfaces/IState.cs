@@ -1,16 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OrkWizard
-{
-    public interface IState
-    {
-        void OnEnter(BaseStateManager stateManager);
-        void OnExit(BaseStateManager stateManager);
-        void OnUpdate(BaseStateManager stateManager);
-        void OnFixedUpdate(BaseStateManager stateManager);
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a6799dc60aee315debe9aea955dd0a4bdb0a117ded683cb30abe484f9cc85ab2
+size 499
