@@ -57,10 +57,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CamerScripts\CameraMovementScript.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\InputComboPressedEventSO.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\PlayerSO\PlayerSO.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\PauseGameEventSO.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EnvSO\InteractableSO\InteractableSO.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\InteractableScripts\BaseInteractableObject\BaseInteractableObject.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\InputSO\BufferSettingsSO.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\Movement\FlyingBombardierEnemyMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\Inventory\PlayerInventoryManager.cs" />
     <Compile Include="Assets\Scripts\Enums\Enums.cs" />
@@ -76,6 +78,7 @@
     <Compile Include="Assets\Scripts\EnvScripts\InteractableScripts\InteractableController.cs" />
     <Compile Include="Assets\Scripts\WeaponScripts\SpreadWeapon.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IDamagable.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\BufferAnalyzer\PlayerInputMove.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\InAirStates\InAirState.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EnvSO\DoorSO\DoorSO.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\FinilizeLvlLoadFinishedEventSO.cs" />
@@ -114,6 +117,7 @@
     <Compile Include="Assets\Scripts\SceneManagment\SceneManager.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EnvSO\TrapSO\TrapSO.cs" />
     <Compile Include="Assets\Scripts\SoundScripts\BaseAudioManager.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\BufferAnalyzer\PlayerBufferAnalyzer.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IInteractable.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyRigidBodyController.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\InteractableScripts\PickUpController.cs" />
@@ -169,6 +173,7 @@
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\IdleState.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IHange.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\InteractState.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\ManualSlider\ManualSliderController.cs" />
     <Compile Include="Assets\Scripts\SettingsManagers\VideoSettings.cs" />
     <Compile Include="Assets\Scripts\SettingsManagers\KeyMappings.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\InAirStates\InAirSuperState.cs" />
@@ -181,8 +186,7 @@
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\GrappleState.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\BaseEnemyState.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\TrapScripts\TrapActivator.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\InputComboPressedEventSO.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\PlayerMoveResolver.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\PlayerSO\PlayerMovesSO.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
