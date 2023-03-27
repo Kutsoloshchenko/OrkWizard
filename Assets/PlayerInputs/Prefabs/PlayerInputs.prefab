@@ -168,11 +168,91 @@ MonoBehaviour:
     m_ActionName: Gameplay/ChangeItem[/Keyboard/tab]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 0539bc15-9a94-42b5-840c-47dda80df365
-    m_ActionName: UI/ToggleMenu[/Keyboard/escape]
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Keboard
-  m_DefaultActionMap: Gameplay
+    m_ActionId: a09478d8-f7b7-4eaa-a898-95c6a24d67b3
+    m_ActionName: Gameplay/ToggleMainMenu[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3452070039363772548}
+        m_TargetAssemblyTypeName: OrkWizard.InputManager, Assembly-CSharp
+        m_MethodName: OnLeftActionBuffer
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: e3126213-59ab-4ed6-a8be-7424b94e715f
+    m_ActionName: FightingGameInputs/LeftAction[/Keyboard/leftArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3452070039363772548}
+        m_TargetAssemblyTypeName: OrkWizard.InputManager, Assembly-CSharp
+        m_MethodName: OnRightActionBuffer
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 9f1f750e-0556-43a0-89bf-60ab76342278
+    m_ActionName: FightingGameInputs/RightAction[/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3452070039363772548}
+        m_TargetAssemblyTypeName: OrkWizard.InputManager, Assembly-CSharp
+        m_MethodName: OnUpActionBuffer
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 5b766821-2e32-4f73-9e85-b459c0a22ae8
+    m_ActionName: FightingGameInputs/UpAction[/Keyboard/upArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3452070039363772548}
+        m_TargetAssemblyTypeName: OrkWizard.InputManager, Assembly-CSharp
+        m_MethodName: OnDownActionBuffer
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: d332b267-c961-4737-ac17-5972a1d6a3c0
+    m_ActionName: FightingGameInputs/DownAction[/Keyboard/downArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3452070039363772548}
+        m_TargetAssemblyTypeName: OrkWizard.InputManager, Assembly-CSharp
+        m_MethodName: OnDirectionalInputChange
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 37db7abf-46b2-4ff9-843f-5e139c4ab5af
+    m_ActionName: FightingGameInputs/DirectionalInput[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  m_NeverAutoSwitchControlSchemes: 1
+  m_DefaultControlScheme: Gamepad
+  m_DefaultActionMap: FightingGameInputs
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &3452070039363772548
@@ -187,3 +267,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a69556095023a0479faa2b98a700923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputEventsSO: {fileID: 11400000, guid: 2eafcc05c7b2ff74d86ba2587a061f8c, type: 2}
+  inputComboPressedSO: {fileID: 11400000, guid: 2842315003e2bac4e951386633cd485b,
+    type: 2}

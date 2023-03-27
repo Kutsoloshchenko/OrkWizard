@@ -2838,29 +2838,114 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3452070039363772548, guid: 68f81550f6fdc644894fdc79f6b4888a,
         type: 3}
-      propertyPath: inputEventsSO
+      propertyPath: bufferSettingsSO
       value: 
-      objectReference: {fileID: 11400000, guid: 2eafcc05c7b2ff74d86ba2587a061f8c,
+      objectReference: {fileID: 11400000, guid: dcc18fe70571eee46a09909003b5deb5,
         type: 2}
     - target: {fileID: 3452070039363772549, guid: 68f81550f6fdc644894fdc79f6b4888a,
         type: 3}
-      propertyPath: m_DefaultControlScheme
-      value: Gamepad
+      propertyPath: m_ActionEvents.Array.size
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 3452070039363772549, guid: 68f81550f6fdc644894fdc79f6b4888a,
         type: 3}
-      propertyPath: m_NeverAutoSwitchControlSchemes
+      propertyPath: m_ActionEvents.Array.data[15].m_ActionId
+      value: 153671a3-e244-49db-986e-3e712a8f5cc7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3452070039363772549, guid: 68f81550f6fdc644894fdc79f6b4888a,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[16].m_ActionId
+      value: db1769bd-8394-4cbe-8be0-a315c9f80fe1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3452070039363772549, guid: 68f81550f6fdc644894fdc79f6b4888a,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[17].m_ActionId
+      value: 6ef3486c-8d66-4276-909d-31495ee2484b
+      objectReference: {fileID: 0}
+    - target: {fileID: 3452070039363772549, guid: 68f81550f6fdc644894fdc79f6b4888a,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_ActionName
+      value: FightingGameInputs/Accelerate[/Keyboard/space,/DualShock4GamepadHID/buttonSouth]
+      objectReference: {fileID: 0}
+    - target: {fileID: 3452070039363772549, guid: 68f81550f6fdc644894fdc79f6b4888a,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[16].m_ActionName
+      value: FightingGameInputs/Break[/Keyboard/shift,/DualShock4GamepadHID/buttonEast]
+      objectReference: {fileID: 0}
+    - target: {fileID: 3452070039363772549, guid: 68f81550f6fdc644894fdc79f6b4888a,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[17].m_ActionName
+      value: FightingGameInputs/FlipStance[/Keyboard/numpad0,/DualShock4GamepadHID/rightShoulder]
+      objectReference: {fileID: 0}
+    - target: {fileID: 3452070039363772549, guid: 68f81550f6fdc644894fdc79f6b4888a,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3452070039363772549, guid: 68f81550f6fdc644894fdc79f6b4888a,
         type: 3}
-      propertyPath: m_ActionEvents.Array.data[9].m_ActionId
-      value: a09478d8-f7b7-4eaa-a898-95c6a24d67b3
+      propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3452070039363772549, guid: 68f81550f6fdc644894fdc79f6b4888a,
         type: 3}
-      propertyPath: m_ActionEvents.Array.data[9].m_ActionName
-      value: Gameplay/ToggleMainMenu[/Keyboard/escape]
+      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3452070039363772549, guid: 68f81550f6fdc644894fdc79f6b4888a,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3452070039363772549, guid: 68f81550f6fdc644894fdc79f6b4888a,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3452070039817981241}
+    - target: {fileID: 3452070039363772549, guid: 68f81550f6fdc644894fdc79f6b4888a,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3452070039817981241}
+    - target: {fileID: 3452070039363772549, guid: 68f81550f6fdc644894fdc79f6b4888a,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3452070039363772549, guid: 68f81550f6fdc644894fdc79f6b4888a,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3452070039363772549, guid: 68f81550f6fdc644894fdc79f6b4888a,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnAcceleration
+      objectReference: {fileID: 0}
+    - target: {fileID: 3452070039363772549, guid: 68f81550f6fdc644894fdc79f6b4888a,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnBreak
+      objectReference: {fileID: 0}
+    - target: {fileID: 3452070039363772549, guid: 68f81550f6fdc644894fdc79f6b4888a,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: OrkWizard.InputManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3452070039363772549, guid: 68f81550f6fdc644894fdc79f6b4888a,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: OrkWizard.InputManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3452070039363772549, guid: 68f81550f6fdc644894fdc79f6b4888a,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3452070039363772549, guid: 68f81550f6fdc644894fdc79f6b4888a,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3452070039363772550, guid: 68f81550f6fdc644894fdc79f6b4888a,
         type: 3}
@@ -2919,6 +3004,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68f81550f6fdc644894fdc79f6b4888a, type: 3}
+--- !u!114 &3452070039817981241 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3452070039363772548, guid: 68f81550f6fdc644894fdc79f6b4888a,
+    type: 3}
+  m_PrefabInstance: {fileID: 3452070039817981240}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a69556095023a0479faa2b98a700923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7232331103633666922
 PrefabInstance:
   m_ObjectHideFlags: 0
