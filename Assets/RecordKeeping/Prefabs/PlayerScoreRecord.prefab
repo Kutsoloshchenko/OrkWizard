@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5719845407596197787
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5719845407596197781}
+  - component: {fileID: 5719845407596197780}
+  m_Layer: 0
+  m_Name: PlayerScoreRecord
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5719845407596197781
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5719845407596197787}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2166.3298, y: 1155.3573, z: -7.4023266}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5719845407596197780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5719845407596197787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4057a9e2ff4956d49b84107051eb90c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recordSO: {fileID: 11400000, guid: ee11faac2d5580543b6a18e025b01402, type: 2}
+  timerEventsSO: {fileID: 11400000, guid: 9f71f6f562a4d654b93dfe433f9479ce, type: 2}
+  movePerformedEventSO: {fileID: 11400000, guid: 8d4a7760d8395ef4595da9cf72d9180b,
+    type: 2}
+  finilizeLvlLoadFinishedEventSO: {fileID: 11400000, guid: ba40e1c7a2c949c4f924527f1a757998,
+    type: 2}
+  lvlCompleatedEventSO: {fileID: 11400000, guid: aa652b08774bfc34fa51bb3a33a7844d,
+    type: 2}
+  scoreUpdatedEventSO: {fileID: 11400000, guid: 28de62a0ef7936849addc83c18490a92,
+    type: 2}

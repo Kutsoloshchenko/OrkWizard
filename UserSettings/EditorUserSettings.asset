@@ -5,6 +5,18 @@ EditorUserSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 4
   m_ConfigSettings:
+    RecentlyUsedSceneGuid-0:
+      value: 53090605030d0a09540a5526477a0d44124e4a7d7f2a2363747f4437e7e5376f
+      flags: 0
+    RecentlyUsedSceneGuid-1:
+      value: 0652030300500f5e085a0d7b43730644444e1e2f292a20647f7e4d60b5b4373e
+      flags: 0
+    RecentlyUsedSceneGuid-2:
+      value: 5304520206015c5e5f085c2647205e4412151c297e7177317e784a37bae36068
+      flags: 0
+    RecentlyUsedSceneGuid-3:
+      value: 00520256560d595d0f580d2644715c44171619282971746478794d66b5b23269
+      flags: 0
     RecentlyUsedScenePath-0:
       value: 22424703114646680e0b0227036c731f171311242b1b2535232c5326ece92021
       flags: 0
@@ -21,13 +33,13 @@ EditorUserSettings:
       value: 22424703114646680e0b0227036c6c1313191d06232922353f67083debf42d
       flags: 0
     RecentlyUsedScenePath-5:
-      value: 22424703114646680e0b0227036c721118161f2f3e3b15332827187df7ee3d2cfb
+      value: 22424703114646680e0b0227036c73061a47563f22213229
       flags: 0
     RecentlyUsedScenePath-6:
       value: 22424703114646680e0b0227036c761e1f03112b201b2535232c5326ece92021
       flags: 0
     RecentlyUsedScenePath-7:
-      value: 22424703114646680e0b0227036c73061a47563f22213229
+      value: 22424703114646680e0b0227036c721118161f2f3e3b15332827187df7ee3d2cfb
       flags: 0
     UnityEditor.ShaderGraph.Blackboard:
       value: 18135939215a0a5004000b0e15254b524c030a3f2964643d120d1230e9e93a3fd6e826abbd2e2d293c4ead313b08042de6030a0afa240c0d020be94c4ba85e435d8715fa32c70d15d11612dacc11fee5d3c5d1fe9ab1bf968e93e2ffcbc3e7e2f0b3ffe0e8b0be9af8ffaeffff8e85dd8390e3949c8899daa7
@@ -46,9 +58,13 @@ EditorUserSettings:
   m_VCDebugCmd: 0
   m_VCDebugOut: 0
   m_SemanticMergeMode: 2
+  m_DesiredImportWorkerCount: 4
+  m_StandbyImportWorkerCount: 2
+  m_IdleImportWorkerShutdownDelay: 60000
   m_VCShowFailedCheckout: 1
   m_VCOverwriteFailedCheckoutAssets: 1
   m_VCProjectOverlayIcons: 1
   m_VCHierarchyOverlayIcons: 1
   m_VCOtherOverlayIcons: 1
   m_VCAllowAsyncUpdate: 0
+  m_ArtifactGarbageCollection: 1
