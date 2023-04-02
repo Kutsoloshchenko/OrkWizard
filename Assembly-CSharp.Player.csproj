@@ -56,6 +56,7 @@
     <Analyzer Include="O:\VS\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\Grind.cs" />
     <Compile Include="Assets\Scripts\CamerScripts\CameraMovementScript.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\InputComboPressedEventSO.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\PlayerSO\PlayerSO.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="Assets\Scripts\ScriptableObjects\EnvSO\InteractableSO\InteractableSO.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\InteractableScripts\BaseInteractableObject\BaseInteractableObject.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\InputSO\BufferSettingsSO.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\RecordKeepingSO\ScoreMappingSO.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\UISO\TimerEvents.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\Movement\FlyingBombardierEnemyMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\Inventory\PlayerInventoryManager.cs" />
@@ -110,6 +112,7 @@
     <Compile Include="Assets\Scripts\InputDetection\InputBufferEntry.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\TrapScripts\TrapManager.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\BaseMovementState.cs" />
+    <Compile Include="Assets\Scripts\RecordKeepingScripts\MoveScore\MoveScores.cs" />
     <Compile Include="Assets\Scripts\BaseClasses\SoundPlayingComponent.cs" />
     <Compile Include="Assets\Scripts\SceneManagment\TransitionManager.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EnemySO\EnemySO.cs" />
@@ -182,7 +185,7 @@
     <Compile Include="Assets\Scripts\SettingsManagers\VideoSettings.cs" />
     <Compile Include="Assets\Scripts\SettingsManagers\KeyMappings.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\InAirStates\InAirSuperState.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\MovePerformedEventSO.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\RewardPointsEventsSO.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\DmgStates\EnemyCriticallyHit.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\SoundSO\OneTimeSoundEventSO.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\InAirStates\PlatformHangState.cs" />
@@ -195,9 +198,9 @@
     <Compile Include="Assets\Scripts\EnvScripts\TrapScripts\TrapActivator.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\UISO\ScoreUpdatedEventSO.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\PlayerSO\PlayerMovesSO.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\Grind.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\RecordKeepingSO\ScoreMappingSO.cs" />
-    <Compile Include="Assets\Scripts\RecordKeepingScripts\MoveScore\MoveScores.cs" />
+    <Compile Include="Assets\Scripts\UIScripts\ScoreController\FinalScoreScreenManager.cs" />
+    <Compile Include="Assets\Scripts\RecordKeepingScripts\OnLevelFinishedStats.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\RestartLevelEventSO.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

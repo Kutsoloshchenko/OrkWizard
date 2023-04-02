@@ -28,6 +28,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5628830341614277023}
   m_RootOrder: 0
@@ -102,6 +103,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -88.54622, y: -32.640625, z: -197.14032}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5628830341287604751}
   m_Father: {fileID: 0}
@@ -125,6 +127,9 @@ MonoBehaviour:
   finilizationFinishedEventSO: {fileID: 11400000, guid: ba40e1c7a2c949c4f924527f1a757998,
     type: 2}
   pauseGameEventSO: {fileID: 11400000, guid: 64842c31ba0980e469d28fa5566708b1, type: 2}
+  lvlCompleatedEventSO: {fileID: 11400000, guid: aa652b08774bfc34fa51bb3a33a7844d,
+    type: 2}
+  restartLvlEvent: {fileID: 11400000, guid: d55a8ab74f57bcf4b9b4bba860ff4f1a, type: 2}
   loadingScreen: {fileID: 5628830341287604750}
 --- !u!1 &5628830341132475038
 GameObject:
@@ -154,6 +159,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5628830341614277023}
   m_RootOrder: 1
@@ -290,6 +296,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5628830341614277023}
   m_Father: {fileID: 5628830341061305880}
@@ -387,6 +394,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -954.1764}
   m_LocalScale: {x: 1.3333334, y: 1.3333334, z: 1.3333334}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5628830340274631165}
   - {fileID: 5628830341132475039}
