@@ -19,3 +19,5 @@ MonoBehaviour:
   deathAnimation: {fileID: 7400000, guid: 4bcf068a6b071ae4a82518a50310cbcb, type: 2}
   grappleClip: {fileID: 7400000, guid: 17a5d918c584ecf41b7c7c9d5ee14b5e, type: 2}
   grappleDmg: 10
+  enemyName: Ice Elemental
+  points: 250

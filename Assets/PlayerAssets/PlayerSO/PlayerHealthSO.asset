@@ -13,5 +13,10 @@ MonoBehaviour:
   m_Name: PlayerHealthSO
   m_EditorClassIdentifier: 
   maxHealth: 100
-  currentHealth: 110
+  currentHealth: 100
   invulDuration: 0.8
+  recivingTickDmg: 0
+  tickDmg: 0
+  tickDmgElement: 0
+  tickTime: 0
+  ticksAfterStop: 0
