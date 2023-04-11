@@ -1,16 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OrkWizard
-{
-    public interface IDamagable
-    {
-        void ApplyDmg(float dmg);
-        void ApplyDmg(float dmg, Element type);
-        void ApplyDmg(float dmg, Element type, float tickTime);
-        void StopTickDmg(int ticksAfterStop = 0);
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5fc41c067f21b254b01aa252d03ec714a05d2306c2a8296ae7aa97229211d438
+size 387

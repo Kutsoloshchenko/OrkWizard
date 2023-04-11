@@ -24,3 +24,16 @@ MonoBehaviour:
     moveScore: 7
   - playerMove: 7
     moveScore: 25
+  - playerMove: 8
+    moveScore: 10
+  - playerMove: 9
+    moveScore: -500
+  - playerMove: 10
+    moveScore: -500
+  - playerMove: 8
+    moveScore: 25
+  - playerMove: 11
+    moveScore: 125
+  TotalEnemiesEncountered: 0
+  TotalEnemiesDefeated: 0
+  ThisLevelEnemiesDefeated: 0

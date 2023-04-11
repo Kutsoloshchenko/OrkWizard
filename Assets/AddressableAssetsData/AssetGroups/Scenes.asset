@@ -18,7 +18,7 @@ MonoBehaviour:
   m_GUID: f69431b5ecb6ddf4299d2baade6b6e45
   m_SerializeEntries:
   - m_GUID: 05fdc45e2f0d7ca4dbdc291a317d8c40
-    m_Address: Assets/Scenes/ManagersScene.unity
+    m_Address: ManagersScene
     m_ReadOnly: 0
     m_SerializedLabels:
     - Managers
@@ -32,6 +32,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 082cf8c29d9d7924d9273be3969deec7
     m_Address: SceneLoader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9b73f37ae148e4643ad1c2b461bb9e37
+    m_Address: FireGates
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

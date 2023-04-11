@@ -29,6 +29,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1468754081}
   m_Father: {fileID: 1509664733}
@@ -127,6 +128,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.75, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1862986039}
   - {fileID: 1646849688}
@@ -183,9 +185,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1929457939}
   m_Direction: 2
   m_MinValue: 0
-  m_MaxValue: 1
-  m_WholeNumbers: 0
-  m_Value: 0.5
+  m_MaxValue: 99
+  m_WholeNumbers: 1
+  m_Value: 50
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -215,6 +217,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 885758594}
   m_Father: {fileID: 8230919764732228918}
@@ -246,6 +249,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.35, y: 0.25, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1929457939}
   m_Father: {fileID: 1468754081}
@@ -284,6 +288,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1468754081}
   m_RootOrder: 0
@@ -359,6 +364,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.35, y: 0.75, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1646849688}
   m_RootOrder: 0
@@ -428,6 +434,7 @@ GameObject:
   - component: {fileID: 8230919764258715208}
   - component: {fileID: 5260682525493862354}
   - component: {fileID: 875148730}
+  - component: {fileID: 8230919764258715203}
   m_Layer: 6
   m_Name: OrkWizard
   m_TagString: Player
@@ -445,6 +452,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 16.4, y: -5.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1509664733}
   m_Father: {fileID: 0}
@@ -461,6 +469,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -503,7 +512,7 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!95 &8230919764732228919
 Animator:
-  serializedVersion: 3
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -516,10 +525,12 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!50 &8230919764732228925
 Rigidbody2D:
   serializedVersion: 4
@@ -555,7 +566,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 6, y: 12.5}
+  m_Size: {x: 6, y: 12}
   m_Direction: 0
 --- !u!114 &8230919764258715209
 MonoBehaviour:
@@ -581,6 +592,7 @@ MonoBehaviour:
   isGrounded: 0
   playerScriptableObject: {fileID: 11400000, guid: be9e223bc59f1024a9330bf087f70944,
     type: 2}
+  PlayerUiCanvas: {fileID: 1468754080}
 --- !u!114 &8230919764732228922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -624,6 +636,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseGameEventSO: {fileID: 11400000, guid: 64842c31ba0980e469d28fa5566708b1, type: 2}
   inputComboEventSO: {fileID: 11400000, guid: 2842315003e2bac4e951386633cd485b, type: 2}
+  movePerformedEventSO: {fileID: 11400000, guid: 874ab7d60a8789749832b6443358fd9d,
+    type: 2}
 --- !u!114 &8230919764258715206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -773,3 +787,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 11400000, guid: 320707d656ee7f24e85e6e9f2606f9d0, type: 2}
   inventoryEvents: {fileID: 11400000, guid: 812e8b3d5b2ba6244b6fe8bdc027b016, type: 2}
+--- !u!114 &8230919764258715203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8230919764732228916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60e01c0d7069c39468d21e9a516e3aee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movesSO: {fileID: 11400000, guid: 67314c610f94c9744886c5b551c1bb16, type: 2}
