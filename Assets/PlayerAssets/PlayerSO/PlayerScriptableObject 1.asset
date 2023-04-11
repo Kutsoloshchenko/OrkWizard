@@ -31,7 +31,22 @@ MonoBehaviour:
   platformHangTimeOut: 0.3
   platformClimbTime: 0.5
   weaponOffset: 2
-  dmgKnockbackDuration: 0.5
-  dmgKnockbackXForce: 50
+  dmgKnockbackRecoveryTime: 0.25
+  dmgKnockbackMinimalTime: 0.75
+  dmgKnockbackXForce: 40
   dmgKnockbackYForce: 12
   flickerFrequency: 0.4
+  facePlantTime: 1
+  facePlantDmg: 10
+  MinManualValue: 0
+  MaxManualValue: 99
+  ManualStartValue: 50
+  MinStepValue: 0
+  MaxStepValue: 15
+  PlayerInputStepValue: 15
+  ManualStepSpeed: 0.25
+  ManualSpeedAddition: 0.0125
+  Iterations: 3
+  MaxMultiplierCounter: 10
+  hippyJumpAnimationClip: {fileID: 7400000, guid: 6c2171d83404dd949bb05caac5799d54,
+    type: 2}

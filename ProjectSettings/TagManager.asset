@@ -17,11 +17,11 @@ TagManager:
   - 
   - Platform
   - Wall
-  - Trap
+  - GroundTrap
   - Enemy
   - Projectile
   - Transition
-  - 
+  - HippyJumpTrap
   - 
   - 
   - 
