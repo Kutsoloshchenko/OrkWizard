@@ -38,6 +38,30 @@ MonoBehaviour:
     m_Address: FireGates
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 8de31e0f12d81324e85bf27752d80693
+    m_Address: BeastPen
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7aae995551c26e94a801dac2eba15c9f
+    m_Address: Guide
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4ba16f410b2217145929385c1c31426d
+    m_Address: GrindDecent
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ea7493b00456b3143bd0d60864c59ac1
+    m_Address: Maze
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d673a2825e0f2fb48889125c6aae3deb
+    m_Address: Enemy
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7cbf9032130ead546abb65214c36c12c
+    m_Address: Clockwork
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: da31cbc848a90aa4f9386b034853464c, type: 2}
   m_SchemaSet:

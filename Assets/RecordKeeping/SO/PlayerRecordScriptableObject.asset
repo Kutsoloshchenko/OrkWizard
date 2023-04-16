@@ -17,23 +17,21 @@ MonoBehaviour:
   TotalGameTime: 26.980427
   MoveScores:
   - playerMove: 1
-    moveScore: 100
+    moveScore: 2
   - playerMove: 2
-    moveScore: 150
+    moveScore: 10
   - playerMove: 4
     moveScore: 7
   - playerMove: 7
-    moveScore: 25
+    moveScore: 30
   - playerMove: 8
-    moveScore: 10
+    moveScore: 5
   - playerMove: 9
-    moveScore: -500
+    moveScore: -100
   - playerMove: 10
-    moveScore: -500
-  - playerMove: 8
-    moveScore: 25
+    moveScore: -200
   - playerMove: 11
-    moveScore: 125
+    moveScore: 15
   TotalEnemiesEncountered: 0
   TotalEnemiesDefeated: 0
   ThisLevelEnemiesDefeated: 0
