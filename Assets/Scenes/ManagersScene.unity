@@ -961,7 +961,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0024414062, y: 0.0025634766}
+  m_AnchoredPosition: {x: -0.0024414062, y: 0.0024414062}
   m_SizeDelta: {x: 0.0051, y: -0.0050049}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &372878522
@@ -2121,7 +2121,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0078125, y: 0.000061035156}
+  m_AnchoredPosition: {x: -0.0078125, y: 0}
   m_SizeDelta: {x: 0.015380859, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &907394312 stripped
@@ -4359,21 +4359,21 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'While facing right:
 
-    236 + R - Ollie
+    6 + R - Ollie
 
-    28+R - Climb Edge
+    8+R - Climb Edge
 
-    82+L
+    2+L
     - Fall from ledge
 
-    4532 + L - Wall Hop
+    4 + L - Wall Hop
 
-    28+L - Manual
+    2+L - Manual
 
-    28+R - Hippy
-    Jump
+    2+R - Hippy Jump
 
-    2+R - Recovery after hit
+    2+R
+    - Recovery after hit
 
 '
   m_isRightToLeft: 0
@@ -4929,6 +4929,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ActionEvents.Array.size
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3452070039363772549, guid: 68f81550f6fdc644894fdc79f6b4888a,
+        type: 3}
+      propertyPath: m_NeverAutoSwitchControlSchemes
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3452070039363772549, guid: 68f81550f6fdc644894fdc79f6b4888a,
         type: 3}

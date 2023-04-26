@@ -118,7 +118,7 @@
                 {
                     "name": "",
                     "id": "9054023e-0485-43aa-ad49-7c2a1e4806e8",
-                    "path": "<Keyboard>/leftArrow",
+                    "path": "<Keyboard>/numpad4",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
@@ -140,7 +140,7 @@
                 {
                     "name": "",
                     "id": "eb3ee473-84f0-4392-89ae-92c33f6c086a",
-                    "path": "<Keyboard>/rightArrow",
+                    "path": "<Keyboard>/numpad6",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
@@ -272,7 +272,7 @@
                 {
                     "name": "",
                     "id": "fa57d0ca-d8ba-4a3b-ae6e-ba741aa28a1b",
-                    "path": "<Keyboard>/space",
+                    "path": "<Keyboard>/numpad0",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
@@ -316,7 +316,7 @@
                 {
                     "name": "",
                     "id": "1fd9f1e7-7e10-477d-a369-3e57b314b0cf",
-                    "path": "<Keyboard>/numpad0",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
@@ -393,7 +393,7 @@
                 {
                     "name": "",
                     "id": "d131f153-0c6b-4611-b3db-13d6d4e6d43f",
-                    "path": "<Keyboard>/downArrow",
+                    "path": "<Keyboard>/numpad2",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
@@ -415,7 +415,7 @@
                 {
                     "name": "",
                     "id": "64a826ff-4cc4-4d44-a004-103a30a1f8d8",
-                    "path": "<Keyboard>/upArrow",
+                    "path": "<Keyboard>/numpad8",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",

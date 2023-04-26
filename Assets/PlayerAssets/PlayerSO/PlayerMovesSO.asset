@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 049e71d2f4570b94d88293f969c96fde, type: 3}
   m_Name: PlayerMovesSO
   m_EditorClassIdentifier: 
+  easyInputs: 0
