@@ -155,6 +155,7 @@
     <Compile Include="Assets\Scripts\Interfaces\IRemoteActor.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\Movement\HorizontalMovement.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\OffensiveManuversState.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\BufferAnalyzer\PlayerMoveConverter.cs" />
     <Compile Include="Assets\Scripts\WeaponScripts\Projectiles\ProjectileController.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IState.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\ProjectileSO.cs" />
@@ -208,6 +209,7 @@
     <Compile Include="Assets\Scripts\EnvScripts\TrapScripts\TrapActivator.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\UISO\ScoreUpdatedEventSO.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\PlayerSO\PlayerMovesSO.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\InputModelChangedEventSO.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

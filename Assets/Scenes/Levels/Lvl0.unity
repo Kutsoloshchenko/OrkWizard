@@ -1209,6 +1209,7 @@ MonoBehaviour:
   detectorSO: {fileID: 11400000, guid: 1a1da48cea054b543bdceb1809832455, type: 2}
   RewardEventSO: {fileID: 0}
   weaponsInitialObjects: []
+  isDying: 0
 --- !u!114 &7616957693914837926
 MonoBehaviour:
   m_ObjectHideFlags: 0
