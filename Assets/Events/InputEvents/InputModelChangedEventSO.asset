@@ -9,7 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 049e71d2f4570b94d88293f969c96fde, type: 3}
-  m_Name: PlayerMovesSO
+  m_Script: {fileID: 11500000, guid: 8aaef00093336cc4c95bf46750fff401, type: 3}
+  m_Name: InputModelChangedEventSO
   m_EditorClassIdentifier: 
-  easyInputs: 0
