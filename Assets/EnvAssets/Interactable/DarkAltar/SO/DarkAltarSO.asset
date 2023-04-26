@@ -16,4 +16,4 @@ MonoBehaviour:
   isFinished: 0
   offset: {x: 0, y: -2}
   activityName: Vandalizm
-  points: 150
+  points: 20

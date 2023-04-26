@@ -20,12 +20,12 @@ MonoBehaviour:
   powerSlideSpeedMultiplier: 1.5
   dragMultiplier: 10
   breakMultiplier: 3
-  buttonHoldTime: 0.5
+  buttonHoldTime: 0.25
   maxJumpSpeed: 40
   initialJumpSpeed: 20
   maxFallSpeed: -35
   scatingSpeed: 10
-  timeTillJumpSpeed: 0.5
+  timeTillJumpSpeed: 0.2
   timeToJump: 0.1
   wallJumpTime: 0.5
   platformHangTimeOut: 0.3
@@ -44,9 +44,9 @@ MonoBehaviour:
   MinStepValue: 0
   MaxStepValue: 15
   PlayerInputStepValue: 15
-  ManualStepSpeed: 0.25
-  ManualSpeedAddition: 0.0125
-  Iterations: 3
+  ManualStepSpeed: 0.2
+  ManualSpeedAddition: 0
+  Iterations: 2
   MaxMultiplierCounter: 10
   hippyJumpAnimationClip: {fileID: 7400000, guid: 6c2171d83404dd949bb05caac5799d54,
     type: 2}

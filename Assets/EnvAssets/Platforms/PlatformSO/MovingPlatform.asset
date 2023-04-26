@@ -15,6 +15,6 @@ MonoBehaviour:
   platformType: 0
   platformSpeed: 10
   playerTriggerMovement: 1
-  stopTime: 1
-  finishOneTime: 0
+  stopTime: 2
+  finishOneTime: 1
   platformResetTime: 2

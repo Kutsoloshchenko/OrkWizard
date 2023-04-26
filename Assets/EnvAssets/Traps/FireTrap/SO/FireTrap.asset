@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FireTrap
   m_EditorClassIdentifier: 
   dmgType: 0
-  damage: 2
+  damage: 4
   trigeredByPlayer: 0
   dealDmgOnlyToPlayer: 0
   dmgCooldown: 1

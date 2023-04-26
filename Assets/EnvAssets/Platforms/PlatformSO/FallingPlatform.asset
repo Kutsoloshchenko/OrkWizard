@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7a90fded0a11a64c9aa96cb3ced18ac, type: 3}
   m_Name: FallingPlatform
   m_EditorClassIdentifier: 
-  fallDelay: 1.5
+  fallDelay: 0.5
   platformResetTime: 2
   fallingSpeed: 60

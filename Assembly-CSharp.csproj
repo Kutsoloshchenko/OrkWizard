@@ -91,6 +91,7 @@
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyWeaponController\EnemyWeaponController.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\DmgRecivedState\FaceplantState.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\DisengageState.cs" />
+    <Compile Include="Assets\Scripts\EnvScripts\InteractableScripts\PickUps\InstantPickUpObjects\PointsPickUp.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\UISO\WeaponChangedEventSO.cs" />
     <Compile Include="Assets\Scripts\InputDetection\BaseBufferEntry.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EnemySO\EnemyHealthSO.cs" />
@@ -140,9 +141,12 @@
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\EnemyIdleState.cs" />
     <Compile Include="Assets\Scripts\BaseClasses\AnimatorControllerBase.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\AttackingState\SpreaderAttackingState.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\EnvSO\InteractableSO\PickUps\PointsPickUpSO.cs" />
+    <Compile Include="Assets\Scripts\EnvScripts\PlatfromScripts\GrindObject.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\EnemyStateManager.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\Movement\BaseEnemyMovement.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\SoundSO\SoundLibrarySO.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IPlatformAngle.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\UISO\InventoryCountChangeEventSO.cs" />
     <Compile Include="Assets\Scripts\BaseClasses\PlayerTagReferenceClass.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\WeaponScripts\PlayerWeaponController.cs" />
@@ -204,8 +208,6 @@
     <Compile Include="Assets\Scripts\EnvScripts\TrapScripts\TrapActivator.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\UISO\ScoreUpdatedEventSO.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\PlayerSO\PlayerMovesSO.cs" />
-    <Compile Include="Assets\Scripts\EnvScripts\InteractableScripts\PickUps\InstantPickUpObjects\PointsPickUp.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\EnvSO\InteractableSO\PickUps\PointsPickUpSO.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

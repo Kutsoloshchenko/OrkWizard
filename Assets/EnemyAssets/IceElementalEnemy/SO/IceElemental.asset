@@ -20,4 +20,4 @@ MonoBehaviour:
   grappleClip: {fileID: 7400000, guid: 17a5d918c584ecf41b7c7c9d5ee14b5e, type: 2}
   grappleDmg: 10
   enemyName: Ice Elemental
-  points: 250
+  points: 50

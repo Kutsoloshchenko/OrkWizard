@@ -103,13 +103,22 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Help",
+                    "type": "Button",
+                    "id": "59078565-20f3-4dbf-b5f2-f9a9f3c71fe2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
                 {
                     "name": "",
                     "id": "9054023e-0485-43aa-ad49-7c2a1e4806e8",
-                    "path": "<Keyboard>/leftArrow",
+                    "path": "<Keyboard>/numpad4",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
@@ -131,7 +140,7 @@
                 {
                     "name": "",
                     "id": "eb3ee473-84f0-4392-89ae-92c33f6c086a",
-                    "path": "<Keyboard>/rightArrow",
+                    "path": "<Keyboard>/numpad6",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
@@ -263,7 +272,7 @@
                 {
                     "name": "",
                     "id": "fa57d0ca-d8ba-4a3b-ae6e-ba741aa28a1b",
-                    "path": "<Keyboard>/space",
+                    "path": "<Keyboard>/numpad0",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
@@ -307,7 +316,7 @@
                 {
                     "name": "",
                     "id": "1fd9f1e7-7e10-477d-a369-3e57b314b0cf",
-                    "path": "<Keyboard>/numpad0",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
@@ -384,7 +393,7 @@
                 {
                     "name": "",
                     "id": "d131f153-0c6b-4611-b3db-13d6d4e6d43f",
-                    "path": "<Keyboard>/downArrow",
+                    "path": "<Keyboard>/numpad2",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
@@ -406,7 +415,7 @@
                 {
                     "name": "",
                     "id": "64a826ff-4cc4-4d44-a004-103a30a1f8d8",
-                    "path": "<Keyboard>/upArrow",
+                    "path": "<Keyboard>/numpad8",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
@@ -433,6 +442,28 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5ec521d6-9579-41fc-acc7-f560c6cc21f1",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Help",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "24a6e2ec-93ed-44fc-a50e-3174b171f03e",
+                    "path": "<Keyboard>/f1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Help",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
