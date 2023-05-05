@@ -150,6 +150,7 @@
     <Compile Include="Assets\Scripts\ScriptableObjects\UISO\InventoryCountChangeEventSO.cs" />
     <Compile Include="Assets\Scripts\BaseClasses\PlayerTagReferenceClass.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\WeaponScripts\PlayerWeaponController.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\InputModelChangedEventSO.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\AttackingState\AttackSuperState.cs" />
     <Compile Include="Assets\Scripts\SceneManagment\OnLevelLoadManager.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IRemoteActor.cs" />
@@ -209,7 +210,7 @@
     <Compile Include="Assets\Scripts\EnvScripts\TrapScripts\TrapActivator.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\UISO\ScoreUpdatedEventSO.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\PlayerSO\PlayerMovesSO.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\InputModelChangedEventSO.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\Powerslide.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
