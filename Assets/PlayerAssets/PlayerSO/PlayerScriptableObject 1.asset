@@ -17,9 +17,10 @@ MonoBehaviour:
   timeTillMaxSpeed: 3
   walkSpeed: 10
   manualSpeedMultiplier: 0.75
-  powerSlideSpeedMultiplier: 1.5
+  grindSpeedMultiplier: 1.5
   dragMultiplier: 10
   breakMultiplier: 3
+  powerSlideMultiplier: 2
   buttonHoldTime: 0.25
   maxJumpSpeed: 40
   initialJumpSpeed: 20
@@ -50,3 +51,4 @@ MonoBehaviour:
   MaxMultiplierCounter: 10
   hippyJumpAnimationClip: {fileID: 7400000, guid: 6c2171d83404dd949bb05caac5799d54,
     type: 2}
+  KickturnDuration: 0.75
