@@ -43,9 +43,6 @@ MonoBehaviour:
   - directionallInput: 64
     inputButton: 1
     characterOrientation: 2
-  - directionallInput: 5
-    inputButton: 2
-    characterOrientation: 0
   GroundedMoves:
   - inputMove:
       directionallInput: 236
@@ -77,11 +74,6 @@ MonoBehaviour:
       inputButton: 1
       characterOrientation: 1
     move: 12
-  - inputMove:
-      directionallInput: 2
-      inputButton: 2
-      characterOrientation: 0
-    move: 13
   AirMoves:
   - inputMove:
       directionallInput: 4521
