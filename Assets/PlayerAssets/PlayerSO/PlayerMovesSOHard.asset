@@ -16,106 +16,111 @@ MonoBehaviour:
   GroundedMoves:
   - inputMove:
       directionallInput: 236
-      inputButton: 5
+      inputButton: 1
       characterOrientation: 2
     move: 1
   - inputMove:
       directionallInput: 214
-      inputButton: 5
+      inputButton: 1
       characterOrientation: 1
     move: 1
   - inputMove:
       directionallInput: 28
-      inputButton: 4
+      inputButton: 0
       characterOrientation: 0
     move: 4
   - inputMove:
       directionallInput: 28
-      inputButton: 5
+      inputButton: 1
       characterOrientation: 0
     move: 11
   - inputMove:
       directionallInput: 46
-      inputButton: 5
+      inputButton: 0
       characterOrientation: 2
     move: 12
   - inputMove:
       directionallInput: 64
-      inputButton: 5
+      inputButton: 0
       characterOrientation: 1
     move: 12
   GrindMoves:
   - inputMove:
       directionallInput: 236
-      inputButton: 5
+      inputButton: 1
       characterOrientation: 2
     move: 1
   - inputMove:
       directionallInput: 214
-      inputButton: 5
+      inputButton: 1
       characterOrientation: 1
     move: 1
   InAirSuperStateMoves: []
   WallTouchStateMoves:
   - inputMove:
       directionallInput: 6523
-      inputButton: 4
+      inputButton: 0
       characterOrientation: 1
     move: 2
   - inputMove:
       directionallInput: 4521
-      inputButton: 4
+      inputButton: 0
       characterOrientation: 2
     move: 2
   - inputMove:
       directionallInput: 4
-      inputButton: 4
+      inputButton: 0
       characterOrientation: 0
-    move: 13
+    move: 15
   - inputMove:
       directionallInput: 2
-      inputButton: 4
+      inputButton: 0
       characterOrientation: 0
-    move: 13
+    move: 15
   - inputMove:
       directionallInput: 6
-      inputButton: 4
+      inputButton: 0
       characterOrientation: 0
-    move: 13
+    move: 15
   - inputMove:
       directionallInput: 8
-      inputButton: 4
+      inputButton: 0
       characterOrientation: 0
-    move: 13
+    move: 15
   - inputMove:
       directionallInput: 4
-      inputButton: 5
+      inputButton: 1
       characterOrientation: 0
-    move: 13
+    move: 15
   - inputMove:
       directionallInput: 2
-      inputButton: 5
+      inputButton: 1
       characterOrientation: 0
-    move: 13
+    move: 15
   - inputMove:
       directionallInput: 6
-      inputButton: 5
+      inputButton: 1
       characterOrientation: 0
-    move: 13
+    move: 15
   - inputMove:
       directionallInput: 8
-      inputButton: 5
+      inputButton: 1
       characterOrientation: 0
-    move: 13
+    move: 15
   PlatformHangStateMoves:
   - inputMove:
       directionallInput: 28
-      inputButton: 5
+      inputButton: 1
       characterOrientation: 0
     move: 5
   - inputMove:
       directionallInput: 82
-      inputButton: 4
+      inputButton: 0
       characterOrientation: 0
     move: 6
-  DmgKnockBackMoves: []
+  DmgKnockBackMoves:
+  - inputMove:
+      directionallInput: 2
+      inputButton: 1
+      characterOrientation: 0
+    move: 8
