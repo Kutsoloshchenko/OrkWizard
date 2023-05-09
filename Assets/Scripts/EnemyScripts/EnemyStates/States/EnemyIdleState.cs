@@ -1,23 +1,3 @@
-﻿using UnityEngine;
-
-namespace OrkWizard
-{
-    public class EnemyIdleState : BaseEnemyState, IState
-    {
-        public override void OnEnter(BaseStateManager stateManager)
-        {
-            stateManager.Enemy.Animator.ChangeAnimation("Idle");
-        }
-
-        public override void OnExit(BaseStateManager stateManager)
-        {
-            return;
-        }
-
-        public override void OnFixedUpdate(BaseStateManager stateManager)
-        {
-            base.OnFixedUpdate(stateManager);
-            stateManager.ChangeState(new PatrolState());
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d0e84251dc0b0d502c3b83e457a4a294e93027f47b474eea5eef8c2e7370211b
+size 583

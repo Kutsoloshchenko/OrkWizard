@@ -88,6 +88,7 @@
     <Compile Include="Assets\Scripts\RecordKeepingScripts\RecordKeepingService.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\WeaponSO.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyHealthManager.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\StateMoveProvider\StateMoveProvider.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyWeaponController\EnemyWeaponController.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\DmgRecivedState\FaceplantState.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\DisengageState.cs" />
@@ -196,9 +197,11 @@
     <Compile Include="Assets\Scripts\PlayerScripts\ManualSlider\ManualSliderController.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\RecordKeepingSO\RecordsSO.cs" />
     <Compile Include="Assets\Scripts\SettingsManagers\VideoSettings.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IEnemyState.cs" />
     <Compile Include="Assets\Scripts\SettingsManagers\KeyMappings.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\Kickturn.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\InAirStates\InAirSuperState.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\WallHopSequence\QuickTimeEventManager.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\RewardPointsEventsSO.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\DmgStates\EnemyCriticallyHit.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\SoundSO\OneTimeSoundEventSO.cs" />

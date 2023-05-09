@@ -12,37 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 049e71d2f4570b94d88293f969c96fde, type: 3}
   m_Name: PlayerMovesSOHard
   m_EditorClassIdentifier: 
-  possibleMovesList:
-  - directionallInput: 236
-    inputButton: 1
-    characterOrientation: 2
-  - directionallInput: 214
-    inputButton: 1
-    characterOrientation: 1
-  - directionallInput: 4521
-    inputButton: 0
-    characterOrientation: 1
-  - directionallInput: 6523
-    inputButton: 0
-    characterOrientation: 1
-  - directionallInput: 28
-    inputButton: 1
-    characterOrientation: 0
-  - directionallInput: 28
-    inputButton: 0
-    characterOrientation: 0
-  - directionallInput: 82
-    inputButton: 1
-    characterOrientation: 0
-  - directionallInput: 2
-    inputButton: 1
-    characterOrientation: 0
-  - directionallInput: 46
-    inputButton: 1
-    characterOrientation: 2
-  - directionallInput: 64
-    inputButton: 1
-    characterOrientation: 2
+  UniversalMoves: []
   GroundedMoves:
   - inputMove:
       directionallInput: 236
@@ -66,25 +36,78 @@ MonoBehaviour:
     move: 11
   - inputMove:
       directionallInput: 46
-      inputButton: 1
+      inputButton: 0
       characterOrientation: 2
     move: 12
   - inputMove:
       directionallInput: 64
-      inputButton: 1
+      inputButton: 0
       characterOrientation: 1
     move: 12
-  AirMoves:
+  GrindMoves:
+  - inputMove:
+      directionallInput: 236
+      inputButton: 1
+      characterOrientation: 2
+    move: 1
+  - inputMove:
+      directionallInput: 214
+      inputButton: 1
+      characterOrientation: 1
+    move: 1
+  InAirSuperStateMoves: []
+  WallTouchStateMoves:
+  - inputMove:
+      directionallInput: 6523
+      inputButton: 0
+      characterOrientation: 1
+    move: 2
   - inputMove:
       directionallInput: 4521
       inputButton: 0
       characterOrientation: 2
     move: 2
   - inputMove:
-      directionallInput: 6523
+      directionallInput: 4
       inputButton: 0
-      characterOrientation: 1
-    move: 2
+      characterOrientation: 0
+    move: 15
+  - inputMove:
+      directionallInput: 2
+      inputButton: 0
+      characterOrientation: 0
+    move: 15
+  - inputMove:
+      directionallInput: 6
+      inputButton: 0
+      characterOrientation: 0
+    move: 15
+  - inputMove:
+      directionallInput: 8
+      inputButton: 0
+      characterOrientation: 0
+    move: 15
+  - inputMove:
+      directionallInput: 4
+      inputButton: 1
+      characterOrientation: 0
+    move: 15
+  - inputMove:
+      directionallInput: 2
+      inputButton: 1
+      characterOrientation: 0
+    move: 15
+  - inputMove:
+      directionallInput: 6
+      inputButton: 1
+      characterOrientation: 0
+    move: 15
+  - inputMove:
+      directionallInput: 8
+      inputButton: 1
+      characterOrientation: 0
+    move: 15
+  PlatformHangStateMoves:
   - inputMove:
       directionallInput: 28
       inputButton: 1
@@ -92,10 +115,10 @@ MonoBehaviour:
     move: 5
   - inputMove:
       directionallInput: 82
-      inputButton: 1
+      inputButton: 0
       characterOrientation: 0
     move: 6
-  RecoveryMoves:
+  DmgKnockBackMoves:
   - inputMove:
       directionallInput: 2
       inputButton: 1
