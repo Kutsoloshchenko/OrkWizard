@@ -199,6 +199,7 @@
     <Compile Include="Assets\Scripts\SettingsManagers\VideoSettings.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IEnemyState.cs" />
     <Compile Include="Assets\Scripts\SettingsManagers\KeyMappings.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\Kickturn.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\InAirStates\InAirSuperState.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\WallHopSequence\QuickTimeEventManager.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\RewardPointsEventsSO.cs" />
