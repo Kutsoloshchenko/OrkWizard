@@ -121,6 +121,7 @@
     <Compile Include="Assets\Scripts\BaseClasses\SoundPlayingComponent.cs" />
     <Compile Include="Assets\Scripts\SceneManagment\TransitionManager.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EnemySO\EnemySO.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\Powerslide.cs" />
     <Compile Include="Assets\Scripts\UIScripts\ScoreController\FinalScoreScreenManager.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\InAirStates\WallTouchState.cs" />
     <Compile Include="Assets\Scripts\InputDetection\InputMapper.cs" />
@@ -196,6 +197,7 @@
     <Compile Include="Assets\Scripts\ScriptableObjects\RecordKeepingSO\RecordsSO.cs" />
     <Compile Include="Assets\Scripts\SettingsManagers\VideoSettings.cs" />
     <Compile Include="Assets\Scripts\SettingsManagers\KeyMappings.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\Kickturn.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\InAirStates\InAirSuperState.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\RewardPointsEventsSO.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\DmgStates\EnemyCriticallyHit.cs" />
@@ -210,8 +212,6 @@
     <Compile Include="Assets\Scripts\EnvScripts\TrapScripts\TrapActivator.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\UISO\ScoreUpdatedEventSO.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\PlayerSO\PlayerMovesSO.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\Powerslide.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\Kickturn.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
