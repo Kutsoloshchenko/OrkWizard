@@ -49,6 +49,9 @@ MonoBehaviour:
   ManualSpeedAddition: 0
   Iterations: 2
   MaxMultiplierCounter: 10
+  eventTime: 0.8
+  uiEventTime: 0.4
   hippyJumpAnimationClip: {fileID: 7400000, guid: 6c2171d83404dd949bb05caac5799d54,
     type: 2}
   KickturnDuration: 0.75
+  CavemanDuration: 0.5

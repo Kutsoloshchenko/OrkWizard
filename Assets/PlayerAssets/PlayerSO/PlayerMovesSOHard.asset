@@ -59,6 +59,16 @@ MonoBehaviour:
       inputButton: 2
       characterOrientation: 1
     move: 14
+  - inputMove:
+      directionallInput: 236
+      inputButton: 0
+      characterOrientation: 2
+    move: 16
+  - inputMove:
+      directionallInput: 214
+      inputButton: 0
+      characterOrientation: 1
+    move: 16
   GrindMoves:
   - inputMove:
       directionallInput: 236
