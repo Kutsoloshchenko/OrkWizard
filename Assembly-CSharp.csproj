@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\Grind.cs" />
     <Compile Include="Assets\Scripts\CamerScripts\CameraMovementScript.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\NoComplyState.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\InputComboPressedEventSO.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\HippyJumpState.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\PlayerSO\PlayerSO.cs" />
@@ -82,6 +83,7 @@
     <Compile Include="Assets\Scripts\WeaponScripts\SpreadWeapon.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IDamagable.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\BufferAnalyzer\PlayerInputMove.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\CavemanState.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\InAirStates\InAirState.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EnvSO\DoorSO\DoorSO.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\FinilizeLvlLoadFinishedEventSO.cs" />
@@ -153,6 +155,7 @@
     <Compile Include="Assets\Scripts\BaseClasses\PlayerTagReferenceClass.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\WeaponScripts\PlayerWeaponController.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\InputModelChangedEventSO.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\InAirStates\QuickClimbState.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\AttackingState\AttackSuperState.cs" />
     <Compile Include="Assets\Scripts\SceneManagment\OnLevelLoadManager.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IRemoteActor.cs" />
@@ -167,6 +170,7 @@
     <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\LvlCompleatedEventSO.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\AttackingState\ThrowAttackState.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\InteractableScripts\PickUps\InstantPickUpObjects\MaxHealthUpgradePickUp.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\SimpleTrickState.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IWeapon.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\InputsEventsSO.cs" />
     <Compile Include="Assets\Scripts\WeaponScripts\Projectiles\BaseProjectile.cs" />
@@ -215,9 +219,6 @@
     <Compile Include="Assets\Scripts\EnvScripts\TrapScripts\TrapActivator.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\UISO\ScoreUpdatedEventSO.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\PlayerSO\PlayerMovesSO.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\NoComplyState.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\SimpleTrickState.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\CavemanState.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
