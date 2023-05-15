@@ -80,7 +80,12 @@ MonoBehaviour:
       inputButton: 1
       characterOrientation: 1
     move: 1
-  InAirSuperStateMoves: []
+  InAirSuperStateMoves:
+  - inputMove:
+      directionallInput: 28
+      inputButton: 1
+      characterOrientation: 0
+    move: 17
   WallTouchStateMoves:
   - inputMove:
       directionallInput: 6523
