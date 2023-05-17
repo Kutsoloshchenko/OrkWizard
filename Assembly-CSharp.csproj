@@ -59,7 +59,6 @@
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\Grind.cs" />
     <Compile Include="Assets\Scripts\CamerScripts\CameraMovementScript.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\NoComplyState.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\InputComboPressedEventSO.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\HippyJumpState.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\PlayerSO\PlayerSO.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\PauseGameEventSO.cs" />
@@ -105,7 +104,6 @@
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerCharacter.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\InteractableScripts\PickUps\InventoryPickUpObject\PortableHealthPotion.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EnvSO\InteractableSO\PickUps\MaxHelathUpPickUpSO.cs" />
-    <Compile Include="Assets\Scripts\BaseClasses\BaseStateManager.cs" />
     <Compile Include="Assets\Scripts\RecordKeepingScripts\OnLevelFinishedStats.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\DmgRecivedState\DmgKnockbackState.cs" />
@@ -206,7 +204,6 @@
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\Kickturn.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\InAirStates\InAirSuperState.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\WallHopSequence\QuickTimeEventManager.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\RewardPointsEventsSO.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\DmgStates\EnemyCriticallyHit.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\SoundSO\OneTimeSoundEventSO.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\InAirStates\PlatformHangState.cs" />
@@ -219,6 +216,8 @@
     <Compile Include="Assets\Scripts\EnvScripts\TrapScripts\TrapActivator.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\UISO\ScoreUpdatedEventSO.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\PlayerSO\PlayerMovesSO.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\RecordKeepingEvents\RewardPointsEventsSO.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\RecordKeepingEvents\ComboEventsSO.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

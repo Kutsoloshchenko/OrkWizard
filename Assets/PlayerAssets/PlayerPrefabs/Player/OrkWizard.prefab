@@ -229,7 +229,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &484076396
 RectTransform:
   m_ObjectHideFlags: 0
@@ -407,7 +407,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &977083372
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1174,9 +1174,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseGameEventSO: {fileID: 11400000, guid: 64842c31ba0980e469d28fa5566708b1, type: 2}
-  inputComboEventSO: {fileID: 11400000, guid: 2842315003e2bac4e951386633cd485b, type: 2}
   movePerformedEventSO: {fileID: 11400000, guid: 874ab7d60a8789749832b6443358fd9d,
     type: 2}
+  comboEventsSO: {fileID: 11400000, guid: 0f9b25ad3a04a384b9a05ca795fc4d22, type: 2}
 --- !u!114 &8230919764258715206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1189,6 +1189,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a688827fdbfbaac4caf8b3c8ac835bed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movePerformedEventSO: {fileID: 11400000, guid: 874ab7d60a8789749832b6443358fd9d,
+    type: 2}
 --- !u!114 &8230919764258715207
 MonoBehaviour:
   m_ObjectHideFlags: 0

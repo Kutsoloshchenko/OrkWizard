@@ -5821,9 +5821,9 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5719845407596197780, guid: c10a0df68997afa4797de2c1b58f1a15,
         type: 3}
-      propertyPath: rewardPointsEventSO
+      propertyPath: comboEventsSO
       value: 
-      objectReference: {fileID: 11400000, guid: 874ab7d60a8789749832b6443358fd9d,
+      objectReference: {fileID: 11400000, guid: 0f9b25ad3a04a384b9a05ca795fc4d22,
         type: 2}
     - target: {fileID: 5719845407596197781, guid: c10a0df68997afa4797de2c1b58f1a15,
         type: 3}
