@@ -46,11 +46,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recordSO: {fileID: 11400000, guid: ee11faac2d5580543b6a18e025b01402, type: 2}
   timerEventsSO: {fileID: 11400000, guid: 9f71f6f562a4d654b93dfe433f9479ce, type: 2}
-  movePerformedEventSO: {fileID: 11400000, guid: 8d4a7760d8395ef4595da9cf72d9180b,
+  rewardPointsEventSO: {fileID: 11400000, guid: 874ab7d60a8789749832b6443358fd9d,
     type: 2}
   finilizeLvlLoadFinishedEventSO: {fileID: 11400000, guid: ba40e1c7a2c949c4f924527f1a757998,
     type: 2}
-  lvlCompleatedEventSO: {fileID: 11400000, guid: aa652b08774bfc34fa51bb3a33a7844d,
-    type: 2}
   scoreUpdatedEventSO: {fileID: 11400000, guid: 28de62a0ef7936849addc83c18490a92,
     type: 2}
+  comboFinishEventSO: {fileID: 11400000, guid: f539e8eb02f04fc4fb7b3e2808f806d3, type: 2}
