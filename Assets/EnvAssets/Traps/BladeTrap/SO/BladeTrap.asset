@@ -24,3 +24,4 @@ MonoBehaviour:
   isMoving: 1
   movingLeft: 1
   movementSpeed: 10
+  invulState: 4
