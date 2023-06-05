@@ -20,7 +20,8 @@ MonoBehaviour:
   downTime: 2
   activeTime: 5
   ticksAfterStop: 5
-  dmgOverTime: 1
+  dmgOverTime: 0
   isMoving: 0
   movingLeft: 0
   movementSpeed: 0
+  invulState: 22
