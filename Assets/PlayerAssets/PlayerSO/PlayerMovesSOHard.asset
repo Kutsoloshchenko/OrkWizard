@@ -69,6 +69,26 @@ MonoBehaviour:
       inputButton: 0
       characterOrientation: 1
     move: 16
+  - inputMove:
+      directionallInput: 6523
+      inputButton: 1
+      characterOrientation: 2
+    move: 3
+  - inputMove:
+      directionallInput: 4521
+      inputButton: 1
+      characterOrientation: 1
+    move: 3
+  - inputMove:
+      directionallInput: 4521
+      inputButton: 0
+      characterOrientation: 2
+    move: 18
+  - inputMove:
+      directionallInput: 6523
+      inputButton: 0
+      characterOrientation: 1
+    move: 18
   GrindMoves:
   - inputMove:
       directionallInput: 236
@@ -185,3 +205,23 @@ MonoBehaviour:
       inputButton: 2
       characterOrientation: 1
     move: 14
+  - inputMove:
+      directionallInput: 6523
+      inputButton: 1
+      characterOrientation: 2
+    move: 3
+  - inputMove:
+      directionallInput: 4521
+      inputButton: 1
+      characterOrientation: 1
+    move: 3
+  - inputMove:
+      directionallInput: 4521
+      inputButton: 0
+      characterOrientation: 2
+    move: 18
+  - inputMove:
+      directionallInput: 6523
+      inputButton: 0
+      characterOrientation: 1
+    move: 18

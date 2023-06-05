@@ -40,6 +40,10 @@ MonoBehaviour:
     moveScore: 5
   - playerMove: 17
     moveScore: 5
+  - playerMove: 3
+    moveScore: 15
+  - playerMove: 18
+    moveScore: 15
   TotalEnemiesEncountered: 0
   TotalEnemiesDefeated: 0
   ThisLevelEnemiesDefeated: 0
