@@ -8,7 +8,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{0D636398-EF19-9136-CD1E-ECD51D43A70C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -126,7 +127,6 @@
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\Powerslide.cs" />
     <Compile Include="Assets\Scripts\UIScripts\ScoreController\FinalScoreScreenManager.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\InAirStates\WallTouchState.cs" />
-    <Compile Include="Assets\Scripts\InputDetection\InputMapper.cs" />
     <Compile Include="Assets\Scripts\SceneManagment\SceneManager.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EnvSO\TrapSO\TrapSO.cs" />
     <Compile Include="Assets\Scripts\SoundScripts\BaseAudioManager.cs" />
