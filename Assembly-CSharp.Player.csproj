@@ -126,7 +126,6 @@
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\Powerslide.cs" />
     <Compile Include="Assets\Scripts\UIScripts\ScoreController\FinalScoreScreenManager.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\InAirStates\WallTouchState.cs" />
-    <Compile Include="Assets\Scripts\InputDetection\InputMapper.cs" />
     <Compile Include="Assets\Scripts\SceneManagment\SceneManager.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EnvSO\TrapSO\TrapSO.cs" />
     <Compile Include="Assets\Scripts\SoundScripts\BaseAudioManager.cs" />
