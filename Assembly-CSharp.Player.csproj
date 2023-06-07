@@ -79,7 +79,6 @@
     <Compile Include="Assets\Scripts\ScriptableObjects\EnemySO\EnemyMovementSO.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\PlayerDetection\PlayerDetector.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\InteractableScripts\InteractableController.cs" />
-    <Compile Include="Assets\Scripts\WeaponScripts\SpreadWeapon.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IDamagable.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\BufferAnalyzer\PlayerInputMove.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\CavemanState.cs" />
@@ -134,6 +133,7 @@
     <Compile Include="Assets\Scripts\PlayerScripts\BufferAnalyzer\PlayerBufferAnalyzer.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IInteractable.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyRigidBodyController.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\BaseGroundInvulState.cs" />
     <Compile Include="Assets\Scripts\UIScripts\ScoreController\ScoreController.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\InteractableScripts\PickUpController.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\PlayerSO\PlayerInventorySO.cs" />
@@ -144,12 +144,12 @@
     <Compile Include="Assets\Scripts\EnvScripts\PlatfromScripts\FallingPlatfrom.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\EnemyIdleState.cs" />
     <Compile Include="Assets\Scripts\BaseClasses\AnimatorControllerBase.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\AttackingState\SpreaderAttackingState.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EnvSO\InteractableSO\PickUps\PointsPickUpSO.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\PlatfromScripts\GrindObject.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\EnemyStateManager.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\Movement\BaseEnemyMovement.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\SoundSO\SoundLibrarySO.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\ShovitState.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IPlatformAngle.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\UISO\InventoryCountChangeEventSO.cs" />
     <Compile Include="Assets\Scripts\BaseClasses\PlayerTagReferenceClass.cs" />
@@ -181,7 +181,6 @@
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\PatrolState.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\DoorScripts\DoorController.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EnemySO\PlayerDetectorSO.cs" />
-    <Compile Include="Assets\Scripts\WeaponScripts\Projectiles\SpreadController.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IInventoryItem.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\InteractableScripts\PickUps\InventoryPickUpObject\InventoryPickUp.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\PlayerStateManager.cs" />
@@ -202,6 +201,7 @@
     <Compile Include="Assets\Scripts\PlayerScripts\ManualSlider\ManualSliderController.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\RecordKeepingSO\RecordsSO.cs" />
     <Compile Include="Assets\Scripts\SettingsManagers\VideoSettings.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\KickflipState.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\RecordKeepingEvents\RewardPointsEventsSO.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IEnemyState.cs" />
     <Compile Include="Assets\Scripts\SettingsManagers\KeyMappings.cs" />
@@ -220,9 +220,6 @@
     <Compile Include="Assets\Scripts\EnvScripts\TrapScripts\TrapActivator.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\UISO\ScoreUpdatedEventSO.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\PlayerSO\PlayerMovesSO.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\BaseGroundInvulState.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\KickflipState.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\ShovitState.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
