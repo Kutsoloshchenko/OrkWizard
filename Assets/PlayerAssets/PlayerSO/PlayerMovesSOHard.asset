@@ -106,6 +106,16 @@ MonoBehaviour:
       inputButton: 0
       characterOrientation: 0
     move: 17
+  - inputMove:
+      directionallInput: 41236
+      inputButton: 1
+      characterOrientation: 2
+    move: 19
+  - inputMove:
+      directionallInput: 63214
+      inputButton: 1
+      characterOrientation: 1
+    move: 19
   WallTouchStateMoves:
   - inputMove:
       directionallInput: 6523

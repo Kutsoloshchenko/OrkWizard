@@ -15,10 +15,9 @@ MonoBehaviour:
   damage: 10
   trigeredByPlayer: 0
   dealDmgOnlyToPlayer: 1
-  dmgCooldown: 1
   downTime: 2
   activeTime: 5
   isMoving: 0
   movingLeft: 0
   movementSpeed: 0
-  invulState: 22
+  invulState: 23

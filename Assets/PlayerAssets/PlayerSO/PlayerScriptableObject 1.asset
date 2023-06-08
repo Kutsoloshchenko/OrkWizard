@@ -57,3 +57,6 @@ MonoBehaviour:
   CavemanDuration: 0.5
   QuickClimbExtention: 10
   QuickClimbTime: 0.25
+  SkateComboReset: 2
+  IdleComboReset: 0.05
+  airInvulForce: {x: 25, y: 0}

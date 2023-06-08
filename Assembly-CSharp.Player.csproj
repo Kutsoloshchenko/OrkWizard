@@ -219,6 +219,8 @@
     <Compile Include="Assets\Scripts\EnvScripts\TrapScripts\TrapActivator.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\UISO\ScoreUpdatedEventSO.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\PlayerSO\PlayerMovesSO.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\InAirStates\InAirInvulMove.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\InAirStates\BackSide360State.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
