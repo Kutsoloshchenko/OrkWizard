@@ -2365,7 +2365,7 @@ PrefabInstance:
     - target: {fileID: 3250660456629042202, guid: a67cf2d8cca25794ab8080aaf4e0b528,
         type: 3}
       propertyPath: nextLvlName
-      value: FireGates
+      value: Maze
       objectReference: {fileID: 0}
     - target: {fileID: 3250660456629042202, guid: a67cf2d8cca25794ab8080aaf4e0b528,
         type: 3}

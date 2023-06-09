@@ -107,6 +107,7 @@
     <Compile Include="Assets\Scripts\RecordKeepingScripts\OnLevelFinishedStats.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\InAirStates\StumbleState.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\InAirStates\InAirInvulMove.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\DmgRecivedState\DmgKnockbackState.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\Movement\GroundEnemyMovement.cs" />
     <Compile Include="Assets\Scripts\InputDetection\InputManager.cs" />
@@ -176,6 +177,7 @@
     <Compile Include="Assets\Scripts\UIScripts\ScoreController\MoveNameTextController.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EnvSO\PlatformSO\FallingPlatformSO.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\AttackPlayerState.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\InAirStates\BackSide360State.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerHealthManager.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\PatrolState.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\DoorScripts\DoorController.cs" />
@@ -219,8 +221,6 @@
     <Compile Include="Assets\Scripts\EnvScripts\TrapScripts\TrapActivator.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\UISO\ScoreUpdatedEventSO.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\PlayerSO\PlayerMovesSO.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\InAirStates\InAirInvulMove.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\InAirStates\BackSide360State.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
