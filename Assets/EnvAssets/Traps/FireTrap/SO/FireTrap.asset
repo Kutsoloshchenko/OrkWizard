@@ -12,15 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fde876d356633f84c93afb368d3e6a5f, type: 3}
   m_Name: FireTrap
   m_EditorClassIdentifier: 
-  dmgType: 0
-  damage: 4
+  damage: 10
   trigeredByPlayer: 0
-  dealDmgOnlyToPlayer: 0
-  dmgCooldown: 1
+  dealDmgOnlyToPlayer: 1
   downTime: 2
   activeTime: 5
-  ticksAfterStop: 5
-  dmgOverTime: 1
   isMoving: 0
   movingLeft: 0
   movementSpeed: 0
+  invulState: 23

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2721670793552426741}
   - component: {fileID: 3061734575988062354}
   - component: {fileID: 5419748305877827885}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: BladeTrap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 1361587151780965687}
   m_LocalRotation: {x: 0, y: 0, z: 0.003944392, w: 0.99999225}
   m_LocalPosition: {x: -435.75, y: -38.35, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
