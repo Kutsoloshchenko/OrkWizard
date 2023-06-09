@@ -961,12 +961,12 @@ Transform:
   - {fileID: 1107406022}
   - {fileID: 1714818654}
   - {fileID: 1252409744}
+  - {fileID: 1223994389}
   - {fileID: 359998397}
   - {fileID: 643286357}
-  - {fileID: 912031617}
-  - {fileID: 1223994389}
-  - {fileID: 72086759}
   - {fileID: 2023729983}
+  - {fileID: 912031617}
+  - {fileID: 72086759}
   - {fileID: 1806871703}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -1493,7 +1493,7 @@ PrefabInstance:
     - target: {fileID: 3250660456629042202, guid: a67cf2d8cca25794ab8080aaf4e0b528,
         type: 3}
       propertyPath: nextLvlName
-      value: Maze
+      value: Guide
       objectReference: {fileID: 0}
     - target: {fileID: 3250660456629042202, guid: a67cf2d8cca25794ab8080aaf4e0b528,
         type: 3}
@@ -1687,18 +1687,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1929457939, guid: a8d12364c33b84e43a96a72be7fef811, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1929457939, guid: a8d12364c33b84e43a96a72be7fef811, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1929457939, guid: a8d12364c33b84e43a96a72be7fef811, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8230919764732228916, guid: a8d12364c33b84e43a96a72be7fef811,
         type: 3}
       propertyPath: m_Name
