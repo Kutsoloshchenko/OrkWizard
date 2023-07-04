@@ -12,11 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b015964068832947a40bbb2c7c8e5af, type: 3}
   m_Name: PlayerHealthSO
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 100
+  maxHealth: 1
+  currentHealth: 1
   invulDuration: 0.8
-  recivingTickDmg: 0
-  tickDmg: 0
-  tickDmgElement: 0
-  tickTime: 0
-  ticksAfterStop: 0

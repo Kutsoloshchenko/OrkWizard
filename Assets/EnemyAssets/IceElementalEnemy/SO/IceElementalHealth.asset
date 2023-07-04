@@ -12,7 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cb75359ee607da48853d6fe0b0002b7, type: 3}
   m_Name: IceElementalHealth
   m_EditorClassIdentifier: 
-  maxHp: 10
-  enemyElement: 1
-  weakElement: 0
-  canBeCritHit: 1
+  maxHp: 1
