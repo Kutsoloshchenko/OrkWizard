@@ -38,7 +38,7 @@ MonoBehaviour:
   dmgKnockbackYForce: 12
   flickerFrequency: 0.4
   facePlantTime: 1
-  facePlantDmg: 10
+  facePlantDmg: 1
   MinManualValue: 0
   MaxManualValue: 99
   ManualStartValue: 50

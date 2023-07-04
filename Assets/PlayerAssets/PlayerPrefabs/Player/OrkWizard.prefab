@@ -1131,7 +1131,8 @@ MonoBehaviour:
   inputModelChangedEventSO: {fileID: 11400000, guid: 4da46b4a01fc8cf4f85cfb1238f5ca94,
     type: 2}
   movesSOHard: {fileID: 11400000, guid: 67314c610f94c9744886c5b551c1bb16, type: 2}
-  movesSOEasy: {fileID: 11400000, guid: 92fb06c8325211b4aaff4aac2fe99c45, type: 2}
+  movesSOEasy: {fileID: 11400000, guid: 9f33aa90fe64264448471f3d4124e3dd, type: 2}
+  movesSONormal: {fileID: 11400000, guid: bccdb5100d1d0e94d845b0328d3d1d05, type: 2}
 --- !u!114 &8230919764732228922
 MonoBehaviour:
   m_ObjectHideFlags: 0
