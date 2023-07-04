@@ -22,28 +22,20 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - Managers
-  - m_GUID: 2cda990e2423bbf4892e6590ba056729
-    m_Address: Lvl1
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: ec7eeefee4a9309429feebf4270374cf
-    m_Address: Lvl0
+  - m_GUID: 7aae995551c26e94a801dac2eba15c9f
+    m_Address: Guide
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 082cf8c29d9d7924d9273be3969deec7
     m_Address: SceneLoader
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 9b73f37ae148e4643ad1c2b461bb9e37
-    m_Address: FireGates
+  - m_GUID: d673a2825e0f2fb48889125c6aae3deb
+    m_Address: No Comply
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 8de31e0f12d81324e85bf27752d80693
     m_Address: BeastPen
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 7aae995551c26e94a801dac2eba15c9f
-    m_Address: Guide
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 4ba16f410b2217145929385c1c31426d
@@ -54,12 +46,8 @@ MonoBehaviour:
     m_Address: Maze
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: d673a2825e0f2fb48889125c6aae3deb
-    m_Address: Enemy
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 7cbf9032130ead546abb65214c36c12c
-    m_Address: Clockwork
+  - m_GUID: 9b73f37ae148e4643ad1c2b461bb9e37
+    m_Address: FireGates
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

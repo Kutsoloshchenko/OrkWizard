@@ -18,6 +18,6 @@ MonoBehaviour:
   knockBackClip: {fileID: 7400000, guid: df6596d4aa6277247819adee28ebff3b, type: 2}
   deathAnimation: {fileID: 7400000, guid: 4bcf068a6b071ae4a82518a50310cbcb, type: 2}
   grappleClip: {fileID: 7400000, guid: 17a5d918c584ecf41b7c7c9d5ee14b5e, type: 2}
-  grappleDmg: 10
+  grappleDmg: 1
   enemyName: Ice Elemental
   points: 50

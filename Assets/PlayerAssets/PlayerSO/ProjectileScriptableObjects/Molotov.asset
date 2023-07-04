@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Molotov
   m_EditorClassIdentifier: 
   force: {x: 35, y: 0}
-  dmgValue: 10
-  damageType: 0
+  dmgValue: 1
   impactDmg: 0
   explosionRadius: 5
   dmgTag: All

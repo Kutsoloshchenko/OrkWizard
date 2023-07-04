@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MovingPlatform
   m_EditorClassIdentifier: 
   platformType: 0
-  platformSpeed: 10
+  platformSpeed: 15
   playerTriggerMovement: 1
   stopTime: 2
   finishOneTime: 1
