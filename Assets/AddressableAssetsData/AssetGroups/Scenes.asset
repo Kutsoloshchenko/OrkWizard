@@ -50,6 +50,10 @@ MonoBehaviour:
     m_Address: FireGates
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: ec7eeefee4a9309429feebf4270374cf
+    m_Address: Test
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: da31cbc848a90aa4f9386b034853464c, type: 2}
   m_SchemaSet:

@@ -82,6 +82,7 @@
     <Compile Include="Assets\Scripts\ScriptableObjects\EnemySO\EnemyMovementSO.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\PlayerDetection\PlayerDetector.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\InteractableScripts\InteractableController.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\UpdateInputHistoryEventSO.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IDamagable.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\BufferAnalyzer\PlayerInputMove.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\CavemanState.cs" />
@@ -146,6 +147,7 @@
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\TransitionToAttackSupperState.cs" />
     <Compile Include="Assets\Scripts\InputDetection\InputBufferManager.cs" />
     <Compile Include="Assets\Scripts\EnvScripts\PlatfromScripts\FallingPlatfrom.cs" />
+    <Compile Include="Assets\Scripts\UIScripts\CommanHistoryController\CommanHistoryController.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\EnemyIdleState.cs" />
     <Compile Include="Assets\Scripts\BaseClasses\AnimatorControllerBase.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EnvSO\InteractableSO\PickUps\PointsPickUpSO.cs" />
@@ -229,8 +231,6 @@
     <Compile Include="Assets\Scripts\EnvScripts\TrapScripts\TrapActivator.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\UISO\ScoreUpdatedEventSO.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\PlayerSO\PlayerMovesSO.cs" />
-    <Compile Include="Assets\Scripts\UIScripts\CommanHistoryController\CommanHistoryController.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\UpdateInputHistoryEventSO.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
