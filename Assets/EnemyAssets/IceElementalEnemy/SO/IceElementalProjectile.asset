@@ -22,3 +22,4 @@ MonoBehaviour:
   explosionAnimationClip: {fileID: 0}
   gravityScale: 0
   audioClip: {fileID: 8300000, guid: 728775ae449e27742be2795222f0d541, type: 3}
+  invulState: 22

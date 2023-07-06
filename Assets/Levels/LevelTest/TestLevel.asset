@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ff223ecb640ae4e9d067c814a56aa7, type: 3}
+  m_Name: TestLevel
+  m_EditorClassIdentifier: 
+  levelName: Test
+  levelNumber: 6
+  scoreToBeat: 75
+  timeToBeat: 11
+  startingLocation: {x: 0, y: 0}
+  finishLocation: {x: 0, y: 0}
+  questList:
+  - {fileID: 11400000, guid: 14c52ed7d2818fa4bae5d3293a5b2d29, type: 2}
+  - {fileID: 11400000, guid: e822f94b77569ba41a17481168d705e4, type: 2}
+  maxHealth: 1
