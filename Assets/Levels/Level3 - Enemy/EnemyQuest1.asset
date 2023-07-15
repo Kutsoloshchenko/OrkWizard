@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: EnemyQuest1
   m_EditorClassIdentifier: 
   questType: 3
-  targetQuestCounter: 4
+  targetQuestCounter: 3
   questMenuName: Slay enemies
   targetName: EnemyKilled

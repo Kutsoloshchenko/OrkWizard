@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: EnemyQuest2
   m_EditorClassIdentifier: 
   questType: 4
-  targetQuestCounter: 3
+  targetQuestCounter: 2
   questMenuName: Health Remaining
   targetName: HealthRemain
