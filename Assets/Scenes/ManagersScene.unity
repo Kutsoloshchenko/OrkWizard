@@ -8323,7 +8323,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1981686902
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9555,6 +9555,11 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 3216983022822744416, guid: b37be07f0d66b7c4c83de8c8a2c1d015,
         type: 3}
+      propertyPath: playerUi
+      value: 
+      objectReference: {fileID: 9018293792369603400}
+    - target: {fileID: 3216983022822744416, guid: b37be07f0d66b7c4c83de8c8a2c1d015,
+        type: 3}
       propertyPath: questList
       value: 
       objectReference: {fileID: 2006422655}
@@ -10607,3 +10612,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 9018293792369603397}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &9018293792369603400 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9018293792273851722, guid: 5f2a2feabfc90cc41aef7c79f7bf1e20,
+    type: 3}
+  m_PrefabInstance: {fileID: 9018293792369603397}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18a257a05fd829d4b8af0e01ac8da199, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
