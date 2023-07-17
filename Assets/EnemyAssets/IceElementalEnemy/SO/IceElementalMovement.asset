@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: IceElementalMovement
   m_EditorClassIdentifier: 
   maxSpeed: 15
-  collisionDistance: 8
+  fallSpeed: -35
+  collisionDistance: 2
+  groundCollision: 3
   collistionLayers:
     serializedVersion: 2
     m_Bits: 768

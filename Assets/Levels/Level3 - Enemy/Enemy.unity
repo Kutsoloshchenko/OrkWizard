@@ -966,6 +966,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: IceElemental (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7280305865203831818, guid: b4ca0f234d7fedb4b9c52e1a6d1c5f73,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4ca0f234d7fedb4b9c52e1a6d1c5f73, type: 3}
 --- !u!4 &607732325 stripped
@@ -8030,6 +8035,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: IceElemental (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7280305865203831818, guid: b4ca0f234d7fedb4b9c52e1a6d1c5f73,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4ca0f234d7fedb4b9c52e1a6d1c5f73, type: 3}
