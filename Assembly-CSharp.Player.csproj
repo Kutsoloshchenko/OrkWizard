@@ -216,6 +216,7 @@
     <Compile Include="Assets\Scripts\SettingsManagers\KeyMappings.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\Kickturn.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\InAirStates\InAirSuperState.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\LevelFinishedState.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\WallHopSequence\QuickTimeEventManager.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\DmgStates\EnemyCriticallyHit.cs" />
     <Compile Include="Assets\Scripts\UIScripts\ScoreController\LevelListItem.cs" />
@@ -231,7 +232,8 @@
     <Compile Include="Assets\Scripts\EnvScripts\TrapScripts\TrapActivator.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\UISO\ScoreUpdatedEventSO.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\PlayerSO\PlayerMovesSO.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\LevelFinishedState.cs" />
+    <Compile Include="Assets\Scripts\UIScripts\LevelBeatStatsManager.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\EnableMainMenuToggleEventSO.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

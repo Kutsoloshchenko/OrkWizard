@@ -16,7 +16,7 @@ MonoBehaviour:
   levelNumber: 1
   scoreToBeat: 45
   timeToBeat: 10
-  startingLocation: {x: 0, y: 0}
+  startingLocation: {x: 0, y: -2}
   finishLocation: {x: 0, y: 0}
   questList:
   - {fileID: 11400000, guid: 8873eec76f4dba1418056c392aed8872, type: 2}
