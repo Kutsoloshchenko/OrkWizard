@@ -27,7 +27,7 @@ MonoBehaviour:
   maxFallSpeed: -35
   scatingSpeed: 10
   timeTillJumpSpeed: 0.2
-  timeToJump: 0.1
+  timeToJump: 0.2
   wallJumpTime: 0.5
   platformHangTimeOut: 0.3
   platformClimbTime: 0.5
