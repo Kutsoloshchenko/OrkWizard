@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\SceneManagment\FirstTimeLoader.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EnvSO\PlatformSO\MovingPlatformSO.cs" />
     <Compile Include="Assets\Scripts\Interfaces\EnemyInterfaces\IEnemyMovement.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IBouncable.cs" />
     <Compile Include="Assets\Scripts\SettingsManagers\SliderController.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\LoadLvlEventSo.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\LevelSO\LevelQuestSO.cs" />
@@ -166,6 +167,7 @@
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\AttackingState\AttackSuperState.cs" />
     <Compile Include="Assets\Scripts\SceneManagment\OnLevelLoadManager.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IRemoteActor.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\EnvSO\PlatformSO\BounceSO.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\Movement\HorizontalMovement.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\OffensiveManuversState.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\LevelSO\LevelSO.cs" />
@@ -180,6 +182,7 @@
     <Compile Include="Assets\Scripts\EnvScripts\InteractableScripts\PickUps\InstantPickUpObjects\MaxHealthUpgradePickUp.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\SimpleTrickState.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IWeapon.cs" />
+    <Compile Include="Assets\Scripts\UIScripts\LevelBeatStatsManager.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\InputsEventsSO.cs" />
     <Compile Include="Assets\Scripts\WeaponScripts\Projectiles\BaseProjectile.cs" />
     <Compile Include="Assets\Scripts\UIScripts\ScoreController\MoveNameTextController.cs" />
@@ -208,6 +211,7 @@
     <Compile Include="Assets\Scripts\Interfaces\IHange.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\InteractState.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\ManualSlider\ManualSliderController.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\EnableMainMenuToggleEventSO.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\RecordKeepingSO\RecordsSO.cs" />
     <Compile Include="Assets\Scripts\SettingsManagers\VideoSettings.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\KickflipState.cs" />
@@ -219,6 +223,7 @@
     <Compile Include="Assets\Scripts\PlayerScripts\StateMachine\States\GroundedStates\LevelFinishedState.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\WallHopSequence\QuickTimeEventManager.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyStates\States\DmgStates\EnemyCriticallyHit.cs" />
+    <Compile Include="Assets\Scripts\EnvScripts\PlatfromScripts\BouncePlatform.cs" />
     <Compile Include="Assets\Scripts\UIScripts\ScoreController\LevelListItem.cs" />
     <Compile Include="Assets\Scripts\UIScripts\ScoreController\LevelQuestsDisplay.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\SoundSO\OneTimeSoundEventSO.cs" />
@@ -232,8 +237,7 @@
     <Compile Include="Assets\Scripts\EnvScripts\TrapScripts\TrapActivator.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\UISO\ScoreUpdatedEventSO.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\PlayerSO\PlayerMovesSO.cs" />
-    <Compile Include="Assets\Scripts\UIScripts\LevelBeatStatsManager.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\EventsSO\EnableMainMenuToggleEventSO.cs" />
+    <Compile Include="Assets\Scripts\EnvScripts\TrapScripts\FallingTrap.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -50,12 +50,12 @@ MonoBehaviour:
     m_Address: FireGates
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: ec7eeefee4a9309429feebf4270374cf
-    m_Address: Test
-    m_ReadOnly: 0
-    m_SerializedLabels: []
   - m_GUID: b1507f97f7c8641469d215fd83809ae8
     m_Address: Enemy
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d54d670bb3951074fbdae15e91c05735
+    m_Address: Test
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

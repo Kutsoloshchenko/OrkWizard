@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TestLevel
   m_EditorClassIdentifier: 
   levelName: Test
-  levelNumber: 6
+  levelNumber: 7
   scoreToBeat: 75
   timeToBeat: 11
   startingLocation: {x: 0, y: 0}
